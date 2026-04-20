@@ -1,0 +1,1504 @@
+﻿item,Q1,Q2,Q3,SG,Note,Response
+Electricity,a. Yes,"{""stem"": ""Q2 (Short reason). Which specific feature of the display makes it most misleading? Select all that apply."", ""options"": [{""text"": ""The light‑bulb icons are scaled by overall size/area, so the 2017 bulb appears far more than twice the 2019 bulb."", ""key"": true, ""rationale"": ""Correct. Identifies the core misleading encoding: icon area does not match the 2:1 data ratio. Reflects MRC4–5 attention to how the representation encodes quantity."", ""misconception_tag"": ""notes_bulb_size_disproportionate_to_""}, {""text"": ""Quantity is encoded with a pictorial icon instead of a bar or point on a common scale, encouraging viewers to read area rather than a linear axis."", ""key"": true, ""rationale"": ""Correct. Names the same core issue (icon/area encoding) in a different way. Reflects MRC4–5 understanding of display properties."", ""misconception_tag"": ""notes_bulb_size_disproportionate_to_""}, {""text"": ""The two pictures are different sizes."", ""key"": true, ""rationale"": ""Partially correct but vague. Notes size difference without tying it to proportionality; aligns with MRC3 (“picture size” only)."", ""misconception_tag"": ""mention_picture_size""}, {""text"": ""2018 is missing from the x‑axis."", ""key"": false, ""rationale"": ""Plausible but not the feature that makes this display most misleading about the 800 vs. 400 comparison. This is a surface/coverage issue. MRC2 tendency."", ""misconception_tag"": ""mention_something_other_than_picture""}, {""text"": ""There is no problem because the exact numbers (800, 400) are printed on the figure."", ""key"": false, ""rationale"": ""Incorrect. Printed numbers do not remove the visual distortion created by icon area. MRC1 misconception."", ""misconception_tag"": ""says_numbers_are_shown""}, {""text"": ""The y‑axis does not start at zero."", ""key"": false, ""rationale"": ""Incorrect for this figure and not the source of distortion here. Common but irrelevant claim. MRC2 misconception."", ""misconception_tag"": ""axis_zero_misconception""}, {""text"": ""The bulbs are not precisely aligned with the gridlines."", ""key"": false, ""rationale"": ""Irrelevant to the misleading impression about magnitude. Focuses on neatness/formatting rather than encoding. MRC2."", ""misconception_tag"": ""alignment_legibility_surface""}]}","{""stem"": ""Q3 (Deeper justification). Why does that feature make the display misleading? Select all reasons that are valid."", ""options"": [{""text"": ""Because icon area grows with the square of its height/width, a 2:1 difference in values looks more like 3–4:1 when read from the bulb sizes."", ""key"": true, ""rationale"": ""Correct. Mechanistic explanation of area/volume scaling distortion. MRC5 reasoning about how the encoding changes what viewers perceive."", ""misconception_tag"": ""explains_distortion_areavolume_scali""}, {""text"": ""A simple two‑bar chart (shared zero baseline) or two labeled points would communicate 800 vs. 400 without the area illusion."", ""key"": true, ""rationale"": ""Correct. Proposes an appropriate alternative and links it to the purpose (accurate 2:1 comparison). MRC5 display choice."", ""misconception_tag"": ""proposes_barchart_alternative""}, {""text"": ""400 is half of 800, yet the smaller bulb looks much less than half of the larger one."", ""key"": true, ""rationale"": ""Correct. States the numerical relationship and mismatched visual impression. MRC4 (shows vs. hides)."", ""misconception_tag"": ""states_that_400_is_half_of_800_but_t""}, {""text"": ""Leaving out 2018 hides whether the change happened gradually or abruptly, which can affect how the audience interprets the story."", ""key"": true, ""rationale"": ""Correct but secondary to the core distortion; identifies information the display hides. MRC4B idea about missing context."", ""misconception_tag"": ""missing_2018_trend_hidden""}, {""text"": ""Larger pictures naturally draw more attention and feel like bigger numbers, even when values are printed, so the size difference can bias viewers."", ""key"": true, ""rationale"": ""Correct but imprecise. Describes a perceptual/attention effect without mechanism. MRC3 justification."", ""misconception_tag"": ""only_says_its_confusing_because_of_s""}, {""text"": ""There is no real issue because the labels 800 and 400 remove any possible misunderstanding."", ""key"": false, ""rationale"": ""Incorrect. Viewers still take cues from the distorted visual; numbers do not neutralize misleading design. MRC1 misconception."", ""misconception_tag"": ""claims_theres_no_problem_since_numbe""}, {""text"": ""Making the bulbs 3‑D and shinier would solve the problem and make the sizes look accurate."", ""key"": false, ""rationale"": ""Incorrect. Adds chartjunk and does not fix the area‑scaling distortion. MRC2 misconception."", ""misconception_tag"": ""chartjunk_enhancement_misconception""}]}","{""waypoints"": [{""id"": ""MRC6"", ""credit"": 6, ""rule"": ""Not claimable for this prompt; no non‑standard manipulations are available in the options. Highest awarded is MRC5.""}, {""id"": ""MRC5"", ""credit"": 5, ""rule"": ""Q1 = a. Yes AND (Q2 includes ≥1 option tagged notes_bulb_size_disproportionate_to_) AND (Q3 includes ≥1 option tagged explains_distortion_areavolume_scali) AND (Q3 includes ≥1 option tagged proposes_barchart_alternative). Extra selections allowed.""}, {""id"": ""MRC4"", ""credit"": 4, ""rule"": ""Q1 = a. Yes AND (Q2 includes ≥1 option tagged notes_bulb_size_disproportionate_to_) AND [ (Q3 includes ≥1 option tagged states_that_400_is_half_of_800_but_t OR missing_2018_trend_hidden) OR (Q3 includes explains_distortion_areavolume_scali BUT does not include proposes_barchart_alternative) ]""}, {""id"": ""MRC3"", ""credit"": 3, ""rule"": ""Q1 = a. Yes AND (Q2 includes option tagged mention_picture_size) AND (Q2 does NOT include any notes_bulb_size_disproportionate_to_) AND (Q3 includes option tagged only_says_its_confusing_because_of_s) AND (Q3 does NOT include explains_distortion_areavolume_scali).""}, {""id"": ""MRC2"", ""credit"": 2, ""rule"": ""Q1 = a. Yes AND (Q2 includes no picture‑size tags: neither notes_bulb_size_disproportionate_to_ nor mention_picture_size) AND (Q2 includes ≥1 distractor such as mention_something_other_than_picture, axis_zero_misconception, alignment_legibility_surface) AND (Q3 selects no MRC4/5 reasons; i.e., contains only incorrect reasons or none).""}, {""id"": ""MRC1"", ""credit"": 1, ""rule"": ""Q1 = b. No AND (Q2 includes says_numbers_are_shown or similar) AND (Q3 includes claims_theres_no_problem_since_numbe).""}, {""id"": ""MRC0"", ""credit"": 0, ""rule"": ""No selections or responses that do not fit any rule above (including off‑task or contradictory with no valid selections).""}], ""notes"": ""Rules mirror the original CR mapping: MRC5 requires both explanation of the distortion and an appropriate alternative; MRC4 requires identifying the mismatch (half vs. visual) or noting hidden context; MRC3 captures vague size mentions; MRC2 captures surface‑feature comments; MRC1 corresponds to rejecting the claim because numbers are printed. Over‑selection of distractors does not lower level unless it prevents meeting a higher‑level rule.""}",Difficulty is targeted by making multiple correct selections required and by including near‑miss distractors keyed to common misconceptions (numbers printed → no problem; missing 2018; axis‑zero). Correct options are homogeneous (features/justifications) and focused on the encoding choice (icon area) to preserve MRC construct alignment.,"{
+  ""q1_choice"": ""a. Yes"",
+  ""q2_item"": {
+    ""stem"": ""Q2 (Short reason). Which specific feature of the display makes it most misleading? Select all that apply."",
+    ""options"": [
+      {
+        ""text"": ""The light‑bulb icons are scaled by overall size/area, so the 2017 bulb appears far more than twice the 2019 bulb."",
+        ""key"": true,
+        ""rationale"": ""Correct. Identifies the core misleading encoding: icon area does not match the 2:1 data ratio. Reflects MRC4–5 attention to how the representation encodes quantity."",
+        ""misconception_tag"": ""notes_bulb_size_disproportionate_to_""
+      },
+      {
+        ""text"": ""Quantity is encoded with a pictorial icon instead of a bar or point on a common scale, encouraging viewers to read area rather than a linear axis."",
+        ""key"": true,
+        ""rationale"": ""Correct. Names the same core issue (icon/area encoding) in a different way. Reflects MRC4–5 understanding of display properties."",
+        ""misconception_tag"": ""notes_bulb_size_disproportionate_to_""
+      },
+      {
+        ""text"": ""The two pictures are different sizes."",
+        ""key"": true,
+        ""rationale"": ""Partially correct but vague. Notes size difference without tying it to proportionality; aligns with MRC3 (“picture size” only)."",
+        ""misconception_tag"": ""mention_picture_size""
+      },
+      {
+        ""text"": ""2018 is missing from the x‑axis."",
+        ""key"": false,
+        ""rationale"": ""Plausible but not the feature that makes this display most misleading about the 800 vs. 400 comparison. This is a surface/coverage issue. MRC2 tendency."",
+        ""misconception_tag"": ""mention_something_other_than_picture""
+      },
+      {
+        ""text"": ""There is no problem because the exact numbers (800, 400) are printed on the figure."",
+        ""key"": false,
+        ""rationale"": ""Incorrect. Printed numbers do not remove the visual distortion created by icon area. MRC1 misconception."",
+        ""misconception_tag"": ""says_numbers_are_shown""
+      },
+      {
+        ""text"": ""The y‑axis does not start at zero."",
+        ""key"": false,
+        ""rationale"": ""Incorrect for this figure and not the source of distortion here. Common but irrelevant claim. MRC2 misconception."",
+        ""misconception_tag"": ""axis_zero_misconception""
+      },
+      {
+        ""text"": ""The bulbs are not precisely aligned with the gridlines."",
+        ""key"": false,
+        ""rationale"": ""Irrelevant to the misleading impression about magnitude. Focuses on neatness/formatting rather than encoding. MRC2."",
+        ""misconception_tag"": ""alignment_legibility_surface""
+      }
+    ]
+  },
+  ""q3_item"": {
+    ""stem"": ""Q3 (Deeper justification). Why does that feature make the display misleading? Select all reasons that are valid."",
+    ""options"": [
+      {
+        ""text"": ""Because icon area grows with the square of its height/width, a 2:1 difference in values looks more like 3–4:1 when read from the bulb sizes."",
+        ""key"": true,
+        ""rationale"": ""Correct. Mechanistic explanation of area/volume scaling distortion. MRC5 reasoning about how the encoding changes what viewers perceive."",
+        ""misconception_tag"": ""explains_distortion_areavolume_scali""
+      },
+      {
+        ""text"": ""A simple two‑bar chart (shared zero baseline) or two labeled points would communicate 800 vs. 400 without the area illusion."",
+        ""key"": true,
+        ""rationale"": ""Correct. Proposes an appropriate alternative and links it to the purpose (accurate 2:1 comparison). MRC5 display choice."",
+        ""misconception_tag"": ""proposes_barchart_alternative""
+      },
+      {
+        ""text"": ""400 is half of 800, yet the smaller bulb looks much less than half of the larger one."",
+        ""key"": true,
+        ""rationale"": ""Correct. States the numerical relationship and mismatched visual impression. MRC4 (shows vs. hides)."",
+        ""misconception_tag"": ""states_that_400_is_half_of_800_but_t""
+      },
+      {
+        ""text"": ""Leaving out 2018 hides whether the change happened gradually or abruptly, which can affect how the audience interprets the story."",
+        ""key"": true,
+        ""rationale"": ""Correct but secondary to the core distortion; identifies information the display hides. MRC4B idea about missing context."",
+        ""misconception_tag"": ""missing_2018_trend_hidden""
+      },
+      {
+        ""text"": ""Larger pictures naturally draw more attention and feel like bigger numbers, even when values are printed, so the size difference can bias viewers."",
+        ""key"": true,
+        ""rationale"": ""Correct but imprecise. Describes a perceptual/attention effect without mechanism. MRC3 justification."",
+        ""misconception_tag"": ""only_says_its_confusing_because_of_s""
+      },
+      {
+        ""text"": ""There is no real issue because the labels 800 and 400 remove any possible misunderstanding."",
+        ""key"": false,
+        ""rationale"": ""Incorrect. Viewers still take cues from the distorted visual; numbers do not neutralize misleading design. MRC1 misconception."",
+        ""misconception_tag"": ""claims_theres_no_problem_since_numbe""
+      },
+      {
+        ""text"": ""Making the bulbs 3‑D and shinier would solve the problem and make the sizes look accurate."",
+        ""key"": false,
+        ""rationale"": ""Incorrect. Adds chartjunk and does not fix the area‑scaling distortion. MRC2 misconception."",
+        ""misconception_tag"": ""chartjunk_enhancement_misconception""
+      }
+    ]
+  },
+  ""scoring_guide"": {
+    ""waypoints"": [
+      {
+        ""id"": ""MRC6"",
+        ""credit"": 6,
+        ""rule"": ""Not claimable for this prompt; no non‑standard manipulations are available in the options. Highest awarded is MRC5.""
+      },
+      {
+        ""id"": ""MRC5"",
+        ""credit"": 5,
+        ""rule"": ""Q1 = a. Yes AND (Q2 includes ≥1 option tagged notes_bulb_size_disproportionate_to_) AND (Q3 includes ≥1 option tagged explains_distortion_areavolume_scali) AND (Q3 includes ≥1 option tagged proposes_barchart_alternative). Extra selections allowed.""
+      },
+      {
+        ""id"": ""MRC4"",
+        ""credit"": 4,
+        ""rule"": ""Q1 = a. Yes AND (Q2 includes ≥1 option tagged notes_bulb_size_disproportionate_to_) AND [ (Q3 includes ≥1 option tagged states_that_400_is_half_of_800_but_t OR missing_2018_trend_hidden) OR (Q3 includes explains_distortion_areavolume_scali BUT does not include proposes_barchart_alternative) ]""
+      },
+      {
+        ""id"": ""MRC3"",
+        ""credit"": 3,
+        ""rule"": ""Q1 = a. Yes AND (Q2 includes option tagged mention_picture_size) AND (Q2 does NOT include any notes_bulb_size_disproportionate_to_) AND (Q3 includes option tagged only_says_its_confusing_because_of_s) AND (Q3 does NOT include explains_distortion_areavolume_scali).""
+      },
+      {
+        ""id"": ""MRC2"",
+        ""credit"": 2,
+        ""rule"": ""Q1 = a. Yes AND (Q2 includes no picture‑size tags: neither notes_bulb_size_disproportionate_to_ nor mention_picture_size) AND (Q2 includes ≥1 distractor such as mention_something_other_than_picture, axis_zero_misconception, alignment_legibility_surface) AND (Q3 selects no MRC4/5 reasons; i.e., contains only incorrect reasons or none).""
+      },
+      {
+        ""id"": ""MRC1"",
+        ""credit"": 1,
+        ""rule"": ""Q1 = b. No AND (Q2 includes says_numbers_are_shown or similar) AND (Q3 includes claims_theres_no_problem_since_numbe).""
+      },
+      {
+        ""id"": ""MRC0"",
+        ""credit"": 0,
+        ""rule"": ""No selections or responses that do not fit any rule above (including off‑task or contradictory with no valid selections).""
+      }
+    ],
+    ""notes"": ""Rules mirror the original CR mapping: MRC5 requires both explanation of the distortion and an appropriate alternative; MRC4 requires identifying the mismatch (half vs. visual) or noting hidden context; MRC3 captures vague size mentions; MRC2 captures surface‑feature comments; MRC1 corresponds to rejecting the claim because numbers are printed. Over‑selection of distractors does not lower level unless it prevents meeting a higher‑level rule.""
+  },
+  ""note"": ""Difficulty is targeted by making multiple correct selections required and by including near‑miss distractors keyed to common misconceptions (numbers printed → no problem; missing 2018; axis‑zero). Correct options are homogeneous (features/justifications) and focused on the encoding choice (icon area) to preserve MRC construct alignment.""
+}"
+Electricity,b. No,"{""stem"": ""You chose No. Which brief reasons support the claim that the graph is not misleading? Select all that apply."", ""options"": [{""text"": ""The exact values (800 and 400) are printed on the figure."", ""key"": true, ""rationale"": ""Treats printed numbers as sufficient; focuses on labels rather than how visuals encode data (MRC1/2A)."", ""misconception_tag"": ""says_numbers_are_shown""}, {""text"": ""Axes and units are clearly labeled, so readers can read the values directly."", ""key"": true, ""rationale"": ""Assumes clear labels prevent misinterpretation; ignores representational distortion (MRC1/2A)."", ""misconception_tag"": ""appeal_to_labels_as_truth""}, {""text"": ""The lightbulb images are just decoration and don’t affect the data being shown."", ""key"": true, ""rationale"": ""Dismisses the encoding role of icons; aligns with the No stance (MRC1)."", ""misconception_tag"": ""ignores_icon_distortion""}, {""text"": ""The graphic correctly shows that 400 is half of 800."", ""key"": false, ""rationale"": ""Asserts accuracy without evaluating how area scaling works; not the targeted MRC1 reason of relying on printed numbers."", ""misconception_tag"": ""assumes_correct_icon_scaling""}, {""text"": ""Omitting 2018 is fine because the point is to compare 2017 and 2019 only."", ""key"": false, ""rationale"": ""Minimizes missing context; does not provide the MRC1 numbers-only justification."", ""misconception_tag"": ""minimizes_missing_year""}, {""text"": ""The bulb sizes exaggerate the difference between 800 and 400."", ""key"": false, ""rationale"": ""This recognizes a misleading visual (area scaling); contradicts the No stance and reflects higher-level MRC4–5 reasoning."", ""misconception_tag"": ""explains_distortion_areavolume_scaling""}]}","{""stem"": ""You chose No. Which statements best justify that the graph is not misleading? Select all that apply."", ""options"": [{""text"": ""Because the actual numbers are written on the display, readers can rely on them regardless of picture size."", ""key"": true, ""rationale"": ""Core MRC1 justification: printed numerals trump the visual encoding."", ""misconception_tag"": ""claims_theres_no_problem_since_numbers_are_printed""}, {""text"": ""With labeled axes and units, a chart cannot mislead; the important information is the numbers."", ""key"": true, ""rationale"": ""Overgeneralizes that labels prevent deception; ignores how representation can distort (MRC1)."", ""misconception_tag"": ""labels_prevent_misleading_overgeneralization""}, {""text"": ""The goal is simply to show a drop from 800 to 400, and the graphic communicates that drop."", ""key"": true, ""rationale"": ""Purpose-only defense that sidesteps representational choices; still MRC1-level reasoning."", ""misconception_tag"": ""purpose_overrides_accuracy""}, {""text"": ""Using different-sized icons encodes area, which exaggerates differences; a basic bar chart would be more accurate."", ""key"": false, ""rationale"": ""Identifies the area-scaling distortion and proposes an alternative; reflects MRC5 reasoning."", ""misconception_tag"": ""explains_distortion_areavolume_scaling""}, {""text"": ""Not showing 2018 hides how the change happened, so the figure could mislead about the pattern."", ""key"": false, ""rationale"": ""Points out hidden information/context; contrary to No and aligns with MRC4 reasoning about what is shown/hidden."", ""misconception_tag"": ""states_that_400_is_half_of_800_but_t""}, {""text"": ""The 2019 bulb is less than half the area of the 2017 bulb, so the visual distorts the 2:1 ratio."", ""key"": false, ""rationale"": ""Accurately notes mismatch between numeric ratio and icon areas; contradicts No (MRC4–5)."", ""misconception_tag"": ""notes_bulb_size_disproportionate_to_""}]}","{""waypoints"": [{""id"": ""MRC1"", ""credit"": 1, ""rule"": ""Q1=b. No AND (Q2 selections include any of {1,2,3}) AND (Q3 selections include any of {1,2,3}) AND (Q3 selections include none of {4,5,6}) AND (Q2 selections include none of {6})""}, {""id"": ""MRC0"", ""credit"": 0, ""rule"": ""All other response patterns (including choosing any contradictory options listed above or not choosing at least one keyed option in both Q2 and Q3).""}], ""notes"": ""This mirrors the CR guide: for Q1=No, award credit only when the examinee justifies the No stance by relying on printed numbers/labels and does not notice visual distortion. Any recognition of misleading features or inconsistent selections → MRC0.""}","Difficulty is kept low to align with the original MRC1 target for the No path. Distractors include expert critiques (area-scaling, hidden year) to penalize inconsistent reasoning and to differentiate examinees who actually recognize the misleading features (who should not receive MRC1 credit under the No choice). Options are concise, homogeneous, and avoid cueing.","{
+  ""q1_choice"": ""b. No"",
+  ""q2_item"": {
+    ""stem"": ""You chose No. Which brief reasons support the claim that the graph is not misleading? Select all that apply."",
+    ""options"": [
+      {
+        ""text"": ""The exact values (800 and 400) are printed on the figure."",
+        ""key"": true,
+        ""rationale"": ""Treats printed numbers as sufficient; focuses on labels rather than how visuals encode data (MRC1/2A)."",
+        ""misconception_tag"": ""says_numbers_are_shown""
+      },
+      {
+        ""text"": ""Axes and units are clearly labeled, so readers can read the values directly."",
+        ""key"": true,
+        ""rationale"": ""Assumes clear labels prevent misinterpretation; ignores representational distortion (MRC1/2A)."",
+        ""misconception_tag"": ""appeal_to_labels_as_truth""
+      },
+      {
+        ""text"": ""The lightbulb images are just decoration and don’t affect the data being shown."",
+        ""key"": true,
+        ""rationale"": ""Dismisses the encoding role of icons; aligns with the No stance (MRC1)."",
+        ""misconception_tag"": ""ignores_icon_distortion""
+      },
+      {
+        ""text"": ""The graphic correctly shows that 400 is half of 800."",
+        ""key"": false,
+        ""rationale"": ""Asserts accuracy without evaluating how area scaling works; not the targeted MRC1 reason of relying on printed numbers."",
+        ""misconception_tag"": ""assumes_correct_icon_scaling""
+      },
+      {
+        ""text"": ""Omitting 2018 is fine because the point is to compare 2017 and 2019 only."",
+        ""key"": false,
+        ""rationale"": ""Minimizes missing context; does not provide the MRC1 numbers-only justification."",
+        ""misconception_tag"": ""minimizes_missing_year""
+      },
+      {
+        ""text"": ""The bulb sizes exaggerate the difference between 800 and 400."",
+        ""key"": false,
+        ""rationale"": ""This recognizes a misleading visual (area scaling); contradicts the No stance and reflects higher-level MRC4–5 reasoning."",
+        ""misconception_tag"": ""explains_distortion_areavolume_scaling""
+      }
+    ]
+  },
+  ""q3_item"": {
+    ""stem"": ""You chose No. Which statements best justify that the graph is not misleading? Select all that apply."",
+    ""options"": [
+      {
+        ""text"": ""Because the actual numbers are written on the display, readers can rely on them regardless of picture size."",
+        ""key"": true,
+        ""rationale"": ""Core MRC1 justification: printed numerals trump the visual encoding."",
+        ""misconception_tag"": ""claims_theres_no_problem_since_numbers_are_printed""
+      },
+      {
+        ""text"": ""With labeled axes and units, a chart cannot mislead; the important information is the numbers."",
+        ""key"": true,
+        ""rationale"": ""Overgeneralizes that labels prevent deception; ignores how representation can distort (MRC1)."",
+        ""misconception_tag"": ""labels_prevent_misleading_overgeneralization""
+      },
+      {
+        ""text"": ""The goal is simply to show a drop from 800 to 400, and the graphic communicates that drop."",
+        ""key"": true,
+        ""rationale"": ""Purpose-only defense that sidesteps representational choices; still MRC1-level reasoning."",
+        ""misconception_tag"": ""purpose_overrides_accuracy""
+      },
+      {
+        ""text"": ""Using different-sized icons encodes area, which exaggerates differences; a basic bar chart would be more accurate."",
+        ""key"": false,
+        ""rationale"": ""Identifies the area-scaling distortion and proposes an alternative; reflects MRC5 reasoning."",
+        ""misconception_tag"": ""explains_distortion_areavolume_scaling""
+      },
+      {
+        ""text"": ""Not showing 2018 hides how the change happened, so the figure could mislead about the pattern."",
+        ""key"": false,
+        ""rationale"": ""Points out hidden information/context; contrary to No and aligns with MRC4 reasoning about what is shown/hidden."",
+        ""misconception_tag"": ""states_that_400_is_half_of_800_but_t""
+      },
+      {
+        ""text"": ""The 2019 bulb is less than half the area of the 2017 bulb, so the visual distorts the 2:1 ratio."",
+        ""key"": false,
+        ""rationale"": ""Accurately notes mismatch between numeric ratio and icon areas; contradicts No (MRC4–5)."",
+        ""misconception_tag"": ""notes_bulb_size_disproportionate_to_""
+      }
+    ]
+  },
+  ""scoring_guide"": {
+    ""waypoints"": [
+      {
+        ""id"": ""MRC1"",
+        ""credit"": 1,
+        ""rule"": ""Q1=b. No AND (Q2 selections include any of {1,2,3}) AND (Q3 selections include any of {1,2,3}) AND (Q3 selections include none of {4,5,6}) AND (Q2 selections include none of {6})""
+      },
+      {
+        ""id"": ""MRC0"",
+        ""credit"": 0,
+        ""rule"": ""All other response patterns (including choosing any contradictory options listed above or not choosing at least one keyed option in both Q2 and Q3).""
+      }
+    ],
+    ""notes"": ""This mirrors the CR guide: for Q1=No, award credit only when the examinee justifies the No stance by relying on printed numbers/labels and does not notice visual distortion. Any recognition of misleading features or inconsistent selections → MRC0.""
+  },
+  ""note"": ""Difficulty is kept low to align with the original MRC1 target for the No path. Distractors include expert critiques (area-scaling, hidden year) to penalize inconsistent reasoning and to differentiate examinees who actually recognize the misleading features (who should not receive MRC1 credit under the No choice). Options are concise, homogeneous, and avoid cueing.""
+}"
+Sandwich,a. Yes,"{""stem"": ""Which specific feature(s) of the display make it most misleading? Select ALL that apply."", ""options"": [{""text"": ""The burger icons are scaled in both height and width, so their overall size (area/volume) grows faster than the sales numbers."", ""key"": true, ""rationale"": ""Correct. Identifies the core misleading feature: encoding magnitude by area/volume rather than aligned length. Reflects MRC5 reasoning about how mark properties map to quantity."", ""misconception_tag"": null}, {""text"": ""The display uses large pictograph icons instead of marks where aligned length/position encodes value."", ""key"": true, ""rationale"": ""Correct. Names the non-standard icon-based encoding that leads viewers to read area, a known source of exaggeration. MRC5 (linking mark choice to perception)."", ""misconception_tag"": null}, {""text"": ""The y-axis does not start at zero."", ""key"": false, ""rationale"": ""Incorrect. In the given display the axis includes zero; this critique misreads the scale. Reflects MRC1/2 baseline-misread misconception."", ""misconception_tag"": ""assumes_nonzero_baseline""}, {""text"": ""The numbers 4000 and 8000 are printed above the pictures."", ""key"": false, ""rationale"": ""Incorrect. Printing numbers does not cause the mislead; it can even mitigate it. This reflects the misconception that numbers alone remove design bias."", ""misconception_tag"": ""says_numbers_are_shown""}, {""text"": ""The picture shows a burger instead of a sandwich."", ""key"": false, ""rationale"": ""Incorrect. This is a surface/semantic issue unrelated to the quantitative distortion. MRC2 surface-feature focus."", ""misconception_tag"": ""mention_something_other_than_picture""}, {""text"": ""Only two years (2015 and 2020) are shown."", ""key"": false, ""rationale"": ""Partially relevant but not the most misleading feature for the growth claim; it hides pattern over time but not the 2× exaggeration. MRC2 listing/missing-context focus."", ""misconception_tag"": ""overweights_missing_years""}, {""text"": ""The pictures are not aligned to a common baseline, so you cannot read their heights against the y-axis."", ""key"": true, ""rationale"": ""Correct. Without a common baseline, viewers rely on overall icon size (area) rather than length/position, amplifying perceived change. MRC5 mark–scale alignment critique."", ""misconception_tag"": null}, {""text"": ""The 2020 burger appears far more than twice the size of the 2015 burger."", ""key"": true, ""rationale"": ""Correct observation of exaggeration, though it does not explain the mechanism. MRC4 noticing mismatch between numbers (2×) and visuals (>2×)."", ""misconception_tag"": null}]}","{""stem"": ""Why does this feature make the graph misleading? Select ALL statements that best justify your answer."", ""options"": [{""text"": ""Doubling the linear dimensions of a picture roughly quadruples its area (and the 3D shading suggests volume), so a 2:1 increase looks like 4–8×."", ""key"": true, ""rationale"": ""Correct. Explains the area/volume exaggeration mechanism. MRC5 trade-off explanation of encoding."", ""misconception_tag"": null}, {""text"": ""A bar chart or dot plot using aligned lengths/positions from a zero baseline would represent the 2:1 ratio faithfully."", ""key"": true, ""rationale"": ""Correct. Proposes an appropriate alternative tied to purpose and encoding properties. MRC5 display choice with rationale."", ""misconception_tag"": null}, {""text"": ""The title lacks units, which is the main reason it is misleading."", ""key"": false, ""rationale"": ""Incorrect. Units are clear from the context (sales count); the main distortion is visual scaling. MRC2 surface-feature emphasis."", ""misconception_tag"": ""focus_on_title_units""}, {""text"": ""Showing only 2015 and 2020 hides whether growth was steady or variable between those years."", ""key"": true, ""rationale"": ""Correct. Identifies information the display hides (temporal pattern) even if it is not the primary exaggeration. MRC4 shows/hides reasoning."", ""misconception_tag"": null}, {""text"": ""Because the exact numbers are printed, the design cannot mislead viewers."", ""key"": false, ""rationale"": ""Incorrect. Printed numbers do not neutralize misleading visual encodings. MRC1/low-level misconception."", ""misconception_tag"": ""claims_numbers_fix_design""}, {""text"": ""Keeping the icons the same size and mapping sales to position/height instead would reduce the exaggeration."", ""key"": true, ""rationale"": ""Correct. Suggests a principled fix (constant-size icons, encode value by aligned length/position). MRC5."", ""misconception_tag"": null}, {""text"": ""The burger artwork distracts from the data and could make people think the food size changed."", ""key"": false, ""rationale"": ""Incorrect/irrelevant to the quantitative claim. MRC2 semantic distraction."", ""misconception_tag"": ""irrelevant_semantics""}, {""text"": ""It is just confusing because the pictures are different sizes."", ""key"": false, ""rationale"": ""Too vague; does not specify how the encoding misleads. MRC3-level imprecision."", ""misconception_tag"": ""only_says_confusing_because_of_size""}]}","{""waypoints"": [{""id"": ""MRC5"", ""credit"": 3, ""rule"": ""Q1 = a. Yes AND (Q2 includes any of {1,2,7}) AND (Q3 includes 1) AND (Q3 includes any of {2,6})""}, {""id"": ""MRC4"", ""credit"": 2, ""rule"": ""Q1 = a. Yes AND (Q2 includes any of {1,2,7,8}) AND (Q3 includes any of {1,4}) AND NOT(MRC5)""}, {""id"": ""MRC3"", ""credit"": 1, ""rule"": ""Q1 = a. Yes AND (Q2 includes 8) AND (Q3 includes none of {1,2,4,6})""}, {""id"": ""MRC2"", ""credit"": 1, ""rule"": ""Q1 = a. Yes AND (Q2 includes none of {1,2,7,8}) AND (Q3 includes none of {1,2,4,6})""}, {""id"": ""MRC0"", ""credit"": 0, ""rule"": ""All other response patterns (including blank selections).""}], ""notes"": ""SATA scoring uses conjunctive rules to mirror CR partial credit: MRC5 requires both mechanism (area/volume exaggeration) and a justified alternative; MRC4 credits identifying the mismatch or what is hidden; MRC3 credits vague size-based concern; MRC2 credits only surface-feature comments.""}","Difficulty is preserved by requiring mechanism + remedy for top credit and by using plausible distractors tied to real misconceptions (non-zero baseline, 'numbers fix bias', surface semantics, missing-years overemphasis). Options are homogeneous (display features for Q2, justifications/alternatives for Q3) and avoid verbal cues.","{
+  ""q1_choice"": ""a. Yes"",
+  ""q2_item"": {
+    ""stem"": ""Which specific feature(s) of the display make it most misleading? Select ALL that apply."",
+    ""options"": [
+      {
+        ""text"": ""The burger icons are scaled in both height and width, so their overall size (area/volume) grows faster than the sales numbers."",
+        ""key"": true,
+        ""rationale"": ""Correct. Identifies the core misleading feature: encoding magnitude by area/volume rather than aligned length. Reflects MRC5 reasoning about how mark properties map to quantity."",
+        ""misconception_tag"": null
+      },
+      {
+        ""text"": ""The display uses large pictograph icons instead of marks where aligned length/position encodes value."",
+        ""key"": true,
+        ""rationale"": ""Correct. Names the non-standard icon-based encoding that leads viewers to read area, a known source of exaggeration. MRC5 (linking mark choice to perception)."",
+        ""misconception_tag"": null
+      },
+      {
+        ""text"": ""The y-axis does not start at zero."",
+        ""key"": false,
+        ""rationale"": ""Incorrect. In the given display the axis includes zero; this critique misreads the scale. Reflects MRC1/2 baseline-misread misconception."",
+        ""misconception_tag"": ""assumes_nonzero_baseline""
+      },
+      {
+        ""text"": ""The numbers 4000 and 8000 are printed above the pictures."",
+        ""key"": false,
+        ""rationale"": ""Incorrect. Printing numbers does not cause the mislead; it can even mitigate it. This reflects the misconception that numbers alone remove design bias."",
+        ""misconception_tag"": ""says_numbers_are_shown""
+      },
+      {
+        ""text"": ""The picture shows a burger instead of a sandwich."",
+        ""key"": false,
+        ""rationale"": ""Incorrect. This is a surface/semantic issue unrelated to the quantitative distortion. MRC2 surface-feature focus."",
+        ""misconception_tag"": ""mention_something_other_than_picture""
+      },
+      {
+        ""text"": ""Only two years (2015 and 2020) are shown."",
+        ""key"": false,
+        ""rationale"": ""Partially relevant but not the most misleading feature for the growth claim; it hides pattern over time but not the 2× exaggeration. MRC2 listing/missing-context focus."",
+        ""misconception_tag"": ""overweights_missing_years""
+      },
+      {
+        ""text"": ""The pictures are not aligned to a common baseline, so you cannot read their heights against the y-axis."",
+        ""key"": true,
+        ""rationale"": ""Correct. Without a common baseline, viewers rely on overall icon size (area) rather than length/position, amplifying perceived change. MRC5 mark–scale alignment critique."",
+        ""misconception_tag"": null
+      },
+      {
+        ""text"": ""The 2020 burger appears far more than twice the size of the 2015 burger."",
+        ""key"": true,
+        ""rationale"": ""Correct observation of exaggeration, though it does not explain the mechanism. MRC4 noticing mismatch between numbers (2×) and visuals (>2×)."",
+        ""misconception_tag"": null
+      }
+    ]
+  },
+  ""q3_item"": {
+    ""stem"": ""Why does this feature make the graph misleading? Select ALL statements that best justify your answer."",
+    ""options"": [
+      {
+        ""text"": ""Doubling the linear dimensions of a picture roughly quadruples its area (and the 3D shading suggests volume), so a 2:1 increase looks like 4–8×."",
+        ""key"": true,
+        ""rationale"": ""Correct. Explains the area/volume exaggeration mechanism. MRC5 trade-off explanation of encoding."",
+        ""misconception_tag"": null
+      },
+      {
+        ""text"": ""A bar chart or dot plot using aligned lengths/positions from a zero baseline would represent the 2:1 ratio faithfully."",
+        ""key"": true,
+        ""rationale"": ""Correct. Proposes an appropriate alternative tied to purpose and encoding properties. MRC5 display choice with rationale."",
+        ""misconception_tag"": null
+      },
+      {
+        ""text"": ""The title lacks units, which is the main reason it is misleading."",
+        ""key"": false,
+        ""rationale"": ""Incorrect. Units are clear from the context (sales count); the main distortion is visual scaling. MRC2 surface-feature emphasis."",
+        ""misconception_tag"": ""focus_on_title_units""
+      },
+      {
+        ""text"": ""Showing only 2015 and 2020 hides whether growth was steady or variable between those years."",
+        ""key"": true,
+        ""rationale"": ""Correct. Identifies information the display hides (temporal pattern) even if it is not the primary exaggeration. MRC4 shows/hides reasoning."",
+        ""misconception_tag"": null
+      },
+      {
+        ""text"": ""Because the exact numbers are printed, the design cannot mislead viewers."",
+        ""key"": false,
+        ""rationale"": ""Incorrect. Printed numbers do not neutralize misleading visual encodings. MRC1/low-level misconception."",
+        ""misconception_tag"": ""claims_numbers_fix_design""
+      },
+      {
+        ""text"": ""Keeping the icons the same size and mapping sales to position/height instead would reduce the exaggeration."",
+        ""key"": true,
+        ""rationale"": ""Correct. Suggests a principled fix (constant-size icons, encode value by aligned length/position). MRC5."",
+        ""misconception_tag"": null
+      },
+      {
+        ""text"": ""The burger artwork distracts from the data and could make people think the food size changed."",
+        ""key"": false,
+        ""rationale"": ""Incorrect/irrelevant to the quantitative claim. MRC2 semantic distraction."",
+        ""misconception_tag"": ""irrelevant_semantics""
+      },
+      {
+        ""text"": ""It is just confusing because the pictures are different sizes."",
+        ""key"": false,
+        ""rationale"": ""Too vague; does not specify how the encoding misleads. MRC3-level imprecision."",
+        ""misconception_tag"": ""only_says_confusing_because_of_size""
+      }
+    ]
+  },
+  ""scoring_guide"": {
+    ""waypoints"": [
+      {
+        ""id"": ""MRC5"",
+        ""credit"": 3,
+        ""rule"": ""Q1 = a. Yes AND (Q2 includes any of {1,2,7}) AND (Q3 includes 1) AND (Q3 includes any of {2,6})""
+      },
+      {
+        ""id"": ""MRC4"",
+        ""credit"": 2,
+        ""rule"": ""Q1 = a. Yes AND (Q2 includes any of {1,2,7,8}) AND (Q3 includes any of {1,4}) AND NOT(MRC5)""
+      },
+      {
+        ""id"": ""MRC3"",
+        ""credit"": 1,
+        ""rule"": ""Q1 = a. Yes AND (Q2 includes 8) AND (Q3 includes none of {1,2,4,6})""
+      },
+      {
+        ""id"": ""MRC2"",
+        ""credit"": 1,
+        ""rule"": ""Q1 = a. Yes AND (Q2 includes none of {1,2,7,8}) AND (Q3 includes none of {1,2,4,6})""
+      },
+      {
+        ""id"": ""MRC0"",
+        ""credit"": 0,
+        ""rule"": ""All other response patterns (including blank selections).""
+      }
+    ],
+    ""notes"": ""SATA scoring uses conjunctive rules to mirror CR partial credit: MRC5 requires both mechanism (area/volume exaggeration) and a justified alternative; MRC4 credits identifying the mismatch or what is hidden; MRC3 credits vague size-based concern; MRC2 credits only surface-feature comments.""
+  },
+  ""note"": ""Difficulty is preserved by requiring mechanism + remedy for top credit and by using plausible distractors tied to real misconceptions (non-zero baseline, 'numbers fix bias', surface semantics, missing-years overemphasis). Options are homogeneous (display features for Q2, justifications/alternatives for Q3) and avoid verbal cues.""
+}"
+Sandwich,b. No,"{""stem"": ""You answered No. Which specific features of the display support the idea that it is not misleading? Select ALL that apply."", ""options"": [{""text"": ""The exact values (4000 and 8000) are printed on the chart."", ""key"": true, ""rationale"": ""Treats printed numbers as sufficient evidence of accuracy and ignores how visuals may distort (MRC1 reasoning)."", ""misconception_tag"": ""says_numbers_are_shown""}, {""text"": ""The 2:1 increase shown by the numbers is correct, so the pictures don’t affect accuracy."", ""key"": true, ""rationale"": ""Assumes correctness of numerals guarantees a fair display, discounting the role of representation (MRC1)."", ""misconception_tag"": ""claims_theres_no_problem_since_numbers_present""}, {""text"": ""The burger icons are scaled correctly to represent the change."", ""key"": false, ""rationale"": ""Incorrect: the icons appear scaled by area, which overstates the change; this is a classic source of distortion (higher-level MRC4/5 idea that contradicts No)."", ""misconception_tag"": ""assumes_icon_scaling_is_linear_and_correct""}, {""text"": ""The y‑axis starts at zero, so the design cannot exaggerate differences."", ""key"": false, ""rationale"": ""Incorrect: starting at zero does not prevent area/icon distortion (superficial rule; ignores representation effects)."", ""misconception_tag"": ""zero_baseline_suffices""}, {""text"": ""Using pictures instead of bars simply makes the chart engaging, not misleading."", ""key"": false, ""rationale"": ""Incorrect: aesthetics do not ensure accuracy; pictographs can systematically bias perception."", ""misconception_tag"": ""aesthetic_equals_accuracy""}, {""text"": ""The years and sales units are labeled, which ensures the display is accurate."", ""key"": false, ""rationale"": ""Incorrect/insufficient: correct labels map marks to variables (MRC2A) but do not address distortion from icon scaling."", ""misconception_tag"": ""labels_ensure_accuracy""}]}","{""stem"": ""Why do those features mean the graph is not misleading? Select ALL that apply."", ""options"": [{""text"": ""Because the exact numbers are printed, viewers can rely on them; the icon sizes cannot mislead."", ""key"": true, ""rationale"": ""Centers the judgment on printed numerals and dismisses visual effects (MRC1 justification)."", ""misconception_tag"": ""claims_theres_no_problem_since_numbers_present""}, {""text"": ""Visual embellishments are just decoration; if the labels are correct, the chart is truthful."", ""key"": true, ""rationale"": ""Minimizes the communicative role of representation, a hallmark MRC1 stance."", ""misconception_tag"": ""visuals_dont_matter_if_numbers_present""}, {""text"": ""Even if the icons were the same size, the reader would still see a doubling, so the current icons don’t matter."", ""key"": true, ""rationale"": ""Argues that the numeric message dominates and thus discounts misperception risk (MRC1)."", ""misconception_tag"": ""minimizes_visual_impact""}, {""text"": ""Scaling icons by area makes a 2:1 change look larger; a bar chart would communicate the change more faithfully."", ""key"": false, ""rationale"": ""Explains the specific distortion and proposes an alternative—this supports Yes, not No (MRC4/5)."", ""misconception_tag"": ""explains_that_scaling_by_areavolume_exaggerates""}, {""text"": ""Starting the axis at zero and adding gridlines guarantees that the chart cannot mislead."", ""key"": false, ""rationale"": ""Incorrect overgeneralization; these features do not prevent pictograph distortion."", ""misconception_tag"": ""zero_and_gridlines_guarantee_honesty""}, {""text"": ""A better design would keep icons the same size and annotate counts, or use bars with a zero baseline."", ""key"": false, ""rationale"": ""Proposes corrective redesign—evidence for Yes (MRC4/5), not for No."", ""misconception_tag"": ""proposes_alternative_display""}]}","{""waypoints"": [{""id"": ""MRC1"", ""credit"": 1, ""rule"": ""Award MRC1 if and only if Q1=b. No AND (Q2 selection includes ≥1 keyed option from {Q2[1], Q2[2]}) AND (Q3 selection includes ≥1 keyed option from {Q3[1], Q3[2], Q3[3]}) AND no contradictory selections are made (i.e., none of {Q2[3], Q2[4], Q2[5]} or {Q3[4], Q3[6]} are selected). Non-keyed, non-contradictory picks (e.g., Q2[6], Q3[5]) are allowed without penalty."", ""alignment"": ""Matches CR mapping for MRC1: Q1=No + says numbers are shown + claims no problem because numbers/labels are present.""}, {""id"": ""MRC0"", ""credit"": 0, ""rule"": ""All other response patterns with Q1=b. No (including missing selections, or any selection that includes a contradictory option) score MRC0."", ""alignment"": ""No meaningful or consistent justification for the No claim.""}], ""notes"": ""This bundle mirrors the CR guide where only MRC1 is attainable with Q1=No; higher levels require Q1=Yes. The SATA scoring uses conjunctive keying and disallows contradictions to preserve the CR consistency constraint. Suitable for PCM/partial-credit models with 2 score points (0,1).""}","Targeted difficulty: low-to-moderate, as examinees must consistently defend a No claim with number-centric justifications while avoiding higher-level (Yes) reasoning. Distractors deliberately include accurate MRC4/5 rationales (area scaling, alternative displays) to expose inconsistency, plus surface-feature fallacies (zero baseline, labels/engagement) reflecting common misconceptions.","{
+  ""q1_choice"": ""b. No"",
+  ""q2_item"": {
+    ""stem"": ""You answered No. Which specific features of the display support the idea that it is not misleading? Select ALL that apply."",
+    ""options"": [
+      {
+        ""text"": ""The exact values (4000 and 8000) are printed on the chart."",
+        ""key"": true,
+        ""rationale"": ""Treats printed numbers as sufficient evidence of accuracy and ignores how visuals may distort (MRC1 reasoning)."",
+        ""misconception_tag"": ""says_numbers_are_shown""
+      },
+      {
+        ""text"": ""The 2:1 increase shown by the numbers is correct, so the pictures don’t affect accuracy."",
+        ""key"": true,
+        ""rationale"": ""Assumes correctness of numerals guarantees a fair display, discounting the role of representation (MRC1)."",
+        ""misconception_tag"": ""claims_theres_no_problem_since_numbers_present""
+      },
+      {
+        ""text"": ""The burger icons are scaled correctly to represent the change."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: the icons appear scaled by area, which overstates the change; this is a classic source of distortion (higher-level MRC4/5 idea that contradicts No)."",
+        ""misconception_tag"": ""assumes_icon_scaling_is_linear_and_correct""
+      },
+      {
+        ""text"": ""The y‑axis starts at zero, so the design cannot exaggerate differences."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: starting at zero does not prevent area/icon distortion (superficial rule; ignores representation effects)."",
+        ""misconception_tag"": ""zero_baseline_suffices""
+      },
+      {
+        ""text"": ""Using pictures instead of bars simply makes the chart engaging, not misleading."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: aesthetics do not ensure accuracy; pictographs can systematically bias perception."",
+        ""misconception_tag"": ""aesthetic_equals_accuracy""
+      },
+      {
+        ""text"": ""The years and sales units are labeled, which ensures the display is accurate."",
+        ""key"": false,
+        ""rationale"": ""Incorrect/insufficient: correct labels map marks to variables (MRC2A) but do not address distortion from icon scaling."",
+        ""misconception_tag"": ""labels_ensure_accuracy""
+      }
+    ]
+  },
+  ""q3_item"": {
+    ""stem"": ""Why do those features mean the graph is not misleading? Select ALL that apply."",
+    ""options"": [
+      {
+        ""text"": ""Because the exact numbers are printed, viewers can rely on them; the icon sizes cannot mislead."",
+        ""key"": true,
+        ""rationale"": ""Centers the judgment on printed numerals and dismisses visual effects (MRC1 justification)."",
+        ""misconception_tag"": ""claims_theres_no_problem_since_numbers_present""
+      },
+      {
+        ""text"": ""Visual embellishments are just decoration; if the labels are correct, the chart is truthful."",
+        ""key"": true,
+        ""rationale"": ""Minimizes the communicative role of representation, a hallmark MRC1 stance."",
+        ""misconception_tag"": ""visuals_dont_matter_if_numbers_present""
+      },
+      {
+        ""text"": ""Even if the icons were the same size, the reader would still see a doubling, so the current icons don’t matter."",
+        ""key"": true,
+        ""rationale"": ""Argues that the numeric message dominates and thus discounts misperception risk (MRC1)."",
+        ""misconception_tag"": ""minimizes_visual_impact""
+      },
+      {
+        ""text"": ""Scaling icons by area makes a 2:1 change look larger; a bar chart would communicate the change more faithfully."",
+        ""key"": false,
+        ""rationale"": ""Explains the specific distortion and proposes an alternative—this supports Yes, not No (MRC4/5)."",
+        ""misconception_tag"": ""explains_that_scaling_by_areavolume_exaggerates""
+      },
+      {
+        ""text"": ""Starting the axis at zero and adding gridlines guarantees that the chart cannot mislead."",
+        ""key"": false,
+        ""rationale"": ""Incorrect overgeneralization; these features do not prevent pictograph distortion."",
+        ""misconception_tag"": ""zero_and_gridlines_guarantee_honesty""
+      },
+      {
+        ""text"": ""A better design would keep icons the same size and annotate counts, or use bars with a zero baseline."",
+        ""key"": false,
+        ""rationale"": ""Proposes corrective redesign—evidence for Yes (MRC4/5), not for No."",
+        ""misconception_tag"": ""proposes_alternative_display""
+      }
+    ]
+  },
+  ""scoring_guide"": {
+    ""waypoints"": [
+      {
+        ""id"": ""MRC1"",
+        ""credit"": 1,
+        ""rule"": ""Award MRC1 if and only if Q1=b. No AND (Q2 selection includes ≥1 keyed option from {Q2[1], Q2[2]}) AND (Q3 selection includes ≥1 keyed option from {Q3[1], Q3[2], Q3[3]}) AND no contradictory selections are made (i.e., none of {Q2[3], Q2[4], Q2[5]} or {Q3[4], Q3[6]} are selected). Non-keyed, non-contradictory picks (e.g., Q2[6], Q3[5]) are allowed without penalty."",
+        ""alignment"": ""Matches CR mapping for MRC1: Q1=No + says numbers are shown + claims no problem because numbers/labels are present.""
+      },
+      {
+        ""id"": ""MRC0"",
+        ""credit"": 0,
+        ""rule"": ""All other response patterns with Q1=b. No (including missing selections, or any selection that includes a contradictory option) score MRC0."",
+        ""alignment"": ""No meaningful or consistent justification for the No claim.""
+      }
+    ],
+    ""notes"": ""This bundle mirrors the CR guide where only MRC1 is attainable with Q1=No; higher levels require Q1=Yes. The SATA scoring uses conjunctive keying and disallows contradictions to preserve the CR consistency constraint. Suitable for PCM/partial-credit models with 2 score points (0,1).""
+  },
+  ""note"": ""Targeted difficulty: low-to-moderate, as examinees must consistently defend a No claim with number-centric justifications while avoiding higher-level (Yes) reasoning. Distractors deliberately include accurate MRC4/5 rationales (area scaling, alternative displays) to expose inconsistency, plus surface-feature fallacies (zero baseline, labels/engagement) reflecting common misconceptions.""
+}"
+PlayingSports_S,"a. Yes, it is statistically significant","{""stem"": ""Select all brief reasons that justify answering “Yes, it is statistically significant” for this study."", ""options"": [{""text"": ""p = 0.025 is less than the conventional α = 0.05 (two-tailed), so we reject the null of no mean difference."", ""key"": true, ""rationale"": ""Correct statistical inference (FoI3S): compares p to α and draws the appropriate decision."", ""misconception_tag"": null}, {""text"": ""A 95% confidence interval for the mean difference would not include 0 if p = 0.025 (two-tailed)."", ""key"": true, ""rationale"": ""Correct statistical linkage (FoI3S): p < .05 implies a 95% CI that excludes 0."", ""misconception_tag"": null}, {""text"": ""With n = 1,500 per group, even tiny differences can yield small p-values; significance alone doesn’t imply a large effect."", ""key"": true, ""rationale"": ""Integration cue (FoI4): acknowledges the impact of large sample size on p-values."", ""misconception_tag"": null}, {""text"": ""Statistical significance does not guarantee practical importance; the $500 magnitude should also be evaluated."", ""key"": true, ""rationale"": ""Integration cue (FoI4): distinguishes statistical from practical significance."", ""misconception_tag"": null}, {""text"": ""p = 0.025 means there is a 97.5% chance that athletes earn more than non-athletes."", ""key"": false, ""rationale"": ""Incorrect (FoI2S): treats p as the probability the claim is true."", ""misconception_tag"": ""p_as_prob_of_claim""}, {""text"": ""The $500 gap is big enough by itself to prove significance."", ""key"": false, ""rationale"": ""Incorrect (FoI1): bases significance on subjective magnitude, not inference."", ""misconception_tag"": ""magnitude_only_reasoning""}, {""text"": ""We cannot tell if it is significant without knowing the standard deviations."", ""key"": false, ""rationale"": ""Incorrect (FoI2S): significance can be determined from the reported p-value."", ""misconception_tag"": ""need_sd_despite_p_given""}]}","{""stem"": ""Select all statements that provide deeper, contextual reasoning about this result (integrating statistical and practical significance for decision making)."", ""options"": [{""text"": ""The effect is statistically detectable, but at about $500 on ~$62,500 (≈0.8%), it may be practically small depending on policy thresholds."", ""key"": true, ""rationale"": ""Integrated reasoning (FoI4): connects magnitude in context to practical thresholds."", ""misconception_tag"": null}, {""text"": ""Large samples can make tiny effects statistically significant; we should report an effect size (e.g., percent difference or standardized mean difference) to assess practical importance."", ""key"": true, ""rationale"": ""Integrated reasoning (FoI4): recognizes sample-size effects and calls for effect size."", ""misconception_tag"": null}, {""text"": ""A 95% CI for the mean difference would exclude 0 but likely be near it; comparing the CI to a meaningful threshold clarifies practical relevance."", ""key"": true, ""rationale"": ""Integrated reasoning (FoI4): uses CI location/width relative to a substantive threshold."", ""misconception_tag"": null}, {""text"": ""Decision-making should weigh costs, benefits, and stakeholder goals; a statistically significant but tiny effect might not warrant action."", ""key"": true, ""rationale"": ""Integrated reasoning (FoI4): ties inference to decision context."", ""misconception_tag"": null}, {""text"": ""Because p = 0.025, we can conclude with 97.5% certainty that athletes in the population earn at least $500 more."", ""key"": false, ""rationale"": ""Incorrect (FoI2S): confuses p-value with the probability of a minimum effect in the population."", ""misconception_tag"": ""p_confidence_at_least_effect""}, {""text"": ""Statistical significance implies the effect is large in real-world terms."", ""key"": false, ""rationale"": ""Incorrect (FoI2S): equates statistical and practical significance."", ""misconception_tag"": ""sig_implies_large""}, {""text"": ""With total N = 3,000, the probability of a Type I error is essentially zero."", ""key"": false, ""rationale"": ""Incorrect (FoI2S): α controls Type I error; large N does not eliminate it."", ""misconception_tag"": ""typeI_zero_bigN""}, {""text"": ""Using a two-tailed test halves the effect size; a one-tailed test would double the practical impact."", ""key"": false, ""rationale"": ""Incorrect (FoI2S): tail choice affects p, not the effect size or practical impact."", ""misconception_tag"": ""tails_change_effect_size""}]}","{""waypoints"": [{""id"": ""FoI4"", ""credit"": 3, ""rule"": ""Q1 = a.Yes AND Q2 selects ≥1 of {correct_p_lt_alpha, ci_excludes_zero} AND Q2 selects ≥1 of {large_n_inflates_sig, sig_vs_prac_distinction} AND Q3 selects ≥2 of {small_percent_diff_threshold, effect_size_needed, ci_near_zero_threshold, decision_context} AND selects none of {p_as_prob_of_claim, magnitude_only_reasoning, need_sd_despite_p_given, p_confidence_at_least_effect, sig_implies_large, typeI_zero_bigN, tails_change_effect_size}""}, {""id"": ""FoI3S"", ""credit"": 2, ""rule"": ""Q1 = a.Yes AND (Q2 selects ≥1 of {correct_p_lt_alpha, ci_excludes_zero} OR Q3 selects a CI/statistical statement without integration) AND Q2 selects 0 of {large_n_inflates_sig, sig_vs_prac_distinction} AND Q3 selects ≤1 of {small_percent_diff_threshold, effect_size_needed, ci_near_zero_threshold, decision_context} AND selects none of {p_as_prob_of_claim, magnitude_only_reasoning, need_sd_despite_p_given, p_confidence_at_least_effect, sig_implies_large, typeI_zero_bigN, tails_change_effect_size}""}, {""id"": ""FoI2S"", ""credit"": 1, ""rule"": ""Q1 = a.Yes AND (selects any of {p_as_prob_of_claim, need_sd_despite_p_given, p_confidence_at_least_effect, sig_implies_large, typeI_zero_bigN, tails_change_effect_size} OR fails to select any of {correct_p_lt_alpha, ci_excludes_zero})""}, {""id"": ""FoI1"", ""credit"": 0, ""rule"": ""Q1 = a.Yes AND selects only {magnitude_only_reasoning} and none of the correct/statistical or integration options""}, {""id"": ""FoI0"", ""credit"": 0, ""rule"": ""No selections made on Q2 and Q3""}], ""notes"": ""Tag mapping: Q2 correct/statistical = {correct_p_lt_alpha (option 1), ci_excludes_zero (option 2)}; Q2 integration = {large_n_inflates_sig (option 3), sig_vs_prac_distinction (option 4)}; Q2 misconceptions = {p_as_prob_of_claim (option 5), magnitude_only_reasoning (option 6), need_sd_despite_p_given (option 7)}. Q3 integration = {small_percent_diff_threshold (option 1), effect_size_needed (option 2), ci_near_zero_threshold (option 3), decision_context (option 4)}; Q3 misconceptions = {p_confidence_at_least_effect (option 5), sig_implies_large (option 6), typeI_zero_bigN (option 7), tails_change_effect_size (option 8)}. The scoring prioritizes integrated reasoning (FoI4) that coordinates statistical and practical significance and articulates decision implications.""}",Difficulty is held comparable to the CR version by requiring both a correct statistical warrant (p < .05) and integration selections that recognize large-n inflation and practical thresholds. Distractors target common p-value misinterpretations and magnitude-only judgments without statistical inference.,"{
+  ""q1_choice"": ""a. Yes, it is statistically significant"",
+  ""q2_item"": {
+    ""stem"": ""Select all brief reasons that justify answering “Yes, it is statistically significant” for this study."",
+    ""options"": [
+      {
+        ""text"": ""p = 0.025 is less than the conventional α = 0.05 (two-tailed), so we reject the null of no mean difference."",
+        ""key"": true,
+        ""rationale"": ""Correct statistical inference (FoI3S): compares p to α and draws the appropriate decision."",
+        ""misconception_tag"": null
+      },
+      {
+        ""text"": ""A 95% confidence interval for the mean difference would not include 0 if p = 0.025 (two-tailed)."",
+        ""key"": true,
+        ""rationale"": ""Correct statistical linkage (FoI3S): p < .05 implies a 95% CI that excludes 0."",
+        ""misconception_tag"": null
+      },
+      {
+        ""text"": ""With n = 1,500 per group, even tiny differences can yield small p-values; significance alone doesn’t imply a large effect."",
+        ""key"": true,
+        ""rationale"": ""Integration cue (FoI4): acknowledges the impact of large sample size on p-values."",
+        ""misconception_tag"": null
+      },
+      {
+        ""text"": ""Statistical significance does not guarantee practical importance; the $500 magnitude should also be evaluated."",
+        ""key"": true,
+        ""rationale"": ""Integration cue (FoI4): distinguishes statistical from practical significance."",
+        ""misconception_tag"": null
+      },
+      {
+        ""text"": ""p = 0.025 means there is a 97.5% chance that athletes earn more than non-athletes."",
+        ""key"": false,
+        ""rationale"": ""Incorrect (FoI2S): treats p as the probability the claim is true."",
+        ""misconception_tag"": ""p_as_prob_of_claim""
+      },
+      {
+        ""text"": ""The $500 gap is big enough by itself to prove significance."",
+        ""key"": false,
+        ""rationale"": ""Incorrect (FoI1): bases significance on subjective magnitude, not inference."",
+        ""misconception_tag"": ""magnitude_only_reasoning""
+      },
+      {
+        ""text"": ""We cannot tell if it is significant without knowing the standard deviations."",
+        ""key"": false,
+        ""rationale"": ""Incorrect (FoI2S): significance can be determined from the reported p-value."",
+        ""misconception_tag"": ""need_sd_despite_p_given""
+      }
+    ]
+  },
+  ""q3_item"": {
+    ""stem"": ""Select all statements that provide deeper, contextual reasoning about this result (integrating statistical and practical significance for decision making)."",
+    ""options"": [
+      {
+        ""text"": ""The effect is statistically detectable, but at about $500 on ~$62,500 (≈0.8%), it may be practically small depending on policy thresholds."",
+        ""key"": true,
+        ""rationale"": ""Integrated reasoning (FoI4): connects magnitude in context to practical thresholds."",
+        ""misconception_tag"": null
+      },
+      {
+        ""text"": ""Large samples can make tiny effects statistically significant; we should report an effect size (e.g., percent difference or standardized mean difference) to assess practical importance."",
+        ""key"": true,
+        ""rationale"": ""Integrated reasoning (FoI4): recognizes sample-size effects and calls for effect size."",
+        ""misconception_tag"": null
+      },
+      {
+        ""text"": ""A 95% CI for the mean difference would exclude 0 but likely be near it; comparing the CI to a meaningful threshold clarifies practical relevance."",
+        ""key"": true,
+        ""rationale"": ""Integrated reasoning (FoI4): uses CI location/width relative to a substantive threshold."",
+        ""misconception_tag"": null
+      },
+      {
+        ""text"": ""Decision-making should weigh costs, benefits, and stakeholder goals; a statistically significant but tiny effect might not warrant action."",
+        ""key"": true,
+        ""rationale"": ""Integrated reasoning (FoI4): ties inference to decision context."",
+        ""misconception_tag"": null
+      },
+      {
+        ""text"": ""Because p = 0.025, we can conclude with 97.5% certainty that athletes in the population earn at least $500 more."",
+        ""key"": false,
+        ""rationale"": ""Incorrect (FoI2S): confuses p-value with the probability of a minimum effect in the population."",
+        ""misconception_tag"": ""p_confidence_at_least_effect""
+      },
+      {
+        ""text"": ""Statistical significance implies the effect is large in real-world terms."",
+        ""key"": false,
+        ""rationale"": ""Incorrect (FoI2S): equates statistical and practical significance."",
+        ""misconception_tag"": ""sig_implies_large""
+      },
+      {
+        ""text"": ""With total N = 3,000, the probability of a Type I error is essentially zero."",
+        ""key"": false,
+        ""rationale"": ""Incorrect (FoI2S): α controls Type I error; large N does not eliminate it."",
+        ""misconception_tag"": ""typeI_zero_bigN""
+      },
+      {
+        ""text"": ""Using a two-tailed test halves the effect size; a one-tailed test would double the practical impact."",
+        ""key"": false,
+        ""rationale"": ""Incorrect (FoI2S): tail choice affects p, not the effect size or practical impact."",
+        ""misconception_tag"": ""tails_change_effect_size""
+      }
+    ]
+  },
+  ""scoring_guide"": {
+    ""waypoints"": [
+      {
+        ""id"": ""FoI4"",
+        ""credit"": 3,
+        ""rule"": ""Q1 = a.Yes AND Q2 selects ≥1 of {correct_p_lt_alpha, ci_excludes_zero} AND Q2 selects ≥1 of {large_n_inflates_sig, sig_vs_prac_distinction} AND Q3 selects ≥2 of {small_percent_diff_threshold, effect_size_needed, ci_near_zero_threshold, decision_context} AND selects none of {p_as_prob_of_claim, magnitude_only_reasoning, need_sd_despite_p_given, p_confidence_at_least_effect, sig_implies_large, typeI_zero_bigN, tails_change_effect_size}""
+      },
+      {
+        ""id"": ""FoI3S"",
+        ""credit"": 2,
+        ""rule"": ""Q1 = a.Yes AND (Q2 selects ≥1 of {correct_p_lt_alpha, ci_excludes_zero} OR Q3 selects a CI/statistical statement without integration) AND Q2 selects 0 of {large_n_inflates_sig, sig_vs_prac_distinction} AND Q3 selects ≤1 of {small_percent_diff_threshold, effect_size_needed, ci_near_zero_threshold, decision_context} AND selects none of {p_as_prob_of_claim, magnitude_only_reasoning, need_sd_despite_p_given, p_confidence_at_least_effect, sig_implies_large, typeI_zero_bigN, tails_change_effect_size}""
+      },
+      {
+        ""id"": ""FoI2S"",
+        ""credit"": 1,
+        ""rule"": ""Q1 = a.Yes AND (selects any of {p_as_prob_of_claim, need_sd_despite_p_given, p_confidence_at_least_effect, sig_implies_large, typeI_zero_bigN, tails_change_effect_size} OR fails to select any of {correct_p_lt_alpha, ci_excludes_zero})""
+      },
+      {
+        ""id"": ""FoI1"",
+        ""credit"": 0,
+        ""rule"": ""Q1 = a.Yes AND selects only {magnitude_only_reasoning} and none of the correct/statistical or integration options""
+      },
+      {
+        ""id"": ""FoI0"",
+        ""credit"": 0,
+        ""rule"": ""No selections made on Q2 and Q3""
+      }
+    ],
+    ""notes"": ""Tag mapping: Q2 correct/statistical = {correct_p_lt_alpha (option 1), ci_excludes_zero (option 2)}; Q2 integration = {large_n_inflates_sig (option 3), sig_vs_prac_distinction (option 4)}; Q2 misconceptions = {p_as_prob_of_claim (option 5), magnitude_only_reasoning (option 6), need_sd_despite_p_given (option 7)}. Q3 integration = {small_percent_diff_threshold (option 1), effect_size_needed (option 2), ci_near_zero_threshold (option 3), decision_context (option 4)}; Q3 misconceptions = {p_confidence_at_least_effect (option 5), sig_implies_large (option 6), typeI_zero_bigN (option 7), tails_change_effect_size (option 8)}. The scoring prioritizes integrated reasoning (FoI4) that coordinates statistical and practical significance and articulates decision implications.""
+  },
+  ""note"": ""Difficulty is held comparable to the CR version by requiring both a correct statistical warrant (p < .05) and integration selections that recognize large-n inflation and practical thresholds. Distractors target common p-value misinterpretations and magnitude-only judgments without statistical inference.""
+}"
+PlayingSports_S,"b. No, it is not statistically significant","{""stem"": ""Q2 (Short reason). Select all reasons that justify answering “No, it is not statistically significant” for p = 0.025 from a two-tailed t-test."", ""options"": [{""text"": ""We pre-specified α = 0.01; since p = 0.025 > 0.01, it is not statistically significant."", ""key"": true, ""rationale"": ""Correct: adopts a stricter, pre-committed threshold and applies it correctly (FoI3S: statistical rule use)."", ""misconception_tag"": ""provides_an_explicit_logically_consi""}, {""text"": ""We adjusted for multiple tests (e.g., Bonferroni/FDR), making the adjusted α smaller than 0.025."", ""key"": true, ""rationale"": ""Correct: recognizes multiplicity control can lower the significance threshold below p = 0.025 (FoI3S: appropriate procedure selection)."", ""misconception_tag"": ""multiple_testing_adjustment""}, {""text"": ""We used a 99% confidence standard (α = 0.01); the 99% CI for the difference would include 0."", ""key"": true, ""rationale"": ""Correct: links a stricter CI criterion to not-significant at α = 0.01 (FoI3S: CI–p equivalence)."", ""misconception_tag"": ""alpha_via_CI""}, {""text"": ""The $500 difference is small, so it cannot be statistically significant."", ""key"": false, ""rationale"": ""Incorrect: confuses practical size with statistical significance (FoI1: magnitude-only judgment)."", ""misconception_tag"": ""judgment_based_only_on_the_subjectiv""}, {""text"": ""p = 0.025 means there’s a 2.5% chance the effect is real, so we shouldn’t call it significant."", ""key"": false, ""rationale"": ""Incorrect: misinterprets p as the probability the effect is true (FoI2S: p-value misunderstanding)."", ""misconception_tag"": ""misinterprets_the_p-value_or_test_lo""}, {""text"": ""Because the test was two-tailed, we divide p by 2 to get 0.0125, which makes it not significant."", ""key"": false, ""rationale"": ""Incorrect: two-tailed p is already the reported value; halving is wrong and the conclusion is inconsistent (FoI2S: test logic error)."", ""misconception_tag"": ""misinterprets_two_tailed_p""}, {""text"": ""We cannot judge significance without knowing the sample sizes."", ""key"": false, ""rationale"": ""Incorrect: the p-value already incorporates n; besides, n is given (FoI0/FoI1: ignores provided inferential result)."", ""misconception_tag"": ""ignores_given_information""}]}","{""stem"": ""Q3 (Extended reasoning). Select all statements that provide deeper, context-aware justification for the “not statistically significant” choice and its decision implications."", ""options"": [{""text"": ""With n = 1,500 per group, even tiny effects can yield small p; using a stricter α (e.g., 0.01) helps limit false positives."", ""key"": true, ""rationale"": ""Correct: connects sample size to Type I error control and threshold choice (FoI3S → sets up integration)."", ""misconception_tag"": ""context_sensitive_alpha_large_n""}, {""text"": ""A $500 mean gap is likely trivial relative to salary variability and decision costs, so practical significance is low."", ""key"": true, ""rationale"": ""Correct: evaluates practical significance in context (FoI3P)."", ""misconception_tag"": ""practical_significance_appraisal""}, {""text"": ""A 99% CI for the mean difference would likely include 0, aligning with non-significance at α = 0.01."", ""key"": true, ""rationale"": ""Correct: ties CI interpretation to the chosen α, reinforcing the statistical claim (FoI3S)."", ""misconception_tag"": ""correct_interpretation_of_the_p-valu""}, {""text"": ""If p < 0.05, the effect is large and meaningful in this context."", ""key"": false, ""rationale"": ""Incorrect: equates statistical significance with effect magnitude (FoI2S/FoI1 misconception)."", ""misconception_tag"": ""equates_significance_with_magnitude""}, {""text"": ""With very large samples, controlling α or adjusting for multiplicity is less important."", ""key"": false, ""rationale"": ""Incorrect: large n increases power but does not obviate Type I error control (FoI2S: over-reliance on n)."", ""misconception_tag"": ""large_n_reduces_need_for_control""}, {""text"": ""Because p = 0.025 < 0.05, the effect must be large; we would ignore it only for budget reasons."", ""key"": false, ""rationale"": ""Incorrect: infers magnitude from p and divorces decision from inferential strength (FoI2S/FoI1)."", ""misconception_tag"": ""magnitude_from_p_only""}, {""text"": ""Decision-wise, act only if the analysis meets the pre-registered α = 0.01 and shows a substantively meaningful effect size upon replication."", ""key"": true, ""rationale"": ""Correct: integrates statistical threshold, replication, and practical relevance for decision-making (FoI4)."", ""misconception_tag"": ""integration_of_stat_and_practical""}]}","{""waypoints"": [{""id"": ""FoI4"", ""credit"": 3, ""rule"": ""Q1=b. No; AND (Q2 selects ≥1 of {Q2.1,Q2.2,Q2.3}); AND (Q3 selects ≥1 of {Q3.1,Q3.3} AND ≥1 of {Q3.2,Q3.7}).""}, {""id"": ""FoI3S"", ""credit"": 2, ""rule"": ""Q1=b. No; AND (Q2 selects ≥1 of {Q2.1,Q2.2,Q2.3}); AND (Q3 selects ≥1 of {Q3.1,Q3.3}) AND (Q3 selects none of {Q3.2,Q3.7}).""}, {""id"": ""FoI2S"", ""credit"": 1, ""rule"": ""Q1=b. No; AND [ (Q2 selects none of {Q2.1,Q2.2,Q2.3} AND selects ≥1 of {Q2.4,Q2.5,Q2.6,Q2.7}) OR (Q2 selects ≥1 of {Q2.1,Q2.2,Q2.3} AND Q3 selects none of {Q3.1,Q3.2,Q3.3,Q3.7}) ].""}, {""id"": ""FoI1"", ""credit"": 0, ""rule"": ""Q1=b. No; AND (Q2 selects only Q2.4 or leaves Q2 blank) AND (Q3 selects only misconception options {Q3.4,Q3.5,Q3.6} or leaves Q3 blank).""}, {""id"": ""FoI0"", ""credit"": 0, ""rule"": ""No selections recorded for both Q2 and Q3.""}], ""notes"": ""Rules prioritize highest level satisfied (evaluate FoI4 → FoI3S → FoI2S → FoI1 → FoI0). Integration (FoI4) requires both a correct statistical threshold rationale (Q2) and explicit practical/decision coordination (Q3). PCM/PC scoring can map credit levels {0,1,2,3} to category scores.""}","Difficulty is targeted by requiring a stricter-threshold rationale to justify the ‘No’ answer (Q2) and by adding nuanced integration choices in Q3. Distractors reflect common misconceptions: p-value as probability the effect is true, conflating significance with magnitude, and misunderstanding two-tailed p and large-n implications.","{
+  ""q1_choice"": ""b. No, it is not statistically significant"",
+  ""q2_item"": {
+    ""stem"": ""Q2 (Short reason). Select all reasons that justify answering “No, it is not statistically significant” for p = 0.025 from a two-tailed t-test."",
+    ""options"": [
+      {
+        ""text"": ""We pre-specified α = 0.01; since p = 0.025 > 0.01, it is not statistically significant."",
+        ""key"": true,
+        ""rationale"": ""Correct: adopts a stricter, pre-committed threshold and applies it correctly (FoI3S: statistical rule use)."",
+        ""misconception_tag"": ""provides_an_explicit_logically_consi""
+      },
+      {
+        ""text"": ""We adjusted for multiple tests (e.g., Bonferroni/FDR), making the adjusted α smaller than 0.025."",
+        ""key"": true,
+        ""rationale"": ""Correct: recognizes multiplicity control can lower the significance threshold below p = 0.025 (FoI3S: appropriate procedure selection)."",
+        ""misconception_tag"": ""multiple_testing_adjustment""
+      },
+      {
+        ""text"": ""We used a 99% confidence standard (α = 0.01); the 99% CI for the difference would include 0."",
+        ""key"": true,
+        ""rationale"": ""Correct: links a stricter CI criterion to not-significant at α = 0.01 (FoI3S: CI–p equivalence)."",
+        ""misconception_tag"": ""alpha_via_CI""
+      },
+      {
+        ""text"": ""The $500 difference is small, so it cannot be statistically significant."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: confuses practical size with statistical significance (FoI1: magnitude-only judgment)."",
+        ""misconception_tag"": ""judgment_based_only_on_the_subjectiv""
+      },
+      {
+        ""text"": ""p = 0.025 means there’s a 2.5% chance the effect is real, so we shouldn’t call it significant."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: misinterprets p as the probability the effect is true (FoI2S: p-value misunderstanding)."",
+        ""misconception_tag"": ""misinterprets_the_p-value_or_test_lo""
+      },
+      {
+        ""text"": ""Because the test was two-tailed, we divide p by 2 to get 0.0125, which makes it not significant."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: two-tailed p is already the reported value; halving is wrong and the conclusion is inconsistent (FoI2S: test logic error)."",
+        ""misconception_tag"": ""misinterprets_two_tailed_p""
+      },
+      {
+        ""text"": ""We cannot judge significance without knowing the sample sizes."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: the p-value already incorporates n; besides, n is given (FoI0/FoI1: ignores provided inferential result)."",
+        ""misconception_tag"": ""ignores_given_information""
+      }
+    ]
+  },
+  ""q3_item"": {
+    ""stem"": ""Q3 (Extended reasoning). Select all statements that provide deeper, context-aware justification for the “not statistically significant” choice and its decision implications."",
+    ""options"": [
+      {
+        ""text"": ""With n = 1,500 per group, even tiny effects can yield small p; using a stricter α (e.g., 0.01) helps limit false positives."",
+        ""key"": true,
+        ""rationale"": ""Correct: connects sample size to Type I error control and threshold choice (FoI3S → sets up integration)."",
+        ""misconception_tag"": ""context_sensitive_alpha_large_n""
+      },
+      {
+        ""text"": ""A $500 mean gap is likely trivial relative to salary variability and decision costs, so practical significance is low."",
+        ""key"": true,
+        ""rationale"": ""Correct: evaluates practical significance in context (FoI3P)."",
+        ""misconception_tag"": ""practical_significance_appraisal""
+      },
+      {
+        ""text"": ""A 99% CI for the mean difference would likely include 0, aligning with non-significance at α = 0.01."",
+        ""key"": true,
+        ""rationale"": ""Correct: ties CI interpretation to the chosen α, reinforcing the statistical claim (FoI3S)."",
+        ""misconception_tag"": ""correct_interpretation_of_the_p-valu""
+      },
+      {
+        ""text"": ""If p < 0.05, the effect is large and meaningful in this context."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: equates statistical significance with effect magnitude (FoI2S/FoI1 misconception)."",
+        ""misconception_tag"": ""equates_significance_with_magnitude""
+      },
+      {
+        ""text"": ""With very large samples, controlling α or adjusting for multiplicity is less important."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: large n increases power but does not obviate Type I error control (FoI2S: over-reliance on n)."",
+        ""misconception_tag"": ""large_n_reduces_need_for_control""
+      },
+      {
+        ""text"": ""Because p = 0.025 < 0.05, the effect must be large; we would ignore it only for budget reasons."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: infers magnitude from p and divorces decision from inferential strength (FoI2S/FoI1)."",
+        ""misconception_tag"": ""magnitude_from_p_only""
+      },
+      {
+        ""text"": ""Decision-wise, act only if the analysis meets the pre-registered α = 0.01 and shows a substantively meaningful effect size upon replication."",
+        ""key"": true,
+        ""rationale"": ""Correct: integrates statistical threshold, replication, and practical relevance for decision-making (FoI4)."",
+        ""misconception_tag"": ""integration_of_stat_and_practical""
+      }
+    ]
+  },
+  ""scoring_guide"": {
+    ""waypoints"": [
+      {
+        ""id"": ""FoI4"",
+        ""credit"": 3,
+        ""rule"": ""Q1=b. No; AND (Q2 selects ≥1 of {Q2.1,Q2.2,Q2.3}); AND (Q3 selects ≥1 of {Q3.1,Q3.3} AND ≥1 of {Q3.2,Q3.7}).""
+      },
+      {
+        ""id"": ""FoI3S"",
+        ""credit"": 2,
+        ""rule"": ""Q1=b. No; AND (Q2 selects ≥1 of {Q2.1,Q2.2,Q2.3}); AND (Q3 selects ≥1 of {Q3.1,Q3.3}) AND (Q3 selects none of {Q3.2,Q3.7}).""
+      },
+      {
+        ""id"": ""FoI2S"",
+        ""credit"": 1,
+        ""rule"": ""Q1=b. No; AND [ (Q2 selects none of {Q2.1,Q2.2,Q2.3} AND selects ≥1 of {Q2.4,Q2.5,Q2.6,Q2.7}) OR (Q2 selects ≥1 of {Q2.1,Q2.2,Q2.3} AND Q3 selects none of {Q3.1,Q3.2,Q3.3,Q3.7}) ].""
+      },
+      {
+        ""id"": ""FoI1"",
+        ""credit"": 0,
+        ""rule"": ""Q1=b. No; AND (Q2 selects only Q2.4 or leaves Q2 blank) AND (Q3 selects only misconception options {Q3.4,Q3.5,Q3.6} or leaves Q3 blank).""
+      },
+      {
+        ""id"": ""FoI0"",
+        ""credit"": 0,
+        ""rule"": ""No selections recorded for both Q2 and Q3.""
+      }
+    ],
+    ""notes"": ""Rules prioritize highest level satisfied (evaluate FoI4 → FoI3S → FoI2S → FoI1 → FoI0). Integration (FoI4) requires both a correct statistical threshold rationale (Q2) and explicit practical/decision coordination (Q3). PCM/PC scoring can map credit levels {0,1,2,3} to category scores.""
+  },
+  ""note"": ""Difficulty is targeted by requiring a stricter-threshold rationale to justify the ‘No’ answer (Q2) and by adding nuanced integration choices in Q3. Distractors reflect common misconceptions: p-value as probability the effect is true, conflating significance with magnitude, and misunderstanding two-tailed p and large-n implications.""
+}"
+PlayingSports_P,"a. Yes, it is practically important","{""stem"": ""Select all brief reasons that best support answering Yes (that the $500 salary difference is practically important) in this context."", ""options"": [{""text"": ""$500 more per year is a meaningful amount for an individual graduate."", ""key"": true, ""rationale"": ""Treated as acceptable (low-level) support for Yes because it asserts importance by magnitude alone without a benchmark; reflects FoI1/FoI2P procedural-practical reasoning."", ""misconception_tag"": ""a_simple_magnitude_claim_without_benchmark""}, {""text"": ""Because p = 0.025 < 0.05, the difference must matter in practice."", ""key"": true, ""rationale"": ""Keyed for this branch as a common FoI2P error: conflates statistical significance with practical importance."", ""misconception_tag"": ""p_value_as_practical_significance""}, {""text"": ""The sample is nationally representative, so the observed difference is practically important."", ""key"": true, ""rationale"": ""Keyed as a plausible but incorrect FoI2P justification: generalizability is mistaken for practical magnitude."", ""misconception_tag"": ""representativeness_implies_practical_importance""}, {""text"": ""$500 is under 1% of average salary, so it’s practically trivial."", ""key"": false, ""rationale"": ""Not keyed for the Yes branch; this reflects FoI3P reasoning focusing on small relative magnitude."", ""misconception_tag"": ""provides_sound_reasoning_focused_only_on_magnitude""}, {""text"": ""Practical importance cannot be judged without an effect size or policy threshold."", ""key"": false, ""rationale"": ""Not keyed for the Yes branch; reflects FoI3P recognition that more information is needed."", ""misconception_tag"": ""recognizes_missing_information_for_practical_importance""}, {""text"": ""We should compare total compensation (benefits, bonuses) before calling $500 important."", ""key"": false, ""rationale"": ""Not keyed for the Yes branch; signals uncertainty and missing-context reasoning (FoI3P)."", ""misconception_tag"": ""recognizes_missing_context""}, {""text"": ""Because the study isolated sports as the only difference, the salary gap must reflect a meaningful sports effect."", ""key"": true, ""rationale"": ""Keyed as a flawed FoI2P justification: equates causality with practical importance (causal ≠ meaningful magnitude)."", ""misconception_tag"": ""equates_causality_with_practical_importance""}]}","{""stem"": ""Select all extended justifications that best support Yes (that the $500 difference is practically important) by elaborating on implications or context."", ""options"": [{""text"": ""With 1,500 per group, the study likely has high power; a reliable $500 advantage across the population is practically meaningful."", ""key"": true, ""rationale"": ""Keyed for this branch as FoI2P reasoning: equates reliability/statistical power with practical importance."", ""misconception_tag"": ""equates_reliability_with_practical_importance""}, {""text"": ""A $500 annual premium compounds over a 40-year career into tens of thousands of dollars, making it important."", ""key"": true, ""rationale"": ""Keyed as a common FoI2P misinterpretation: treats a fixed level difference as if it compounds like a growth rate."", ""misconception_tag"": ""misapplies_compounding_to_fixed_difference""}, {""text"": ""For institutional decisions (e.g., recruiting), $500 per graduate, scaled across thousands of alumni, yields a large total economic impact."", ""key"": true, ""rationale"": ""Keyed as FoI2P aggregation fallacy: shifts to aggregate totals to claim practical importance without per-person effect relevance or thresholds."", ""misconception_tag"": ""aggregation_to_total_impact""}, {""text"": ""Using a typical salary SD ≈ $20,000, Cohen’s d ≈ 0.025, which is trivial—so practical importance is not supported."", ""key"": false, ""rationale"": ""Not keyed for the Yes branch; reflects FoI3P/4 effect-size reasoning that undermines the Yes claim."", ""misconception_tag"": ""correct_effect_size_trivial""}, {""text"": ""A 95% CI for the mean difference would likely exclude large values and remain near $0–$1,000; even if statistically significant, that range is substantively small."", ""key"": false, ""rationale"": ""Not keyed for the Yes branch; integrates statistical vs practical strands (FoI4), arguing practical triviality despite significance."", ""misconception_tag"": ""distinguishes_statistical_from_practical_significance""}, {""text"": ""Practical importance should be judged against a policy threshold (e.g., ≥ $2,000); this result does not meet such a threshold."", ""key"": false, ""rationale"": ""Not keyed for the Yes branch; applies thresholding consistent with FoI3P/4 to argue against practical importance."", ""misconception_tag"": ""uses_policy_thresholds""}, {""text"": ""We cannot conclude practical importance without effect size benchmarks or cost–benefit context."", ""key"": false, ""rationale"": ""Not keyed for the Yes branch; reflects FoI3P awareness of missing evaluative criteria."", ""misconception_tag"": ""recognizes_missing_information_for_practical_importance""}]}","{""waypoints"": [{""id"": ""FoI2P"", ""credit"": 1, ""rule"": ""Q1 = a. Yes, and (Q2 selections include at least one of: \""$500 more per year is a meaningful amount for an individual graduate.\"", \""Because p = 0.025 < 0.05, the difference must matter in practice.\"", \""The sample is nationally representative, so the observed difference is practically important.\"", \""Because the study isolated sports as the only difference, the salary gap must reflect a meaningful sports effect.\"") AND (Q3 selections include at least one of: \""With 1,500 per group... high power... practically meaningful.\"", \""A $500 annual premium compounds over a 40-year career...\"", \""For institutional decisions... scaled across thousands...\"") AND NOT (selected two or more of the following contradictory high-level options: Q2 \""$500 is under 1%... trivial.\"", Q2 \""Practical importance cannot be judged without an effect size or policy threshold.\"", Q2 \""We should compare total compensation...\"", Q3 \""Using a typical salary SD ≈ $20,000, Cohen’s d ≈ 0.025...\"", Q3 \""A 95% CI... substantively small.\"", Q3 \""Practical importance should be judged against a policy threshold...\"", Q3 \""We cannot conclude practical importance without effect size benchmarks or cost–benefit context.\"").""}, {""id"": ""FoI1"", ""credit"": 0, ""rule"": ""Q1 = a. Yes, and Q2 selections are limited to \""$500 more per year is a meaningful amount for an individual graduate.\"" only, with no Q3 selections from the keyed Yes-supporting set (\""With 1,500 per group...\"", \""A $500 annual premium compounds...\"", \""For institutional decisions... scaled across thousands...\""). This reflects subjective/impression-based justification without procedural/statistical references.""}, {""id"": ""FoI0"", ""credit"": 0, ""rule"": ""Q1 = a. Yes, and either (a) no options selected in Q2 and Q3, or (b) only contradictory high-level options selected (e.g., Q2 \""$500 is under 1%...\"", Q3 \""Cohen’s d ≈ 0.025...\"", thresholds/CI/missing-info options) with zero selections from the keyed Yes-supporting sets listed above.""}], ""notes"": ""This bundle targets lower FoI levels for the 'Yes' path; examinees cannot reach FoI3/FoI4 with Q1=Yes given this scenario. FoI2P credit requires at least one procedural/practical misreasoning in both Q2 and Q3; purely subjective justification remains at FoI1/0.""}","Difficulty is maintained by including attractive high-level counters (effect size, percent difference, CI, thresholds) that penalize inconsistent Yes rationales. Keyed options reflect realistic misconceptions: equating p-values/power/representativeness/causality with practical importance, compounding a level difference, and aggregating to totals.","{
+  ""q1_choice"": ""a. Yes, it is practically important"",
+  ""q2_item"": {
+    ""stem"": ""Select all brief reasons that best support answering Yes (that the $500 salary difference is practically important) in this context."",
+    ""options"": [
+      {
+        ""text"": ""$500 more per year is a meaningful amount for an individual graduate."",
+        ""key"": true,
+        ""rationale"": ""Treated as acceptable (low-level) support for Yes because it asserts importance by magnitude alone without a benchmark; reflects FoI1/FoI2P procedural-practical reasoning."",
+        ""misconception_tag"": ""a_simple_magnitude_claim_without_benchmark""
+      },
+      {
+        ""text"": ""Because p = 0.025 < 0.05, the difference must matter in practice."",
+        ""key"": true,
+        ""rationale"": ""Keyed for this branch as a common FoI2P error: conflates statistical significance with practical importance."",
+        ""misconception_tag"": ""p_value_as_practical_significance""
+      },
+      {
+        ""text"": ""The sample is nationally representative, so the observed difference is practically important."",
+        ""key"": true,
+        ""rationale"": ""Keyed as a plausible but incorrect FoI2P justification: generalizability is mistaken for practical magnitude."",
+        ""misconception_tag"": ""representativeness_implies_practical_importance""
+      },
+      {
+        ""text"": ""$500 is under 1% of average salary, so it’s practically trivial."",
+        ""key"": false,
+        ""rationale"": ""Not keyed for the Yes branch; this reflects FoI3P reasoning focusing on small relative magnitude."",
+        ""misconception_tag"": ""provides_sound_reasoning_focused_only_on_magnitude""
+      },
+      {
+        ""text"": ""Practical importance cannot be judged without an effect size or policy threshold."",
+        ""key"": false,
+        ""rationale"": ""Not keyed for the Yes branch; reflects FoI3P recognition that more information is needed."",
+        ""misconception_tag"": ""recognizes_missing_information_for_practical_importance""
+      },
+      {
+        ""text"": ""We should compare total compensation (benefits, bonuses) before calling $500 important."",
+        ""key"": false,
+        ""rationale"": ""Not keyed for the Yes branch; signals uncertainty and missing-context reasoning (FoI3P)."",
+        ""misconception_tag"": ""recognizes_missing_context""
+      },
+      {
+        ""text"": ""Because the study isolated sports as the only difference, the salary gap must reflect a meaningful sports effect."",
+        ""key"": true,
+        ""rationale"": ""Keyed as a flawed FoI2P justification: equates causality with practical importance (causal ≠ meaningful magnitude)."",
+        ""misconception_tag"": ""equates_causality_with_practical_importance""
+      }
+    ]
+  },
+  ""q3_item"": {
+    ""stem"": ""Select all extended justifications that best support Yes (that the $500 difference is practically important) by elaborating on implications or context."",
+    ""options"": [
+      {
+        ""text"": ""With 1,500 per group, the study likely has high power; a reliable $500 advantage across the population is practically meaningful."",
+        ""key"": true,
+        ""rationale"": ""Keyed for this branch as FoI2P reasoning: equates reliability/statistical power with practical importance."",
+        ""misconception_tag"": ""equates_reliability_with_practical_importance""
+      },
+      {
+        ""text"": ""A $500 annual premium compounds over a 40-year career into tens of thousands of dollars, making it important."",
+        ""key"": true,
+        ""rationale"": ""Keyed as a common FoI2P misinterpretation: treats a fixed level difference as if it compounds like a growth rate."",
+        ""misconception_tag"": ""misapplies_compounding_to_fixed_difference""
+      },
+      {
+        ""text"": ""For institutional decisions (e.g., recruiting), $500 per graduate, scaled across thousands of alumni, yields a large total economic impact."",
+        ""key"": true,
+        ""rationale"": ""Keyed as FoI2P aggregation fallacy: shifts to aggregate totals to claim practical importance without per-person effect relevance or thresholds."",
+        ""misconception_tag"": ""aggregation_to_total_impact""
+      },
+      {
+        ""text"": ""Using a typical salary SD ≈ $20,000, Cohen’s d ≈ 0.025, which is trivial—so practical importance is not supported."",
+        ""key"": false,
+        ""rationale"": ""Not keyed for the Yes branch; reflects FoI3P/4 effect-size reasoning that undermines the Yes claim."",
+        ""misconception_tag"": ""correct_effect_size_trivial""
+      },
+      {
+        ""text"": ""A 95% CI for the mean difference would likely exclude large values and remain near $0–$1,000; even if statistically significant, that range is substantively small."",
+        ""key"": false,
+        ""rationale"": ""Not keyed for the Yes branch; integrates statistical vs practical strands (FoI4), arguing practical triviality despite significance."",
+        ""misconception_tag"": ""distinguishes_statistical_from_practical_significance""
+      },
+      {
+        ""text"": ""Practical importance should be judged against a policy threshold (e.g., ≥ $2,000); this result does not meet such a threshold."",
+        ""key"": false,
+        ""rationale"": ""Not keyed for the Yes branch; applies thresholding consistent with FoI3P/4 to argue against practical importance."",
+        ""misconception_tag"": ""uses_policy_thresholds""
+      },
+      {
+        ""text"": ""We cannot conclude practical importance without effect size benchmarks or cost–benefit context."",
+        ""key"": false,
+        ""rationale"": ""Not keyed for the Yes branch; reflects FoI3P awareness of missing evaluative criteria."",
+        ""misconception_tag"": ""recognizes_missing_information_for_practical_importance""
+      }
+    ]
+  },
+  ""scoring_guide"": {
+    ""waypoints"": [
+      {
+        ""id"": ""FoI2P"",
+        ""credit"": 1,
+        ""rule"": ""Q1 = a. Yes, and (Q2 selections include at least one of: \""$500 more per year is a meaningful amount for an individual graduate.\"", \""Because p = 0.025 < 0.05, the difference must matter in practice.\"", \""The sample is nationally representative, so the observed difference is practically important.\"", \""Because the study isolated sports as the only difference, the salary gap must reflect a meaningful sports effect.\"") AND (Q3 selections include at least one of: \""With 1,500 per group... high power... practically meaningful.\"", \""A $500 annual premium compounds over a 40-year career...\"", \""For institutional decisions... scaled across thousands...\"") AND NOT (selected two or more of the following contradictory high-level options: Q2 \""$500 is under 1%... trivial.\"", Q2 \""Practical importance cannot be judged without an effect size or policy threshold.\"", Q2 \""We should compare total compensation...\"", Q3 \""Using a typical salary SD ≈ $20,000, Cohen’s d ≈ 0.025...\"", Q3 \""A 95% CI... substantively small.\"", Q3 \""Practical importance should be judged against a policy threshold...\"", Q3 \""We cannot conclude practical importance without effect size benchmarks or cost–benefit context.\"").""
+      },
+      {
+        ""id"": ""FoI1"",
+        ""credit"": 0,
+        ""rule"": ""Q1 = a. Yes, and Q2 selections are limited to \""$500 more per year is a meaningful amount for an individual graduate.\"" only, with no Q3 selections from the keyed Yes-supporting set (\""With 1,500 per group...\"", \""A $500 annual premium compounds...\"", \""For institutional decisions... scaled across thousands...\""). This reflects subjective/impression-based justification without procedural/statistical references.""
+      },
+      {
+        ""id"": ""FoI0"",
+        ""credit"": 0,
+        ""rule"": ""Q1 = a. Yes, and either (a) no options selected in Q2 and Q3, or (b) only contradictory high-level options selected (e.g., Q2 \""$500 is under 1%...\"", Q3 \""Cohen’s d ≈ 0.025...\"", thresholds/CI/missing-info options) with zero selections from the keyed Yes-supporting sets listed above.""
+      }
+    ],
+    ""notes"": ""This bundle targets lower FoI levels for the 'Yes' path; examinees cannot reach FoI3/FoI4 with Q1=Yes given this scenario. FoI2P credit requires at least one procedural/practical misreasoning in both Q2 and Q3; purely subjective justification remains at FoI1/0.""
+  },
+  ""note"": ""Difficulty is maintained by including attractive high-level counters (effect size, percent difference, CI, thresholds) that penalize inconsistent Yes rationales. Keyed options reflect realistic misconceptions: equating p-values/power/representativeness/causality with practical importance, compounding a level difference, and aggregating to totals.""
+}"
+PlayingSports_P,"b. No, it is not practically important","{""stem"": ""Select ALL brief reasons that support your answer that the $500 difference is not practically important."", ""options"": [{""text"": ""$500 is less than about 1% of the typical salary here, so the magnitude is trivial in context."", ""key"": true, ""rationale"": ""Correct. Frames the effect as a small percentage, aligning with practical magnitude judgment (FoI3P)."", ""misconception_tag"": ""provides_sound_reasoning_focused_onl""}, {""text"": ""With ~1,500 per group, even tiny mean differences can be statistically significant; practical importance is about size, not p."", ""key"": true, ""rationale"": ""Correct. Explicitly distinguishes statistical from practical significance (FoI4 integration cue)."", ""misconception_tag"": ""correctly_argues_that_the_result_is_""}, {""text"": ""Because p = 0.025 < 0.05, the difference is important in practice."", ""key"": false, ""rationale"": ""Incorrect. Confuses statistical significance with practical importance (FoI2P misconception)."", ""misconception_tag"": ""a_simple_magnitude_claim_without_ben""}, {""text"": ""The sample is nationally representative, so any detected difference is practically important."", ""key"": false, ""rationale"": ""Incorrect. Overgeneralizes representativeness to imply practical importance (FoI1–2P misconception)."", ""misconception_tag"": ""overgeneralizes_representativeness""}, {""text"": ""$500 per year is roughly $42 per month, which is negligible for most salary decisions."", ""key"": true, ""rationale"": ""Correct. Re-expresses the magnitude in decision-relevant units to show triviality (FoI3P)."", ""misconception_tag"": ""provides_sound_reasoning_focused_onl""}, {""text"": ""We cannot judge practical importance at all without more information, so you should not answer 'No.'"", ""key"": false, ""rationale"": ""Incorrect. This aligns with 'cannot determine' rather than supporting 'No' (FoI3P but inconsistent with chosen claim)."", ""misconception_tag"": ""recognizes_that_practical_importance""}]}","{""stem"": ""Select ALL extended justifications that best explain why the $500 difference is not practically important, even though p = 0.025."", ""options"": [{""text"": ""Statistical significance (p = 0.025) can occur with large n even for trivial effects; ~$500 is ~0.8%—too small to matter for decisions."", ""key"": true, ""rationale"": ""Correct. Integrates statistical and practical strands and resolves the apparent conflict (FoI4)."", ""misconception_tag"": ""correctly_argues_that_the_result_is_""}, {""text"": ""A confidence interval for the mean difference would likely be centered near $500; unless a policy threshold (e.g., ≥5% premium) is met, the result is not actionable."", ""key"": true, ""rationale"": ""Correct. Invokes CI and explicit decision thresholds, aligning with purpose-driven practical judgment (FoI4)."", ""misconception_tag"": ""correctly_argues_that_the_result_is_""}, {""text"": ""Salaries vary by many thousands; the standardized effect size would be near zero, signaling trivial practical impact."", ""key"": true, ""rationale"": ""Correct. Uses effect-size reasoning to classify magnitude as negligible (FoI3P)."", ""misconception_tag"": ""provides_sound_reasoning_focused_onl""}, {""text"": ""Because p = 0.025, the earnings advantage is meaningful and should guide policy decisions."", ""key"": false, ""rationale"": ""Incorrect. Equates statistical significance with practical importance (FoI2P misconception)."", ""misconception_tag"": ""a_simple_magnitude_claim_without_ben""}, {""text"": ""A larger sample makes an effect more practically important because more people are affected, so this difference matters."", ""key"": false, ""rationale"": ""Incorrect. Confuses sample size/precision with effect magnitude and practical relevance (FoI1–2P)."", ""misconception_tag"": ""conflates_sample_size_with_importance""}, {""text"": ""Without medians or distribution shape, we cannot assess practical importance."", ""key"": false, ""rationale"": ""Incorrect. Median/shape may be informative but are not required to judge that a 0.8% mean gap is trivial (FoI2P)."", ""misconception_tag"": ""demands_irrelevant_detail""}, {""text"": ""Self-reported salaries are noisy; a $500 mean gap is within typical measurement error, so even if detectable, it’s not decision-relevant."", ""key"": true, ""rationale"": ""Correct. Weighs design/measurement constraints against actionability, reinforcing trivial practical impact (FoI4)."", ""misconception_tag"": ""credits_constraints_context""}]}","{""waypoints"": [{""id"": ""FoI4"", ""credit"": 3, ""rule"": ""Q1=b. Q2 selected includes option 2 AND at least one of {1,5}, with no Q2 selections in {3,4,6}. Q3 selected includes option 1 AND at least one of {2,3,7}, with no Q3 selections in {4,5}.""}, {""id"": ""FoI3P"", ""credit"": 2, ""rule"": ""Q1=b. Not meeting FoI4. At least one correct selection in Q2 from {1,5} (option 2 may or may not be selected), AND at least one correct selection in Q3 from {2,3,7}. Total correct selections across Q2+Q3 > total incorrect selections.""}, {""id"": ""FoI2P"", ""credit"": 1, ""rule"": ""Q1=b. At least one correct selection in Q2 or Q3, but either (a) all correct selections are confined to a single item (Q2-only or Q3-only), OR (b) one or more critical misconceptions are selected in Q2 {3,4,6} or Q3 {4,5,6}, OR (c) total incorrect selections ≥ total correct selections.""}, {""id"": ""FoI1"", ""credit"": 0, ""rule"": ""Q1=b. No correct selections in Q2 and Q3, or only subjective/irrelevant/don’t-know style selections (i.e., only options from Q2 {3,4,6} and Q3 {4,5,6}).""}, {""id"": ""FoI0"", ""credit"": 0, ""rule"": ""Missing or non-responsive (no selections on both Q2 and Q3).""}], ""notes"": ""Formal keying supports PCM/PC by awarding higher credit for explicit coordination of statistical and practical significance (FoI4), mid credit for sound practical reasoning without full integration (FoI3P), and low credit for partial or procedurally flawed reasoning (FoI2P). Selecting critical misconceptions suppresses credit.""}","Difficulty is targeted near the CR version by requiring coordination of practical magnitude with statistical evidence for top credit. Distractors encode common misconceptions: conflating p-values with importance, overgeneralizing representativeness, confusing sample size with importance, and demanding irrelevant details. Correct options are homogeneous and focus on magnitude, thresholds, CI/effect sizes, and design constraints.","{
+  ""q1_choice"": ""b. No, it is not practically important"",
+  ""q2_item"": {
+    ""stem"": ""Select ALL brief reasons that support your answer that the $500 difference is not practically important."",
+    ""options"": [
+      {
+        ""text"": ""$500 is less than about 1% of the typical salary here, so the magnitude is trivial in context."",
+        ""key"": true,
+        ""rationale"": ""Correct. Frames the effect as a small percentage, aligning with practical magnitude judgment (FoI3P)."",
+        ""misconception_tag"": ""provides_sound_reasoning_focused_onl""
+      },
+      {
+        ""text"": ""With ~1,500 per group, even tiny mean differences can be statistically significant; practical importance is about size, not p."",
+        ""key"": true,
+        ""rationale"": ""Correct. Explicitly distinguishes statistical from practical significance (FoI4 integration cue)."",
+        ""misconception_tag"": ""correctly_argues_that_the_result_is_""
+      },
+      {
+        ""text"": ""Because p = 0.025 < 0.05, the difference is important in practice."",
+        ""key"": false,
+        ""rationale"": ""Incorrect. Confuses statistical significance with practical importance (FoI2P misconception)."",
+        ""misconception_tag"": ""a_simple_magnitude_claim_without_ben""
+      },
+      {
+        ""text"": ""The sample is nationally representative, so any detected difference is practically important."",
+        ""key"": false,
+        ""rationale"": ""Incorrect. Overgeneralizes representativeness to imply practical importance (FoI1–2P misconception)."",
+        ""misconception_tag"": ""overgeneralizes_representativeness""
+      },
+      {
+        ""text"": ""$500 per year is roughly $42 per month, which is negligible for most salary decisions."",
+        ""key"": true,
+        ""rationale"": ""Correct. Re-expresses the magnitude in decision-relevant units to show triviality (FoI3P)."",
+        ""misconception_tag"": ""provides_sound_reasoning_focused_onl""
+      },
+      {
+        ""text"": ""We cannot judge practical importance at all without more information, so you should not answer 'No.'"",
+        ""key"": false,
+        ""rationale"": ""Incorrect. This aligns with 'cannot determine' rather than supporting 'No' (FoI3P but inconsistent with chosen claim)."",
+        ""misconception_tag"": ""recognizes_that_practical_importance""
+      }
+    ]
+  },
+  ""q3_item"": {
+    ""stem"": ""Select ALL extended justifications that best explain why the $500 difference is not practically important, even though p = 0.025."",
+    ""options"": [
+      {
+        ""text"": ""Statistical significance (p = 0.025) can occur with large n even for trivial effects; ~$500 is ~0.8%—too small to matter for decisions."",
+        ""key"": true,
+        ""rationale"": ""Correct. Integrates statistical and practical strands and resolves the apparent conflict (FoI4)."",
+        ""misconception_tag"": ""correctly_argues_that_the_result_is_""
+      },
+      {
+        ""text"": ""A confidence interval for the mean difference would likely be centered near $500; unless a policy threshold (e.g., ≥5% premium) is met, the result is not actionable."",
+        ""key"": true,
+        ""rationale"": ""Correct. Invokes CI and explicit decision thresholds, aligning with purpose-driven practical judgment (FoI4)."",
+        ""misconception_tag"": ""correctly_argues_that_the_result_is_""
+      },
+      {
+        ""text"": ""Salaries vary by many thousands; the standardized effect size would be near zero, signaling trivial practical impact."",
+        ""key"": true,
+        ""rationale"": ""Correct. Uses effect-size reasoning to classify magnitude as negligible (FoI3P)."",
+        ""misconception_tag"": ""provides_sound_reasoning_focused_onl""
+      },
+      {
+        ""text"": ""Because p = 0.025, the earnings advantage is meaningful and should guide policy decisions."",
+        ""key"": false,
+        ""rationale"": ""Incorrect. Equates statistical significance with practical importance (FoI2P misconception)."",
+        ""misconception_tag"": ""a_simple_magnitude_claim_without_ben""
+      },
+      {
+        ""text"": ""A larger sample makes an effect more practically important because more people are affected, so this difference matters."",
+        ""key"": false,
+        ""rationale"": ""Incorrect. Confuses sample size/precision with effect magnitude and practical relevance (FoI1–2P)."",
+        ""misconception_tag"": ""conflates_sample_size_with_importance""
+      },
+      {
+        ""text"": ""Without medians or distribution shape, we cannot assess practical importance."",
+        ""key"": false,
+        ""rationale"": ""Incorrect. Median/shape may be informative but are not required to judge that a 0.8% mean gap is trivial (FoI2P)."",
+        ""misconception_tag"": ""demands_irrelevant_detail""
+      },
+      {
+        ""text"": ""Self-reported salaries are noisy; a $500 mean gap is within typical measurement error, so even if detectable, it’s not decision-relevant."",
+        ""key"": true,
+        ""rationale"": ""Correct. Weighs design/measurement constraints against actionability, reinforcing trivial practical impact (FoI4)."",
+        ""misconception_tag"": ""credits_constraints_context""
+      }
+    ]
+  },
+  ""scoring_guide"": {
+    ""waypoints"": [
+      {
+        ""id"": ""FoI4"",
+        ""credit"": 3,
+        ""rule"": ""Q1=b. Q2 selected includes option 2 AND at least one of {1,5}, with no Q2 selections in {3,4,6}. Q3 selected includes option 1 AND at least one of {2,3,7}, with no Q3 selections in {4,5}.""
+      },
+      {
+        ""id"": ""FoI3P"",
+        ""credit"": 2,
+        ""rule"": ""Q1=b. Not meeting FoI4. At least one correct selection in Q2 from {1,5} (option 2 may or may not be selected), AND at least one correct selection in Q3 from {2,3,7}. Total correct selections across Q2+Q3 > total incorrect selections.""
+      },
+      {
+        ""id"": ""FoI2P"",
+        ""credit"": 1,
+        ""rule"": ""Q1=b. At least one correct selection in Q2 or Q3, but either (a) all correct selections are confined to a single item (Q2-only or Q3-only), OR (b) one or more critical misconceptions are selected in Q2 {3,4,6} or Q3 {4,5,6}, OR (c) total incorrect selections ≥ total correct selections.""
+      },
+      {
+        ""id"": ""FoI1"",
+        ""credit"": 0,
+        ""rule"": ""Q1=b. No correct selections in Q2 and Q3, or only subjective/irrelevant/don’t-know style selections (i.e., only options from Q2 {3,4,6} and Q3 {4,5,6}).""
+      },
+      {
+        ""id"": ""FoI0"",
+        ""credit"": 0,
+        ""rule"": ""Missing or non-responsive (no selections on both Q2 and Q3).""
+      }
+    ],
+    ""notes"": ""Formal keying supports PCM/PC by awarding higher credit for explicit coordination of statistical and practical significance (FoI4), mid credit for sound practical reasoning without full integration (FoI3P), and low credit for partial or procedurally flawed reasoning (FoI2P). Selecting critical misconceptions suppresses credit.""
+  },
+  ""note"": ""Difficulty is targeted near the CR version by requiring coordination of practical magnitude with statistical evidence for top credit. Distractors encode common misconceptions: conflating p-values with importance, overgeneralizing representativeness, confusing sample size with importance, and demanding irrelevant details. Correct options are homogeneous and focus on magnitude, thresholds, CI/effect sizes, and design constraints.""
+}"
+ABtest_S,"a. Yes, it is statistically significant","{""stem"": ""You chose Yes — it is statistically significant. Which brief reasons best support that claim? Select all that apply."", ""options"": [{""text"": ""The observed difference is +20 percentage points (> 0), so the null difference of 0 must be rejected."", ""key"": true, ""rationale"": ""Keyed as a common but incorrect procedural rule: treats a positive point estimate as sufficient for significance, ignoring sampling variability/CI. Reflects FoI2S (procedural misinterpretation)."", ""misconception_tag"": ""incorrectly_applies_ci_logic_uses_point_estimate""}, {""text"": ""The 95% CI’s upper bound (0.392) is well above 0, which shows a positive effect."", ""key"": true, ""rationale"": ""Keyed as a common but incorrect criterion: focuses on the upper bound being > 0 rather than whether the CI excludes 0. Reflects FoI2S (procedural misinterpretation)."", ""misconception_tag"": ""incorrectly_applies_ci_logic_uses_upper_bound""}, {""text"": ""Since 40% > 20%, the p-value will be below 0.05."", ""key"": true, ""rationale"": ""Keyed as a naive claim equating direction/magnitude with significance without considering variability. Reflects FoI1 (subjective/naive p-value reasoning)."", ""misconception_tag"": ""p_value_directionality_confusion""}, {""text"": ""The 95% CI includes 0, so at α = 0.05 we cannot reject the null."", ""key"": false, ""rationale"": ""Incorrect for this stem because it does not support the Yes claim; it is the correct statistical rule and contradicts the chosen answer. Reflects FoI3S when used appropriately."", ""misconception_tag"": ""applies_ci_rule_correctly""}, {""text"": ""Small n (~35 per group) makes any observed difference more convincing."", ""key"": false, ""rationale"": ""Incorrect and does not support Yes; small samples reduce power/precision, not the opposite. Reflects FoI1 (misinterprets power/precision)."", ""misconception_tag"": ""misinterprets_power_small_n""}, {""text"": ""Exceeding the company’s 10-point practical threshold implies statistical significance."", ""key"": false, ""rationale"": ""Incorrect for this stem; it confuses practical and statistical significance. Reflects FoI2 (conflation of strands)."", ""misconception_tag"": ""conflates_practical_with_statistical""}, {""text"": ""Randomization means the treatment caused the increase, so the result must be statistically significant."", ""key"": false, ""rationale"": ""Incorrect for this stem; randomization supports causal interpretation but does not guarantee statistical significance. Reflects FoI1 (causal vs. statistical confusion)."", ""misconception_tag"": ""causal_vs_statistical_confusion""}]}","{""stem"": ""Select all extended justifications that best support the claim 'Yes — it is statistically significant' for this study."", ""options"": [{""text"": ""Using a one-sided test pre-specified for increases, the 95% one-sided interval would sit entirely above 0, so the effect is significant."", ""key"": true, ""rationale"": ""Keyed as a common mis-specification: post-hoc switch to one-sided testing is invalid. Reflects FoI2S (procedure chosen to fit the result)."", ""misconception_tag"": ""one_sided_after_seeing_data""}, {""text"": ""Although the CI touches 0 at −0.015, almost all of it is above 0, so it’s effectively significant."", ""key"": true, ""rationale"": ""Keyed as a misreading of CI as probability mass and a vague 'effective significance' rule. Reflects FoI2S (CI/probability confusion)."", ""misconception_tag"": ""ci_probability_mass_confusion""}, {""text"": ""The observed 0.20 difference is about 1.9–2.0 standard errors from 0, which implies p < 0.05."", ""key"": true, ""rationale"": ""Keyed as a threshold misremembering; at ~1.9 SE two-sided p≈0.06, not <0.05. Reflects FoI2S (misapplied z/p rule)."", ""misconception_tag"": ""z_threshold_misremembered""}, {""text"": ""Significance at 5% requires that 0 be excluded from the 95% CI; since 0 is included, the result is not significant."", ""key"": false, ""rationale"": ""Incorrect for this stem because it contradicts the Yes claim; it is the correct rule. Reflects FoI3S when used appropriately."", ""misconception_tag"": ""applies_ci_rule_correctly""}, {""text"": ""Because the CI spans negative to quite positive values, precision is low; gathering more data would be prudent before declaring significance or making a decision."", ""key"": false, ""rationale"": ""Incorrect for this stem because it argues against Yes; it integrates precision and decision-making. Reflects FoI4."", ""misconception_tag"": ""integrates_precision_and_decision""}, {""text"": ""Because the CI upper bound (0.392) exceeds the 10-point practical threshold, the study meets both practical and statistical criteria."", ""key"": true, ""rationale"": ""Keyed as a conflation of practical and statistical standards; CI upper bound over a practical cutoff does not determine statistical significance. Reflects FoI2 (misintegration)."", ""misconception_tag"": ""conflates_practical_with_statistical""}, {""text"": ""Random assignment justifies a causal claim if there is a significant effect, but significance still depends on variability and the CI."", ""key"": false, ""rationale"": ""Incorrect for this stem because it does not support Yes; it correctly differentiates causality from significance. Reflects FoI3S."", ""misconception_tag"": ""clarifies_randomization_vs_significance""}]}","{""waypoints"": [{""id"": ""FoI4"", ""credit"": 3, ""rule"": ""Q1 = 'b. No, it is not statistically significant' AND Q2 selects option 4 ONLY (no selection of Q2 options 1–3) AND Q3 selects option 5 AND (option 7 selected OR no misapplied Q3 keys {1,2,3,6} selected). Rationale: correct CI rule plus integrated precision/decision context.""}, {""id"": ""FoI3S"", ""credit"": 2, ""rule"": ""Q1 = 'b. No, it is not statistically significant' AND Q2 selects option 4 AND does NOT select any of Q2 options {1,2,3}; Q3 does NOT select any misapplied keys {1,2,3,6}. Rationale: correct statistical rule without deeper integration.""}, {""id"": ""FoI2S"", ""credit"": 1, ""rule"": ""Primary path (Yes with procedural misapplication): Q1 = 'a. Yes, it is statistically significant' AND Q2 selects at least one of {1,2} AND does NOT select Q2 option 4 AND Q3 selects at least one of {1,2,3,6} AND does NOT select Q3 option 4 or 5. Rationale: consistent but incorrect procedural/statistical reasoning. Alternate path (mixed): Q1 = 'a. Yes' AND Q2 selects option 3 only (or with 1–2) AND Q3 selects at least one of {1,2,3,6}.""}, {""id"": ""FoI1"", ""credit"": 0, ""rule"": ""Q1 = 'a. Yes, it is statistically significant' AND (Q2 selects only naive/irrelevant items {3,5,6,7} with none of {1,2} OR Q2 includes contradictory correct option 4) AND Q3 selects none of {1,2,3,6} (or selects contradictory correct items {4,5,7}). Rationale: subjective or incoherent reasoning without a defensible (even if flawed) procedural basis.""}, {""id"": ""FoI0"", ""credit"": 0, ""rule"": ""No selections in both Q2 and Q3, or responses that are entirely off-task. Rationale: no inference.""}], ""notes"": ""Option indices refer to the order listed in q2_item.options and q3_item.options. Keys for Q2 are {1,2,3}; keys for Q3 are {1,2,3,6}. This scoring mirrors the CR guide: highest levels require Q1='No' with correct CI-based reasoning (FoI3S/FoI4). With Q1='Yes', the maximum attainable level is FoI2S, awarded only when the respondent shows consistent (though incorrect) procedural/statistical reasoning. Partial-credit is implemented as ordered categories suitable for PCM/PC models.""}","Difficulty is maintained by requiring examinees who chose 'Yes' to discriminate among superficially plausible but incorrect statistical justifications (CI misuse, one-sided post hoc testing, z-threshold misremembering) versus statements that correctly contradict their claim. Distractors are built from documented misconceptions (CI interpretation errors, conflation of practical/statistical significance, p-value directionality assumptions) and avoid verbal cues or absolute terms.","{
+  ""q1_choice"": ""a. Yes, it is statistically significant"",
+  ""q2_item"": {
+    ""stem"": ""You chose Yes — it is statistically significant. Which brief reasons best support that claim? Select all that apply."",
+    ""options"": [
+      {
+        ""text"": ""The observed difference is +20 percentage points (> 0), so the null difference of 0 must be rejected."",
+        ""key"": true,
+        ""rationale"": ""Keyed as a common but incorrect procedural rule: treats a positive point estimate as sufficient for significance, ignoring sampling variability/CI. Reflects FoI2S (procedural misinterpretation)."",
+        ""misconception_tag"": ""incorrectly_applies_ci_logic_uses_point_estimate""
+      },
+      {
+        ""text"": ""The 95% CI’s upper bound (0.392) is well above 0, which shows a positive effect."",
+        ""key"": true,
+        ""rationale"": ""Keyed as a common but incorrect criterion: focuses on the upper bound being > 0 rather than whether the CI excludes 0. Reflects FoI2S (procedural misinterpretation)."",
+        ""misconception_tag"": ""incorrectly_applies_ci_logic_uses_upper_bound""
+      },
+      {
+        ""text"": ""Since 40% > 20%, the p-value will be below 0.05."",
+        ""key"": true,
+        ""rationale"": ""Keyed as a naive claim equating direction/magnitude with significance without considering variability. Reflects FoI1 (subjective/naive p-value reasoning)."",
+        ""misconception_tag"": ""p_value_directionality_confusion""
+      },
+      {
+        ""text"": ""The 95% CI includes 0, so at α = 0.05 we cannot reject the null."",
+        ""key"": false,
+        ""rationale"": ""Incorrect for this stem because it does not support the Yes claim; it is the correct statistical rule and contradicts the chosen answer. Reflects FoI3S when used appropriately."",
+        ""misconception_tag"": ""applies_ci_rule_correctly""
+      },
+      {
+        ""text"": ""Small n (~35 per group) makes any observed difference more convincing."",
+        ""key"": false,
+        ""rationale"": ""Incorrect and does not support Yes; small samples reduce power/precision, not the opposite. Reflects FoI1 (misinterprets power/precision)."",
+        ""misconception_tag"": ""misinterprets_power_small_n""
+      },
+      {
+        ""text"": ""Exceeding the company’s 10-point practical threshold implies statistical significance."",
+        ""key"": false,
+        ""rationale"": ""Incorrect for this stem; it confuses practical and statistical significance. Reflects FoI2 (conflation of strands)."",
+        ""misconception_tag"": ""conflates_practical_with_statistical""
+      },
+      {
+        ""text"": ""Randomization means the treatment caused the increase, so the result must be statistically significant."",
+        ""key"": false,
+        ""rationale"": ""Incorrect for this stem; randomization supports causal interpretation but does not guarantee statistical significance. Reflects FoI1 (causal vs. statistical confusion)."",
+        ""misconception_tag"": ""causal_vs_statistical_confusion""
+      }
+    ]
+  },
+  ""q3_item"": {
+    ""stem"": ""Select all extended justifications that best support the claim 'Yes — it is statistically significant' for this study."",
+    ""options"": [
+      {
+        ""text"": ""Using a one-sided test pre-specified for increases, the 95% one-sided interval would sit entirely above 0, so the effect is significant."",
+        ""key"": true,
+        ""rationale"": ""Keyed as a common mis-specification: post-hoc switch to one-sided testing is invalid. Reflects FoI2S (procedure chosen to fit the result)."",
+        ""misconception_tag"": ""one_sided_after_seeing_data""
+      },
+      {
+        ""text"": ""Although the CI touches 0 at −0.015, almost all of it is above 0, so it’s effectively significant."",
+        ""key"": true,
+        ""rationale"": ""Keyed as a misreading of CI as probability mass and a vague 'effective significance' rule. Reflects FoI2S (CI/probability confusion)."",
+        ""misconception_tag"": ""ci_probability_mass_confusion""
+      },
+      {
+        ""text"": ""The observed 0.20 difference is about 1.9–2.0 standard errors from 0, which implies p < 0.05."",
+        ""key"": true,
+        ""rationale"": ""Keyed as a threshold misremembering; at ~1.9 SE two-sided p≈0.06, not <0.05. Reflects FoI2S (misapplied z/p rule)."",
+        ""misconception_tag"": ""z_threshold_misremembered""
+      },
+      {
+        ""text"": ""Significance at 5% requires that 0 be excluded from the 95% CI; since 0 is included, the result is not significant."",
+        ""key"": false,
+        ""rationale"": ""Incorrect for this stem because it contradicts the Yes claim; it is the correct rule. Reflects FoI3S when used appropriately."",
+        ""misconception_tag"": ""applies_ci_rule_correctly""
+      },
+      {
+        ""text"": ""Because the CI spans negative to quite positive values, precision is low; gathering more data would be prudent before declaring significance or making a decision."",
+        ""key"": false,
+        ""rationale"": ""Incorrect for this stem because it argues against Yes; it integrates precision and decision-making. Reflects FoI4."",
+        ""misconception_tag"": ""integrates_precision_and_decision""
+      },
+      {
+        ""text"": ""Because the CI upper bound (0.392) exceeds the 10-point practical threshold, the study meets both practical and statistical criteria."",
+        ""key"": true,
+        ""rationale"": ""Keyed as a conflation of practical and statistical standards; CI upper bound over a practical cutoff does not determine statistical significance. Reflects FoI2 (misintegration)."",
+        ""misconception_tag"": ""conflates_practical_with_statistical""
+      },
+      {
+        ""text"": ""Random assignment justifies a causal claim if there is a significant effect, but significance still depends on variability and the CI."",
+        ""key"": false,
+        ""rationale"": ""Incorrect for this stem because it does not support Yes; it correctly differentiates causality from significance. Reflects FoI3S."",
+        ""misconception_tag"": ""clarifies_randomization_vs_significance""
+      }
+    ]
+  },
+  ""scoring_guide"": {
+    ""waypoints"": [
+      {
+        ""id"": ""FoI4"",
+        ""credit"": 3,
+        ""rule"": ""Q1 = 'b. No, it is not statistically significant' AND Q2 selects option 4 ONLY (no selection of Q2 options 1–3) AND Q3 selects option 5 AND (option 7 selected OR no misapplied Q3 keys {1,2,3,6} selected). Rationale: correct CI rule plus integrated precision/decision context.""
+      },
+      {
+        ""id"": ""FoI3S"",
+        ""credit"": 2,
+        ""rule"": ""Q1 = 'b. No, it is not statistically significant' AND Q2 selects option 4 AND does NOT select any of Q2 options {1,2,3}; Q3 does NOT select any misapplied keys {1,2,3,6}. Rationale: correct statistical rule without deeper integration.""
+      },
+      {
+        ""id"": ""FoI2S"",
+        ""credit"": 1,
+        ""rule"": ""Primary path (Yes with procedural misapplication): Q1 = 'a. Yes, it is statistically significant' AND Q2 selects at least one of {1,2} AND does NOT select Q2 option 4 AND Q3 selects at least one of {1,2,3,6} AND does NOT select Q3 option 4 or 5. Rationale: consistent but incorrect procedural/statistical reasoning. Alternate path (mixed): Q1 = 'a. Yes' AND Q2 selects option 3 only (or with 1–2) AND Q3 selects at least one of {1,2,3,6}.""
+      },
+      {
+        ""id"": ""FoI1"",
+        ""credit"": 0,
+        ""rule"": ""Q1 = 'a. Yes, it is statistically significant' AND (Q2 selects only naive/irrelevant items {3,5,6,7} with none of {1,2} OR Q2 includes contradictory correct option 4) AND Q3 selects none of {1,2,3,6} (or selects contradictory correct items {4,5,7}). Rationale: subjective or incoherent reasoning without a defensible (even if flawed) procedural basis.""
+      },
+      {
+        ""id"": ""FoI0"",
+        ""credit"": 0,
+        ""rule"": ""No selections in both Q2 and Q3, or responses that are entirely off-task. Rationale: no inference.""
+      }
+    ],
+    ""notes"": ""Option indices refer to the order listed in q2_item.options and q3_item.options. Keys for Q2 are {1,2,3}; keys for Q3 are {1,2,3,6}. This scoring mirrors the CR guide: highest levels require Q1='No' with correct CI-based reasoning (FoI3S/FoI4). With Q1='Yes', the maximum attainable level is FoI2S, awarded only when the respondent shows consistent (though incorrect) procedural/statistical reasoning. Partial-credit is implemented as ordered categories suitable for PCM/PC models.""
+  },
+  ""note"": ""Difficulty is maintained by requiring examinees who chose 'Yes' to discriminate among superficially plausible but incorrect statistical justifications (CI misuse, one-sided post hoc testing, z-threshold misremembering) versus statements that correctly contradict their claim. Distractors are built from documented misconceptions (CI interpretation errors, conflation of practical/statistical significance, p-value directionality assumptions) and avoid verbal cues or absolute terms.""
+}"
+ABtest_S,"b. No, it is not statistically significant","{""stem"": ""Select all brief reasons that correctly support the claim that the difference is not statistically significant at α = 0.05, given the 95% CI for the difference is −0.015 to 0.392 (n ≈ 35 per group)."", ""options"": [{""text"": ""The 95% confidence interval (−0.015, 0.392) includes 0, so a zero effect is plausible."", ""key"": true, ""rationale"": ""Correct: This applies the CI decision rule for a two-sided α = 0.05 test. Cognitive process: FoI3S (statistical interpretation)."", ""misconception_tag"": ""applies_the_ci_rule_correctly_but_wi""}, {""text"": ""Because the CI crosses 0, a two-sided test at α = 0.05 would fail to reject H0."", ""key"": true, ""rationale"": ""Correct: CI crossing 0 is equivalent to p > 0.05 for a two-sided test. Cognitive process: FoI3S (statistical interpretation)."", ""misconception_tag"": ""applies_the_ci_rule_correctly_but_wi""}, {""text"": ""The lower bound is negative, which proves the treatment decreased likes."", ""key"": false, ""rationale"": ""Incorrect: A negative bound only indicates that a decrease is within the plausible range; it does not prove harm. Cognitive process: FoI2S error (misreads CI)."", ""misconception_tag"": ""incorrectly_applies_ci_logic_eg_usin""}, {""text"": ""The upper bound (0.392) is well above 0, which shows the difference is statistically significant."", ""key"": false, ""rationale"": ""Incorrect: Significance is not determined by the upper bound alone; the CI must exclude 0. Cognitive process: FoI2S error (misuses CI bound)."", ""misconception_tag"": ""incorrectly_applies_ci_logic_eg_usin""}, {""text"": ""The point estimate (0.20) is greater than 0; therefore the effect is statistically significant."", ""key"": false, ""rationale"": ""Incorrect: A positive point estimate does not imply statistical significance. Cognitive process: FoI1/2S error (conflates estimate with inference)."", ""misconception_tag"": ""incorrectly_applies_ci_logic_eg_usin""}, {""text"": ""The interval spans negative to large positive values, indicating imprecision (likely from n ≈ 35/group), which contributes to non-significance."", ""key"": true, ""rationale"": ""Correct: Recognizes wide CI/imprecision due to sample size as a reason the CI includes 0. Cognitive process: FoI3S→FoI4 bridge (links design/precision to inference)."", ""misconception_tag"": ""correctly_interprets_the_ci_it_inclu""}, {""text"": ""With a sample this small, results can never be statistically significant."", ""key"": false, ""rationale"": ""Incorrect: Small samples can still yield significance; it is just less likely. Cognitive process: FoI1 naive generalization."", ""misconception_tag"": ""subjective_judgment_without_statisti""}]}","{""stem"": ""Management’s practical threshold is a +10 percentage-point increase in likes. Select all statements that best explain the practical and decision-making implications of these results."", ""options"": [{""text"": ""Although the point estimate (+20 pp) exceeds +10 pp, the CI includes effects < +10 pp and even ≤ 0, so we cannot conclude the feature clears the threshold."", ""key"": true, ""rationale"": ""Correct: Coordinates statistical uncertainty with the practical threshold and resolves the apparent conflict. Cognitive process: FoI4 (integration)."", ""misconception_tag"": ""correctly_interprets_the_ci_it_inclu""}, {""text"": ""Because the result is not statistically significant, it must be practically unimportant."", ""key"": false, ""rationale"": ""Incorrect: Practical importance is about effect size/threshold, not p-value alone. Cognitive process: FoI1 error (equates statistical with practical)."", ""misconception_tag"": ""subjective_judgment_without_statisti""}, {""text"": ""With ≈35 per group, power to detect a +10 pp effect may be low; a larger experiment would reduce Type II error and narrow the CI."", ""key"": true, ""rationale"": ""Correct: Identifies power/Type II error and links to planning/precision. Cognitive process: FoI4 (constraints and decision implications)."", ""misconception_tag"": ""correctly_interprets_the_ci_it_inclu""}, {""text"": ""Since the CI upper bound is +39.2 pp, the true effect is at least +39.2 pp; we should deploy immediately."", ""key"": false, ""rationale"": ""Incorrect: An upper bound is not a guaranteed minimum. Cognitive process: FoI2S error (misreads CI bound)."", ""misconception_tag"": ""incorrectly_applies_ci_logic_eg_usin""}, {""text"": ""Random assignment limits confounding; the main issue here is sampling uncertainty, so more data (not more controls) is the priority."", ""key"": true, ""rationale"": ""Correct: Matches design features to the uncertainty source and appropriate remedy. Cognitive process: FoI4 (method-choice aligned to goal)."", ""misconception_tag"": ""correctly_interprets_the_ci_it_inclu""}, {""text"": ""Compare the CI to the +10 pp threshold (or test H0: Δ ≤ +10 pp vs HA: Δ > +10 pp); because the CI includes values ≤ +10 pp, we cannot claim the feature clears the threshold."", ""key"": true, ""rationale"": ""Correct: Aligns inference with the business decision rule (superiority vs threshold). Cognitive process: FoI4 (purpose-aligned inference)."", ""misconception_tag"": ""correctly_interprets_the_ci_it_inclu""}, {""text"": ""Because the point estimate exceeds +10 pp, we should proceed; statistical significance is irrelevant."", ""key"": false, ""rationale"": ""Incorrect: Ignores uncertainty and risk of Type II/overestimation. Cognitive process: FoI1 error (point-estimate-only decision)."", ""misconception_tag"": ""subjective_judgment_without_statisti""}, {""text"": ""To make the result significant, switch to a one-tailed test after seeing the positive effect."", ""key"": false, ""rationale"": ""Incorrect: Post hoc one-tailed testing is invalid and inflates Type I error. Cognitive process: FoI2S misuse of testing."", ""misconception_tag"": ""incorrectly_applies_ci_logic_eg_usin""}]}","{""waypoints"": [{""id"": ""FoI4"", ""credit"": 3, ""rule"": ""Q1 = b. No; Q2: select at least one core statistical key {1,2} AND select none of {3,4,5}; Q3: must select option 1 AND at least one of {3,5,6}; selections from distractors {2,4,7,8} in Q3 must be none.""}, {""id"": ""FoI3S"", ""credit"": 2, ""rule"": ""Q1 = b. No; Q2: select at least one of {1,2} (option 6 may also be selected) AND do not select {4,5}; Q3: select at most one of {1,3,5,6} AND select none of {4,8}. (Limited or no integration.)""}, {""id"": ""FoI2S"", ""credit"": 1, ""rule"": ""Q1 = b. No; EITHER Q2 fails to select any of {1,2} OR Q2 selects any incorrect CI-logic options {3,4,5}. (Even if Q3 has some correct choices, CI logic is flawed.)""}, {""id"": ""FoI1"", ""credit"": 0, ""rule"": ""Q1 = b. No; Q2 selects naive subjective option {7} and none of {1,2}; Q3 does not demonstrate integration (selects none of {1,3,5,6} or selects only {7}).""}, {""id"": ""FoI0"", ""credit"": 0, ""rule"": ""No coherent inference: Q1 not b. No OR Q2 selects none of the keys {1,2,6} and Q3 selects none of the keys {1,3,5,6}.""}], ""notes"": ""Scoring prioritizes correct statistical warrant in Q2 (CI includes 0 ⇒ not significant) and integration in Q3 (coordination of statistical uncertainty with the +10 pp practical threshold, power, and decision implications). Evaluate rules in descending order: FoI4 → FoI3S → FoI2S → FoI1 → FoI0. This mirrors CR partial credit by anchoring on warrants (Q2) and integration/decision framing (Q3).""}","Difficulty is targeted by requiring both a correct CI-based warrant (Q2) and integrated practical reasoning (Q3). Distractors reflect common misconceptions: CI-bound misuse, conflating point estimates with significance, equating statistical with practical importance, and post hoc one-tailed testing. This preserves the original construct demand and supports PCM/PC scoring.","{
+  ""q1_choice"": ""b. No, it is not statistically significant"",
+  ""q2_item"": {
+    ""stem"": ""Select all brief reasons that correctly support the claim that the difference is not statistically significant at α = 0.05, given the 95% CI for the difference is −0.015 to 0.392 (n ≈ 35 per group)."",
+    ""options"": [
+      {
+        ""text"": ""The 95% confidence interval (−0.015, 0.392) includes 0, so a zero effect is plausible."",
+        ""key"": true,
+        ""rationale"": ""Correct: This applies the CI decision rule for a two-sided α = 0.05 test. Cognitive process: FoI3S (statistical interpretation)."",
+        ""misconception_tag"": ""applies_the_ci_rule_correctly_but_wi""
+      },
+      {
+        ""text"": ""Because the CI crosses 0, a two-sided test at α = 0.05 would fail to reject H0."",
+        ""key"": true,
+        ""rationale"": ""Correct: CI crossing 0 is equivalent to p > 0.05 for a two-sided test. Cognitive process: FoI3S (statistical interpretation)."",
+        ""misconception_tag"": ""applies_the_ci_rule_correctly_but_wi""
+      },
+      {
+        ""text"": ""The lower bound is negative, which proves the treatment decreased likes."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: A negative bound only indicates that a decrease is within the plausible range; it does not prove harm. Cognitive process: FoI2S error (misreads CI)."",
+        ""misconception_tag"": ""incorrectly_applies_ci_logic_eg_usin""
+      },
+      {
+        ""text"": ""The upper bound (0.392) is well above 0, which shows the difference is statistically significant."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: Significance is not determined by the upper bound alone; the CI must exclude 0. Cognitive process: FoI2S error (misuses CI bound)."",
+        ""misconception_tag"": ""incorrectly_applies_ci_logic_eg_usin""
+      },
+      {
+        ""text"": ""The point estimate (0.20) is greater than 0; therefore the effect is statistically significant."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: A positive point estimate does not imply statistical significance. Cognitive process: FoI1/2S error (conflates estimate with inference)."",
+        ""misconception_tag"": ""incorrectly_applies_ci_logic_eg_usin""
+      },
+      {
+        ""text"": ""The interval spans negative to large positive values, indicating imprecision (likely from n ≈ 35/group), which contributes to non-significance."",
+        ""key"": true,
+        ""rationale"": ""Correct: Recognizes wide CI/imprecision due to sample size as a reason the CI includes 0. Cognitive process: FoI3S→FoI4 bridge (links design/precision to inference)."",
+        ""misconception_tag"": ""correctly_interprets_the_ci_it_inclu""
+      },
+      {
+        ""text"": ""With a sample this small, results can never be statistically significant."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: Small samples can still yield significance; it is just less likely. Cognitive process: FoI1 naive generalization."",
+        ""misconception_tag"": ""subjective_judgment_without_statisti""
+      }
+    ]
+  },
+  ""q3_item"": {
+    ""stem"": ""Management’s practical threshold is a +10 percentage-point increase in likes. Select all statements that best explain the practical and decision-making implications of these results."",
+    ""options"": [
+      {
+        ""text"": ""Although the point estimate (+20 pp) exceeds +10 pp, the CI includes effects < +10 pp and even ≤ 0, so we cannot conclude the feature clears the threshold."",
+        ""key"": true,
+        ""rationale"": ""Correct: Coordinates statistical uncertainty with the practical threshold and resolves the apparent conflict. Cognitive process: FoI4 (integration)."",
+        ""misconception_tag"": ""correctly_interprets_the_ci_it_inclu""
+      },
+      {
+        ""text"": ""Because the result is not statistically significant, it must be practically unimportant."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: Practical importance is about effect size/threshold, not p-value alone. Cognitive process: FoI1 error (equates statistical with practical)."",
+        ""misconception_tag"": ""subjective_judgment_without_statisti""
+      },
+      {
+        ""text"": ""With ≈35 per group, power to detect a +10 pp effect may be low; a larger experiment would reduce Type II error and narrow the CI."",
+        ""key"": true,
+        ""rationale"": ""Correct: Identifies power/Type II error and links to planning/precision. Cognitive process: FoI4 (constraints and decision implications)."",
+        ""misconception_tag"": ""correctly_interprets_the_ci_it_inclu""
+      },
+      {
+        ""text"": ""Since the CI upper bound is +39.2 pp, the true effect is at least +39.2 pp; we should deploy immediately."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: An upper bound is not a guaranteed minimum. Cognitive process: FoI2S error (misreads CI bound)."",
+        ""misconception_tag"": ""incorrectly_applies_ci_logic_eg_usin""
+      },
+      {
+        ""text"": ""Random assignment limits confounding; the main issue here is sampling uncertainty, so more data (not more controls) is the priority."",
+        ""key"": true,
+        ""rationale"": ""Correct: Matches design features to the uncertainty source and appropriate remedy. Cognitive process: FoI4 (method-choice aligned to goal)."",
+        ""misconception_tag"": ""correctly_interprets_the_ci_it_inclu""
+      },
+      {
+        ""text"": ""Compare the CI to the +10 pp threshold (or test H0: Δ ≤ +10 pp vs HA: Δ > +10 pp); because the CI includes values ≤ +10 pp, we cannot claim the feature clears the threshold."",
+        ""key"": true,
+        ""rationale"": ""Correct: Aligns inference with the business decision rule (superiority vs threshold). Cognitive process: FoI4 (purpose-aligned inference)."",
+        ""misconception_tag"": ""correctly_interprets_the_ci_it_inclu""
+      },
+      {
+        ""text"": ""Because the point estimate exceeds +10 pp, we should proceed; statistical significance is irrelevant."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: Ignores uncertainty and risk of Type II/overestimation. Cognitive process: FoI1 error (point-estimate-only decision)."",
+        ""misconception_tag"": ""subjective_judgment_without_statisti""
+      },
+      {
+        ""text"": ""To make the result significant, switch to a one-tailed test after seeing the positive effect."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: Post hoc one-tailed testing is invalid and inflates Type I error. Cognitive process: FoI2S misuse of testing."",
+        ""misconception_tag"": ""incorrectly_applies_ci_logic_eg_usin""
+      }
+    ]
+  },
+  ""scoring_guide"": {
+    ""waypoints"": [
+      {
+        ""id"": ""FoI4"",
+        ""credit"": 3,
+        ""rule"": ""Q1 = b. No; Q2: select at least one core statistical key {1,2} AND select none of {3,4,5}; Q3: must select option 1 AND at least one of {3,5,6}; selections from distractors {2,4,7,8} in Q3 must be none.""
+      },
+      {
+        ""id"": ""FoI3S"",
+        ""credit"": 2,
+        ""rule"": ""Q1 = b. No; Q2: select at least one of {1,2} (option 6 may also be selected) AND do not select {4,5}; Q3: select at most one of {1,3,5,6} AND select none of {4,8}. (Limited or no integration.)""
+      },
+      {
+        ""id"": ""FoI2S"",
+        ""credit"": 1,
+        ""rule"": ""Q1 = b. No; EITHER Q2 fails to select any of {1,2} OR Q2 selects any incorrect CI-logic options {3,4,5}. (Even if Q3 has some correct choices, CI logic is flawed.)""
+      },
+      {
+        ""id"": ""FoI1"",
+        ""credit"": 0,
+        ""rule"": ""Q1 = b. No; Q2 selects naive subjective option {7} and none of {1,2}; Q3 does not demonstrate integration (selects none of {1,3,5,6} or selects only {7}).""
+      },
+      {
+        ""id"": ""FoI0"",
+        ""credit"": 0,
+        ""rule"": ""No coherent inference: Q1 not b. No OR Q2 selects none of the keys {1,2,6} and Q3 selects none of the keys {1,3,5,6}.""
+      }
+    ],
+    ""notes"": ""Scoring prioritizes correct statistical warrant in Q2 (CI includes 0 ⇒ not significant) and integration in Q3 (coordination of statistical uncertainty with the +10 pp practical threshold, power, and decision implications). Evaluate rules in descending order: FoI4 → FoI3S → FoI2S → FoI1 → FoI0. This mirrors CR partial credit by anchoring on warrants (Q2) and integration/decision framing (Q3).""
+  },
+  ""note"": ""Difficulty is targeted by requiring both a correct CI-based warrant (Q2) and integrated practical reasoning (Q3). Distractors reflect common misconceptions: CI-bound misuse, conflating point estimates with significance, equating statistical with practical importance, and post hoc one-tailed testing. This preserves the original construct demand and supports PCM/PC scoring.""
+}"
+ABtest_P,"a. Yes, it is practically important","{""stem"": ""You chose Yes. Select all brief statements that appropriately justify practical importance and acknowledge key caveats (Select all that apply)."", ""options"": [{""text"": ""The observed difference is 0.20 (20 percentage points), which exceeds the company’s 0.10 practical threshold."", ""key"": true, ""rationale"": ""Correct: Links the point estimate directly to the stated practical benchmark (FoI3P: practical classification)."", ""misconception_tag"": null}, {""text"": ""The 95% CI (−0.015, 0.392) includes values below 0.10 and even below 0, so we cannot be confident the true increase clears the 10-pp benchmark."", ""key"": true, ""rationale"": ""Correct: Integrates CI with the practical threshold, noting uncertainty about reliably meeting the benchmark (FoI4: coordination of statistical and practical significance)."", ""misconception_tag"": null}, {""text"": ""Because the CI’s upper bound (0.392) is above 0.10, the effect is practically important regardless of the lower bound."", ""key"": false, ""rationale"": ""Incorrect: Misuses the CI by focusing only on the upper bound; ignores that the lower bound is < 0.10 and < 0 (misinterpretation of CI)."", ""misconception_tag"": ""ci_upper_bound_implies_importance""}, {""text"": ""Statistical significance is not the decision goal here; we should still check whether the interval clears the 10-pp practical threshold."", ""key"": true, ""rationale"": ""Correct: Distinguishes goals and properly ties the CI to the practical threshold (FoI4: integrated framing)."", ""misconception_tag"": null}, {""text"": ""With about 35 users per group, the estimate is imprecise, which helps explain the wide CI."", ""key"": true, ""rationale"": ""Correct: Identifies a design/precision factor that affects uncertainty (FoI4: recognizes constraints and trade-offs)."", ""misconception_tag"": null}, {""text"": ""A 20-point jump sounds big, so it must matter."", ""key"": false, ""rationale"": ""Incorrect: Impressionistic claim without benchmarked or inferential reasoning."", ""misconception_tag"": ""purely_subjective_or_impression-base""}, {""text"": ""Because 40% is double 20%, the feature must be worth investing in."", ""key"": false, ""rationale"": ""Incorrect: Ratio framing without respect to the 10-pp benchmark or uncertainty."", ""misconception_tag"": ""ratio_double_implies_importance""}, {""text"": ""Since the lower CI bound is negative, the true effect must be negative."", ""key"": false, ""rationale"": ""Incorrect: Misinterprets CI bounds; a negative lower bound does not imply the true effect is definitely negative."", ""misconception_tag"": ""ci_lower_bound_negative_means_definitely_negative""}]}","{""stem"": ""Extend your reasoning to decision-making. Select all statements that appropriately justify what to do next and how to resolve uncertainty (Select all that apply)."", ""options"": [{""text"": ""Collect more data (or run a larger A/B test) to narrow the CI; invest only if a follow-up shows the lower bound exceeds 0.10."", ""key"": true, ""rationale"": ""Correct: Proposes a decision rule tied to the practical threshold and a method to reduce uncertainty (FoI4: coordinated, decision-oriented)."", ""misconception_tag"": null}, {""text"": ""Proceed with investment now; the point estimate exceeds 0.10, and sample size/uncertainty are irrelevant once the benchmark is met."", ""key"": false, ""rationale"": ""Incorrect: Ignores uncertainty and precision; overrelies on the point estimate."", ""misconception_tag"": ""declares_practical_importance_based_""}, {""text"": ""Because the CI includes 0, the effect cannot be practically important."", ""key"": false, ""rationale"": ""Incorrect: Conflates statistical significance with practical importance."", ""misconception_tag"": ""conflates_stat_and_practical_significance""}, {""text"": ""With only ~35 per group, power is likely low; a well-powered randomized test would clarify whether the lift reliably exceeds 10 pp."", ""key"": true, ""rationale"": ""Correct: Connects sample size/power to the ability to assess the practical threshold (FoI4)."", ""misconception_tag"": null}, {""text"": ""Adopt a decision rule requiring the entire 95% CI to lie above 0.10 to claim practical importance at this confidence level."", ""key"": true, ""rationale"": ""Correct: Formalizes an integrated criterion that coordinates CI and practical threshold (FoI4)."", ""misconception_tag"": null}, {""text"": ""Even if the true effect were 0.08, the high upper CI bound means the feature still meets the 10-pp threshold."", ""key"": false, ""rationale"": ""Incorrect: Misunderstands that the benchmark applies to the true effect or lower bound standard, not the upper bound."", ""misconception_tag"": ""misunderstands_threshold_requires_lb""}, {""text"": ""Consider potential measurement error or user heterogeneity that could dilute effects; stratify or improve measurement in the next test."", ""key"": true, ""rationale"": ""Correct: Incorporates contextual limitations and design improvements to strengthen inference (FoI4: credits trade-offs and constraints)."", ""misconception_tag"": null}]}","{""waypoints"": [{""id"": ""FoI4"", ""credit"": 3, ""rule"": ""Q1 = a. Yes; AND (Q2 correct selections include option 1 AND at least one of {2,4,5}); AND (Q3 correct selections include at least two of {1,4,5,7}); AND (no misconception options selected in Q2 {3,6,7,8} or Q3 {2,3,6}).""}, {""id"": ""FoI3P"", ""credit"": 2, ""rule"": ""Q1 = a. Yes; AND (Q2 correct selections = {1} only, with none of {2,4,5} selected); AND (Q3 correct selections among {1,4,5,7} ≤ 1); AND (no misconception options selected in Q2 {3,6,7,8} or Q3 {2,3,6}).""}, {""id"": ""FoI2P"", ""credit"": 1, ""rule"": ""Q1 = a. Yes; AND (any misconception selected in Q2 {3,6,7,8} or Q3 {2,3,6}) OR (Q2 lacks option 1 and instead selects at least one of {3,6,7,8}); precedence: any misconception caps score at FoI2P unless FoI0 applies.""}, {""id"": ""FoI1"", ""credit"": 0, ""rule"": ""Q1 = a. Yes; AND (Q2 selects only option 6 and no other Q2 options) AND (Q3 selects no keyed options {1,4,5,7} and no other options).""}, {""id"": ""FoI0"", ""credit"": 0, ""rule"": ""Q1 = a. Yes; AND (no options selected in both Q2 and Q3).""}], ""notes"": ""Scoring prioritizes integrated coordination of practical threshold with inferential uncertainty (CI/power). Any selected misconception (CI bound misuse, conflating statistical/practical significance, or impressionistic claims) limits credit to FoI2P. PCM/PC implementation: assign scores 0–3 per rules; if multiple rules match, award the highest level that does not violate misconception precedence.""}","Difficulty is targeted to match the original CR by requiring dual evidence: practical benchmark plus CI-based uncertainty and decision rules (FoI4). Distractors probe common misunderstandings: focusing on CI upper bound only, conflating statistical with practical significance, ratio-based magnitude heuristics, and impressionistic reasoning. Increased option complexity preserves CR-like discrimination.","{
+  ""q1_choice"": ""a. Yes, it is practically important"",
+  ""q2_item"": {
+    ""stem"": ""You chose Yes. Select all brief statements that appropriately justify practical importance and acknowledge key caveats (Select all that apply)."",
+    ""options"": [
+      {
+        ""text"": ""The observed difference is 0.20 (20 percentage points), which exceeds the company’s 0.10 practical threshold."",
+        ""key"": true,
+        ""rationale"": ""Correct: Links the point estimate directly to the stated practical benchmark (FoI3P: practical classification)."",
+        ""misconception_tag"": null
+      },
+      {
+        ""text"": ""The 95% CI (−0.015, 0.392) includes values below 0.10 and even below 0, so we cannot be confident the true increase clears the 10-pp benchmark."",
+        ""key"": true,
+        ""rationale"": ""Correct: Integrates CI with the practical threshold, noting uncertainty about reliably meeting the benchmark (FoI4: coordination of statistical and practical significance)."",
+        ""misconception_tag"": null
+      },
+      {
+        ""text"": ""Because the CI’s upper bound (0.392) is above 0.10, the effect is practically important regardless of the lower bound."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: Misuses the CI by focusing only on the upper bound; ignores that the lower bound is < 0.10 and < 0 (misinterpretation of CI)."",
+        ""misconception_tag"": ""ci_upper_bound_implies_importance""
+      },
+      {
+        ""text"": ""Statistical significance is not the decision goal here; we should still check whether the interval clears the 10-pp practical threshold."",
+        ""key"": true,
+        ""rationale"": ""Correct: Distinguishes goals and properly ties the CI to the practical threshold (FoI4: integrated framing)."",
+        ""misconception_tag"": null
+      },
+      {
+        ""text"": ""With about 35 users per group, the estimate is imprecise, which helps explain the wide CI."",
+        ""key"": true,
+        ""rationale"": ""Correct: Identifies a design/precision factor that affects uncertainty (FoI4: recognizes constraints and trade-offs)."",
+        ""misconception_tag"": null
+      },
+      {
+        ""text"": ""A 20-point jump sounds big, so it must matter."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: Impressionistic claim without benchmarked or inferential reasoning."",
+        ""misconception_tag"": ""purely_subjective_or_impression-base""
+      },
+      {
+        ""text"": ""Because 40% is double 20%, the feature must be worth investing in."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: Ratio framing without respect to the 10-pp benchmark or uncertainty."",
+        ""misconception_tag"": ""ratio_double_implies_importance""
+      },
+      {
+        ""text"": ""Since the lower CI bound is negative, the true effect must be negative."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: Misinterprets CI bounds; a negative lower bound does not imply the true effect is definitely negative."",
+        ""misconception_tag"": ""ci_lower_bound_negative_means_definitely_negative""
+      }
+    ]
+  },
+  ""q3_item"": {
+    ""stem"": ""Extend your reasoning to decision-making. Select all statements that appropriately justify what to do next and how to resolve uncertainty (Select all that apply)."",
+    ""options"": [
+      {
+        ""text"": ""Collect more data (or run a larger A/B test) to narrow the CI; invest only if a follow-up shows the lower bound exceeds 0.10."",
+        ""key"": true,
+        ""rationale"": ""Correct: Proposes a decision rule tied to the practical threshold and a method to reduce uncertainty (FoI4: coordinated, decision-oriented)."",
+        ""misconception_tag"": null
+      },
+      {
+        ""text"": ""Proceed with investment now; the point estimate exceeds 0.10, and sample size/uncertainty are irrelevant once the benchmark is met."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: Ignores uncertainty and precision; overrelies on the point estimate."",
+        ""misconception_tag"": ""declares_practical_importance_based_""
+      },
+      {
+        ""text"": ""Because the CI includes 0, the effect cannot be practically important."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: Conflates statistical significance with practical importance."",
+        ""misconception_tag"": ""conflates_stat_and_practical_significance""
+      },
+      {
+        ""text"": ""With only ~35 per group, power is likely low; a well-powered randomized test would clarify whether the lift reliably exceeds 10 pp."",
+        ""key"": true,
+        ""rationale"": ""Correct: Connects sample size/power to the ability to assess the practical threshold (FoI4)."",
+        ""misconception_tag"": null
+      },
+      {
+        ""text"": ""Adopt a decision rule requiring the entire 95% CI to lie above 0.10 to claim practical importance at this confidence level."",
+        ""key"": true,
+        ""rationale"": ""Correct: Formalizes an integrated criterion that coordinates CI and practical threshold (FoI4)."",
+        ""misconception_tag"": null
+      },
+      {
+        ""text"": ""Even if the true effect were 0.08, the high upper CI bound means the feature still meets the 10-pp threshold."",
+        ""key"": false,
+        ""rationale"": ""Incorrect: Misunderstands that the benchmark applies to the true effect or lower bound standard, not the upper bound."",
+        ""misconception_tag"": ""misunderstands_threshold_requires_lb""
+      },
+      {
+        ""text"": ""Consider potential measurement error or user heterogeneity that could dilute effects; stratify or improve measurement in the next test."",
+        ""key"": true,
+        ""rationale"": ""Correct: Incorporates contextual limitations and design improvements to strengthen inference (FoI4: credits trade-offs and constraints)."",
+        ""misconception_tag"": null
+      }
+    ]
+  },
+  ""scoring_guide"": {
+    ""waypoints"": [
+      {
+        ""id"": ""FoI4"",
+        ""credit"": 3,
+        ""rule"": ""Q1 = a. Yes; AND (Q2 correct selections include option 1 AND at least one of {2,4,5}); AND (Q3 correct selections include at least two of {1,4,5,7}); AND (no misconception options selected in Q2 {3,6,7,8} or Q3 {2,3,6}).""
+      },
+      {
+        ""id"": ""FoI3P"",
+        ""credit"": 2,
+        ""rule"": ""Q1 = a. Yes; AND (Q2 correct selections = {1} only, with none of {2,4,5} selected); AND (Q3 correct selections among {1,4,5,7} ≤ 1); AND (no misconception options selected in Q2 {3,6,7,8} or Q3 {2,3,6}).""
+      },
+      {
+        ""id"": ""FoI2P"",
+        ""credit"": 1,
+        ""rule"": ""Q1 = a. Yes; AND (any misconception selected in Q2 {3,6,7,8} or Q3 {2,3,6}) OR (Q2 lacks option 1 and instead selects at least one of {3,6,7,8}); precedence: any misconception caps score at FoI2P unless FoI0 applies.""
+      },
+      {
+        ""id"": ""FoI1"",
+        ""credit"": 0,
+        ""rule"": ""Q1 = a. Yes; AND (Q2 selects only option 6 and no other Q2 options) AND (Q3 selects no keyed options {1,4,5,7} and no other options).""
+      },
+      {
+        ""id"": ""FoI0"",
+        ""credit"": 0,
+        ""rule"": ""Q1 = a. Yes; AND (no options selected in both Q2 and Q3).""
+      }
+    ],
+    ""notes"": ""Scoring prioritizes integrated coordination of practical threshold with inferential uncertainty (CI/power). Any selected misconception (CI bound misuse, conflating statistical/practical significance, or impressionistic claims) limits credit to FoI2P. PCM/PC implementation: assign scores 0–3 per rules; if multiple rules match, award the highest level that does not violate misconception precedence.""
+  },
+  ""note"": ""Difficulty is targeted to match the original CR by requiring dual evidence: practical benchmark plus CI-based uncertainty and decision rules (FoI4). Distractors probe common misunderstandings: focusing on CI upper bound only, conflating statistical with practical significance, ratio-based magnitude heuristics, and impressionistic reasoning. Increased option complexity preserves CR-like discrimination.""
+}"
+ABtest_P,"b. No, it is not practically important","{""stem"": ""Select all brief reasons that best justify answering “No, it is not practically important” for this study."", ""options"": [{""text"": ""The 95% CI for the difference (−0.015, 0.392) includes values below the 10-pp benchmark, so the evidence does not reliably meet the practical threshold."", ""key"": true, ""rationale"": ""Correct. Coordinates the decision threshold (10 pp) with the CI; uncertainty means the benchmark is not met with sufficient confidence."", ""misconception_tag"": ""explicitly_coordinates_the_10-pp_thr""}, {""text"": ""The CI’s lower bound is negative, so the true effect could be zero or harmful; we should not claim practical importance."", ""key"": true, ""rationale"": ""Correct. Recognizes that the CI includes 0 and negative values, so claiming practical importance is not justified."", ""misconception_tag"": ""explicitly_coordinates_the_10-pp_thr""}, {""text"": ""With only about 35 users per group, the CI is wide; the evidence is too uncertain to justify calling it practically important."", ""key"": true, ""rationale"": ""Correct. Connects small n to wide CI and decision uncertainty, supporting a conservative ‘No’ call."", ""misconception_tag"": ""explicitly_coordinates_the_10-pp_thr""}, {""text"": ""The observed difference (20 pp) is smaller than the 10-pp target, so it is not practically important."", ""key"": false, ""rationale"": ""Incorrect. Misreads the benchmark; 20 pp exceeds 10 pp."", ""misconception_tag"": ""benchmark_misread""}, {""text"": ""Because the result is not statistically significant, it cannot be practically important."", ""key"": false, ""rationale"": ""Incorrect. Conflates statistical significance with practical significance; the two are distinct."", ""misconception_tag"": ""conflates_stat_and_practical""}, {""text"": ""The upper bound of the CI is well above 10 pp, which shows the feature is practically important."", ""key"": false, ""rationale"": ""Incorrect for a ‘No’ conclusion. A high upper bound doesn’t ensure the effect reliably exceeds the threshold because the lower bound is below 10 pp."", ""misconception_tag"": ""declares_practical_importance_based_""}, {""text"": ""The point estimate (20 pp) exceeds the threshold, so the feature is practically important."", ""key"": false, ""rationale"": ""Incorrect. Ignores uncertainty; practical importance should be judged against the CI relative to the threshold."", ""misconception_tag"": ""declares_practical_importance_based_""}]}","{""stem"": ""Select all extended justifications that support answering “No” and appropriately integrate statistical and practical considerations for decision making."", ""options"": [{""text"": ""Apply a decision rule: label as practically important only if the 95% CI lies entirely above +10 pp; here the lower bound (−1.5 pp) is below +10 pp, so choose ‘No’ for now."", ""key"": true, ""rationale"": ""Correct. Explicitly coordinates threshold and CI and frames a decision rule."", ""misconception_tag"": ""explicitly_coordinates_the_10-pp_thr""}, {""text"": ""Collect more data to narrow the CI; if the true effect is near 20 pp, a larger n would likely push the lower bound above +10 pp and change the decision."", ""key"": true, ""rationale"": ""Correct. Connects sample size, precision, and how to resolve the decision."", ""misconception_tag"": ""explicitly_coordinates_the_10-pp_thr""}, {""text"": ""Because groups were randomly assigned, the feature caused the difference; therefore it is practically important."", ""key"": false, ""rationale"": ""Incorrect. Causality does not imply practical importance; magnitude relative to the threshold and uncertainty still matter."", ""misconception_tag"": ""causality_vs_practical""}, {""text"": ""Given management only cares about increases beyond +10 pp, even a one-sided 95% lower bound should exceed +10 pp; it doesn’t here, so do not claim practical importance."", ""key"": true, ""rationale"": ""Correct. Aligns inferential quantity with the directional decision criterion; the one-sided lower bound still fails."", ""misconception_tag"": ""explicitly_coordinates_the_10-pp_thr""}, {""text"": ""A 95% CI means there is a 95% chance the true effect lies in [−0.015, 0.392]; since it includes negative values, the true effect is probably zero, so ‘No’."", ""key"": false, ""rationale"": ""Incorrect. Misinterprets CI as a probability statement about the parameter and overstates ‘zero’ as the likely truth."", ""misconception_tag"": ""ci_probability_misinterpretation""}, {""text"": ""Practical significance cannot be assessed with CIs; only the point estimate matters for business decisions."", ""key"": false, ""rationale"": ""Incorrect. Practical decisions should consider both effect size and uncertainty."", ""misconception_tag"": ""ignores_uncertainty""}, {""text"": ""If implementation costs are nontrivial, requiring the CI’s lower bound to exceed +10 pp before investing is prudent given current uncertainty."", ""key"": true, ""rationale"": ""Correct. Attends to decision costs and sets an evidence threshold consistent with the practical benchmark."", ""misconception_tag"": ""decision_cost_tradeoff""}]}","{""waypoints"": [{""id"": ""FoI4"", ""credit"": 3, ""rule"": ""Not attainable when Q1 = b. Reserved for Q1 ∈ {a, c} with coordinated threshold–CI reasoning and decision framing.""}, {""id"": ""FoI3S"", ""credit"": 2, ""rule"": ""Q1 = b AND (Q2 keys ⊇ {1,2} OR Q2 keys ⊇ {1,3} OR Q2 keys ⊇ {2,3}) AND (Q3 keys ⊇ at least two of {A,B,D,G}) AND does NOT select any of {Q2 option 6, Q2 option 7, Q3 option F}.""}, {""id"": ""FoI2P"", ""credit"": 1, ""rule"": ""Q1 = b AND [ (Q2 keys includes at least one of {1,2,3}) OR (Q3 keys includes at least one of {A,B,D,G}) ] BUT NOT meeting FoI3S; selections may include misconceptions (e.g., Q2 option 5 or Q3 option E).""}, {""id"": ""FoI1_or_FoI0"", ""credit"": 0, ""rule"": ""Q1 = b AND selects none of the keyed options in Q2 and Q3 (i.e., Q2 keys ∩ {1,2,3} = ∅ AND Q3 keys ∩ {A,B,D,G} = ∅).""}], ""notes"": ""Partial-credit PCM rule: maximum credit constrained by Q1. For Q1 = b, ceiling is FoI3S (2 points) because the stance overstates certainty relative to the integrated standard; strong statistical coordination and decision-aware justifications earn 2. Minimal or flawed reasoning earns 1 or 0 depending on presence of keyed selections.""}","Difficulty is targeted by requiring coordination of the CI with the 10-pp threshold and decision rules (Q3). Distractors embody common misconceptions: conflating statistical with practical significance, misreading benchmarks, CI probability misinterpretation, and ignoring uncertainty. This preserves the CR cognitive demand while leveraging SATA to diagnose integration versus superficial magnitude claims.","{
+  ""q1_choice"": ""b. No, it is not practically important"",
+  ""q2_item"": {
+    ""stem"": ""Select all brief reasons that best justify answering “No, it is not practically important” for this study."",
+    ""options"": [
+      {
+        ""text"": ""The 95% CI for the difference (−0.015, 0.392) includes values below the 10-pp benchmark, so the evidence does not reliably meet the practical threshold."",
+        ""key"": true,
+        ""rationale"": ""Correct. Coordinates the decision threshold (10 pp) with the CI; uncertainty means the benchmark is not met with sufficient confidence."",
+        ""misconception_tag"": ""explicitly_coordinates_the_10-pp_thr""
+      },
+      {
+        ""text"": ""The CI’s lower bound is negative, so the true effect could be zero or harmful; we should not claim practical importance."",
+        ""key"": true,
+        ""rationale"": ""Correct. Recognizes that the CI includes 0 and negative values, so claiming practical importance is not justified."",
+        ""misconception_tag"": ""explicitly_coordinates_the_10-pp_thr""
+      },
+      {
+        ""text"": ""With only about 35 users per group, the CI is wide; the evidence is too uncertain to justify calling it practically important."",
+        ""key"": true,
+        ""rationale"": ""Correct. Connects small n to wide CI and decision uncertainty, supporting a conservative ‘No’ call."",
+        ""misconception_tag"": ""explicitly_coordinates_the_10-pp_thr""
+      },
+      {
+        ""text"": ""The observed difference (20 pp) is smaller than the 10-pp target, so it is not practically important."",
+        ""key"": false,
+        ""rationale"": ""Incorrect. Misreads the benchmark; 20 pp exceeds 10 pp."",
+        ""misconception_tag"": ""benchmark_misread""
+      },
+      {
+        ""text"": ""Because the result is not statistically significant, it cannot be practically important."",
+        ""key"": false,
+        ""rationale"": ""Incorrect. Conflates statistical significance with practical significance; the two are distinct."",
+        ""misconception_tag"": ""conflates_stat_and_practical""
+      },
+      {
+        ""text"": ""The upper bound of the CI is well above 10 pp, which shows the feature is practically important."",
+        ""key"": false,
+        ""rationale"": ""Incorrect for a ‘No’ conclusion. A high upper bound doesn’t ensure the effect reliably exceeds the threshold because the lower bound is below 10 pp."",
+        ""misconception_tag"": ""declares_practical_importance_based_""
+      },
+      {
+        ""text"": ""The point estimate (20 pp) exceeds the threshold, so the feature is practically important."",
+        ""key"": false,
+        ""rationale"": ""Incorrect. Ignores uncertainty; practical importance should be judged against the CI relative to the threshold."",
+        ""misconception_tag"": ""declares_practical_importance_based_""
+      }
+    ]
+  },
+  ""q3_item"": {
+    ""stem"": ""Select all extended justifications that support answering “No” and appropriately integrate statistical and practical considerations for decision making."",
+    ""options"": [
+      {
+        ""text"": ""Apply a decision rule: label as practically important only if the 95% CI lies entirely above +10 pp; here the lower bound (−1.5 pp) is below +10 pp, so choose ‘No’ for now."",
+        ""key"": true,
+        ""rationale"": ""Correct. Explicitly coordinates threshold and CI and frames a decision rule."",
+        ""misconception_tag"": ""explicitly_coordinates_the_10-pp_thr""
+      },
+      {
+        ""text"": ""Collect more data to narrow the CI; if the true effect is near 20 pp, a larger n would likely push the lower bound above +10 pp and change the decision."",
+        ""key"": true,
+        ""rationale"": ""Correct. Connects sample size, precision, and how to resolve the decision."",
+        ""misconception_tag"": ""explicitly_coordinates_the_10-pp_thr""
+      },
+      {
+        ""text"": ""Because groups were randomly assigned, the feature caused the difference; therefore it is practically important."",
+        ""key"": false,
+        ""rationale"": ""Incorrect. Causality does not imply practical importance; magnitude relative to the threshold and uncertainty still matter."",
+        ""misconception_tag"": ""causality_vs_practical""
+      },
+      {
+        ""text"": ""Given management only cares about increases beyond +10 pp, even a one-sided 95% lower bound should exceed +10 pp; it doesn’t here, so do not claim practical importance."",
+        ""key"": true,
+        ""rationale"": ""Correct. Aligns inferential quantity with the directional decision criterion; the one-sided lower bound still fails."",
+        ""misconception_tag"": ""explicitly_coordinates_the_10-pp_thr""
+      },
+      {
+        ""text"": ""A 95% CI means there is a 95% chance the true effect lies in [−0.015, 0.392]; since it includes negative values, the true effect is probably zero, so ‘No’."",
+        ""key"": false,
+        ""rationale"": ""Incorrect. Misinterprets CI as a probability statement about the parameter and overstates ‘zero’ as the likely truth."",
+        ""misconception_tag"": ""ci_probability_misinterpretation""
+      },
+      {
+        ""text"": ""Practical significance cannot be assessed with CIs; only the point estimate matters for business decisions."",
+        ""key"": false,
+        ""rationale"": ""Incorrect. Practical decisions should consider both effect size and uncertainty."",
+        ""misconception_tag"": ""ignores_uncertainty""
+      },
+      {
+        ""text"": ""If implementation costs are nontrivial, requiring the CI’s lower bound to exceed +10 pp before investing is prudent given current uncertainty."",
+        ""key"": true,
+        ""rationale"": ""Correct. Attends to decision costs and sets an evidence threshold consistent with the practical benchmark."",
+        ""misconception_tag"": ""decision_cost_tradeoff""
+      }
+    ]
+  },
+  ""scoring_guide"": {
+    ""waypoints"": [
+      {
+        ""id"": ""FoI4"",
+        ""credit"": 3,
+        ""rule"": ""Not attainable when Q1 = b. Reserved for Q1 ∈ {a, c} with coordinated threshold–CI reasoning and decision framing.""
+      },
+      {
+        ""id"": ""FoI3S"",
+        ""credit"": 2,
+        ""rule"": ""Q1 = b AND (Q2 keys ⊇ {1,2} OR Q2 keys ⊇ {1,3} OR Q2 keys ⊇ {2,3}) AND (Q3 keys ⊇ at least two of {A,B,D,G}) AND does NOT select any of {Q2 option 6, Q2 option 7, Q3 option F}.""
+      },
+      {
+        ""id"": ""FoI2P"",
+        ""credit"": 1,
+        ""rule"": ""Q1 = b AND [ (Q2 keys includes at least one of {1,2,3}) OR (Q3 keys includes at least one of {A,B,D,G}) ] BUT NOT meeting FoI3S; selections may include misconceptions (e.g., Q2 option 5 or Q3 option E).""
+      },
+      {
+        ""id"": ""FoI1_or_FoI0"",
+        ""credit"": 0,
+        ""rule"": ""Q1 = b AND selects none of the keyed options in Q2 and Q3 (i.e., Q2 keys ∩ {1,2,3} = ∅ AND Q3 keys ∩ {A,B,D,G} = ∅).""
+      }
+    ],
+    ""notes"": ""Partial-credit PCM rule: maximum credit constrained by Q1. For Q1 = b, ceiling is FoI3S (2 points) because the stance overstates certainty relative to the integrated standard; strong statistical coordination and decision-aware justifications earn 2. Minimal or flawed reasoning earns 1 or 0 depending on presence of keyed selections.""
+  },
+  ""note"": ""Difficulty is targeted by requiring coordination of the CI with the 10-pp threshold and decision rules (Q3). Distractors embody common misconceptions: conflating statistical with practical significance, misreading benchmarks, CI probability misinterpretation, and ignoring uncertainty. This preserves the CR cognitive demand while leveraging SATA to diagnose integration versus superficial magnitude claims.""
+}"

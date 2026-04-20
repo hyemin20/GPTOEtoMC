@@ -1,0 +1,343 @@
+﻿item,Q1,Q2,Q3,SG,Note,Response
+PlayingSports_S,"a. Yes, it is statistically significant","{""stem"": ""Which reason best supports your answer to Q1?"", ""options"": [{""text"": ""I'm not sure; I just guessed yes."", ""key"": false, ""rationale"": ""FoI0: No inference provided."", ""misconception_tag"": ""no_inference""}, {""text"": ""Yes, because $500 more is a big amount."", ""key"": false, ""rationale"": ""FoI1: Magnitude-only judgment."", ""misconception_tag"": ""judgment_based_only_on_the_subjectiv""}, {""text"": ""Yes, athletes usually earn more, so it makes sense."", ""key"": false, ""rationale"": ""FoI1: Prior belief, not statistical reasoning."", ""misconception_tag"": ""judgment_based_only_on_the_subjectiv""}, {""text"": ""Yes; p=0.025 means a 97.5% chance athletes earn more."", ""key"": false, ""rationale"": ""FoI2S: Misinterprets p-value as probability of the claim."", ""misconception_tag"": ""misinterprets_the_p-value_or_test_lo""}, {""text"": ""Yes; p below .05 means the pay gap is large."", ""key"": false, ""rationale"": ""FoI2S: Confuses statistical significance with effect size."", ""misconception_tag"": ""misinterprets_the_p-value_or_test_lo""}, {""text"": ""Yes, the sample is huge, so any difference becomes significant."", ""key"": false, ""rationale"": ""FoI2S: Overrelies on n; ignores inferential meaning."", ""misconception_tag"": ""misinterprets_the_p-value_or_test_lo""}, {""text"": ""Yes; p=0.025 is below 0.05, so there is evidence of a difference."", ""key"": true, ""rationale"": ""FoI3S: Correct statistical interpretation of the p-value."", ""misconception_tag"": ""correct_interpretation_of_the_p-valu""}, {""text"": ""Yes; p=0.025 < 0.05, but with 1500 each, a $500 gap may lack practical value."", ""key"": true, ""rationale"": ""FoI4: Integrates statistical result with sample size and practical impact."", ""misconception_tag"": ""considers_the_p-value_together_with_""}]}",,"{""waypoints"": [{""id"": ""FoI4"", ""credit"": 3, ""rule"": ""Q1='a. Yes' AND Q2 selects an option tagged considers_the_p-value_together_with_""}, {""id"": ""FoI3S"", ""credit"": 2, ""rule"": ""Q1='a. Yes' AND Q2 selects an option tagged correct_interpretation_of_the_p-valu""}, {""id"": ""FoI2S"", ""credit"": 1, ""rule"": ""Q1='a. Yes' AND Q2 selects an option tagged misinterprets_the_p-value_or_test_lo""}, {""id"": ""FoI1"", ""credit"": 0, ""rule"": ""Q1='a. Yes' AND Q2 selects an option tagged judgment_based_only_on_the_subjectiv""}, {""id"": ""FoI0"", ""credit"": 0, ""rule"": ""Q1='a. Yes' AND Q2 selects an option tagged no_inference""}], ""notes"": ""Partial credit mirrors CR guide: integrated > correct statistical > procedural. Ordinal ordering preserved across options.""}","Two keys target FoI4 and FoI3S. Distractors ladder from no inference to procedural misinterpretations to magnitude-only claims, supporting diagnostic classification and difficulty spread.","{
+  ""q1_choice"": ""a. Yes, it is statistically significant"",
+  ""q2_item"": {
+    ""stem"": ""Which reason best supports your answer to Q1?"",
+    ""options"": [
+      {
+        ""text"": ""I'm not sure; I just guessed yes."",
+        ""key"": false,
+        ""rationale"": ""FoI0: No inference provided."",
+        ""misconception_tag"": ""no_inference""
+      },
+      {
+        ""text"": ""Yes, because $500 more is a big amount."",
+        ""key"": false,
+        ""rationale"": ""FoI1: Magnitude-only judgment."",
+        ""misconception_tag"": ""judgment_based_only_on_the_subjectiv""
+      },
+      {
+        ""text"": ""Yes, athletes usually earn more, so it makes sense."",
+        ""key"": false,
+        ""rationale"": ""FoI1: Prior belief, not statistical reasoning."",
+        ""misconception_tag"": ""judgment_based_only_on_the_subjectiv""
+      },
+      {
+        ""text"": ""Yes; p=0.025 means a 97.5% chance athletes earn more."",
+        ""key"": false,
+        ""rationale"": ""FoI2S: Misinterprets p-value as probability of the claim."",
+        ""misconception_tag"": ""misinterprets_the_p-value_or_test_lo""
+      },
+      {
+        ""text"": ""Yes; p below .05 means the pay gap is large."",
+        ""key"": false,
+        ""rationale"": ""FoI2S: Confuses statistical significance with effect size."",
+        ""misconception_tag"": ""misinterprets_the_p-value_or_test_lo""
+      },
+      {
+        ""text"": ""Yes, the sample is huge, so any difference becomes significant."",
+        ""key"": false,
+        ""rationale"": ""FoI2S: Overrelies on n; ignores inferential meaning."",
+        ""misconception_tag"": ""misinterprets_the_p-value_or_test_lo""
+      },
+      {
+        ""text"": ""Yes; p=0.025 is below 0.05, so there is evidence of a difference."",
+        ""key"": true,
+        ""rationale"": ""FoI3S: Correct statistical interpretation of the p-value."",
+        ""misconception_tag"": ""correct_interpretation_of_the_p-valu""
+      },
+      {
+        ""text"": ""Yes; p=0.025 < 0.05, but with 1500 each, a $500 gap may lack practical value."",
+        ""key"": true,
+        ""rationale"": ""FoI4: Integrates statistical result with sample size and practical impact."",
+        ""misconception_tag"": ""considers_the_p-value_together_with_""
+      }
+    ]
+  },
+  ""q3_item"": null,
+  ""scoring_guide"": {
+    ""waypoints"": [
+      {
+        ""id"": ""FoI4"",
+        ""credit"": 3,
+        ""rule"": ""Q1='a. Yes' AND Q2 selects an option tagged considers_the_p-value_together_with_""
+      },
+      {
+        ""id"": ""FoI3S"",
+        ""credit"": 2,
+        ""rule"": ""Q1='a. Yes' AND Q2 selects an option tagged correct_interpretation_of_the_p-valu""
+      },
+      {
+        ""id"": ""FoI2S"",
+        ""credit"": 1,
+        ""rule"": ""Q1='a. Yes' AND Q2 selects an option tagged misinterprets_the_p-value_or_test_lo""
+      },
+      {
+        ""id"": ""FoI1"",
+        ""credit"": 0,
+        ""rule"": ""Q1='a. Yes' AND Q2 selects an option tagged judgment_based_only_on_the_subjectiv""
+      },
+      {
+        ""id"": ""FoI0"",
+        ""credit"": 0,
+        ""rule"": ""Q1='a. Yes' AND Q2 selects an option tagged no_inference""
+      }
+    ],
+    ""notes"": ""Partial credit mirrors CR guide: integrated > correct statistical > procedural. Ordinal ordering preserved across options.""
+  },
+  ""note"": ""Two keys target FoI4 and FoI3S. Distractors ladder from no inference to procedural misinterpretations to magnitude-only claims, supporting diagnostic classification and difficulty spread.""
+}"
+PlayingSports_S,"b. No, it is not statistically significant","{""stem"": ""Which reason best supports answering 'No' to Q1?"", ""options"": [{""text"": ""I am not sure how to judge this."", ""key"": false, ""rationale"": ""No inference offered."", ""misconception_tag"": ""no_inference""}, {""text"": ""The $500 gap is tiny, so not important."", ""key"": false, ""rationale"": ""Magnitude-only, ignores inference."", ""misconception_tag"": ""judgment_based_only_on_the_subjectiv""}, {""text"": ""Salaries vary a lot; such a small gap means nothing."", ""key"": false, ""rationale"": ""Subjective size judgment, no statistics."", ""misconception_tag"": ""judgment_based_only_on_the_subjectiv""}, {""text"": ""0.025 is bigger than 0.05, so not significant."", ""key"": false, ""rationale"": ""Incorrect numeric comparison."", ""misconception_tag"": ""misinterprets_the_p-value_or_test_lo""}, {""text"": ""p=0.025 means only a 2.5% chance the effect is real."", ""key"": false, ""rationale"": ""Treats p as probability the claim is true."", ""misconception_tag"": ""misinterprets_the_p-value_or_test_lo""}, {""text"": ""Two-tailed testing doubles p to 0.05, which fails the cutoff."", ""key"": false, ""rationale"": ""Misapplies two-tailed adjustment; p given is already two-tailed."", ""misconception_tag"": ""misinterprets_the_p-value_or_test_lo""}, {""text"": ""We use alpha=0.01; since 0.025>0.01, it does not qualify."", ""key"": true, ""rationale"": ""Applies a stricter alpha consistently; correct p-value logic."", ""misconception_tag"": ""provides_an_explicit_logically_consi""}, {""text"": ""At 99% confidence, the interval would include zero, so not significant."", ""key"": true, ""rationale"": ""Uses CI reasoning consistent with alpha=0.01."", ""misconception_tag"": ""provides_an_explicit_logically_consi""}]}",,"{""waypoints"": [{""id"": ""FoI3S"", ""credit"": 2, ""rule"": ""Q1=b, Q2 keys ⊇ {7,8}, Q3 N/A""}, {""id"": ""FoI2S"", ""credit"": 1, ""rule"": ""Q1=b, Q2 ∈ {4,5,6}""}, {""id"": ""FoI1"", ""credit"": 0, ""rule"": ""Q1=b, Q2 ∈ {2,3}""}, {""id"": ""FoI0"", ""credit"": 0, ""rule"": ""Q1=b, Q2 ∈ {1}""}], ""notes"": ""Score by highest keyed rationale selected. Ordinal ordering from FoI0→FoI3S mirrors CR guide. Partial credit for procedural attempts (FoI2S).""}",Keys target mid-high proficiency (alpha/CI coordination). Distractors probe common p-value misreads and magnitude-only heuristics. Ordered options support OMC threshold scoring.,"{
+  ""q1_choice"": ""b. No, it is not statistically significant"",
+  ""q2_item"": {
+    ""stem"": ""Which reason best supports answering 'No' to Q1?"",
+    ""options"": [
+      {
+        ""text"": ""I am not sure how to judge this."",
+        ""key"": false,
+        ""rationale"": ""No inference offered."",
+        ""misconception_tag"": ""no_inference""
+      },
+      {
+        ""text"": ""The $500 gap is tiny, so not important."",
+        ""key"": false,
+        ""rationale"": ""Magnitude-only, ignores inference."",
+        ""misconception_tag"": ""judgment_based_only_on_the_subjectiv""
+      },
+      {
+        ""text"": ""Salaries vary a lot; such a small gap means nothing."",
+        ""key"": false,
+        ""rationale"": ""Subjective size judgment, no statistics."",
+        ""misconception_tag"": ""judgment_based_only_on_the_subjectiv""
+      },
+      {
+        ""text"": ""0.025 is bigger than 0.05, so not significant."",
+        ""key"": false,
+        ""rationale"": ""Incorrect numeric comparison."",
+        ""misconception_tag"": ""misinterprets_the_p-value_or_test_lo""
+      },
+      {
+        ""text"": ""p=0.025 means only a 2.5% chance the effect is real."",
+        ""key"": false,
+        ""rationale"": ""Treats p as probability the claim is true."",
+        ""misconception_tag"": ""misinterprets_the_p-value_or_test_lo""
+      },
+      {
+        ""text"": ""Two-tailed testing doubles p to 0.05, which fails the cutoff."",
+        ""key"": false,
+        ""rationale"": ""Misapplies two-tailed adjustment; p given is already two-tailed."",
+        ""misconception_tag"": ""misinterprets_the_p-value_or_test_lo""
+      },
+      {
+        ""text"": ""We use alpha=0.01; since 0.025>0.01, it does not qualify."",
+        ""key"": true,
+        ""rationale"": ""Applies a stricter alpha consistently; correct p-value logic."",
+        ""misconception_tag"": ""provides_an_explicit_logically_consi""
+      },
+      {
+        ""text"": ""At 99% confidence, the interval would include zero, so not significant."",
+        ""key"": true,
+        ""rationale"": ""Uses CI reasoning consistent with alpha=0.01."",
+        ""misconception_tag"": ""provides_an_explicit_logically_consi""
+      }
+    ]
+  },
+  ""q3_item"": null,
+  ""scoring_guide"": {
+    ""waypoints"": [
+      {
+        ""id"": ""FoI3S"",
+        ""credit"": 2,
+        ""rule"": ""Q1=b, Q2 keys ⊇ {7,8}, Q3 N/A""
+      },
+      {
+        ""id"": ""FoI2S"",
+        ""credit"": 1,
+        ""rule"": ""Q1=b, Q2 ∈ {4,5,6}""
+      },
+      {
+        ""id"": ""FoI1"",
+        ""credit"": 0,
+        ""rule"": ""Q1=b, Q2 ∈ {2,3}""
+      },
+      {
+        ""id"": ""FoI0"",
+        ""credit"": 0,
+        ""rule"": ""Q1=b, Q2 ∈ {1}""
+      }
+    ],
+    ""notes"": ""Score by highest keyed rationale selected. Ordinal ordering from FoI0→FoI3S mirrors CR guide. Partial credit for procedural attempts (FoI2S).""
+  },
+  ""note"": ""Keys target mid-high proficiency (alpha/CI coordination). Distractors probe common p-value misreads and magnitude-only heuristics. Ordered options support OMC threshold scoring.""
+}"
+PlayingSports_P,"a. Yes, it is practically meaningful","{""stem"": ""Which reason best supports saying the difference is practically meaningful?"", ""options"": [{""text"": ""I don’t know."", ""key"": false, ""rationale"": ""FoI0: no inference or reason provided."", ""misconception_tag"": ""no_inference""}, {""text"": ""It just feels important."", ""key"": false, ""rationale"": ""FoI1: subjective impression without quantitative support."", ""misconception_tag"": ""purely_subjective_or_impression-base""}, {""text"": ""$500 is a lot of money."", ""key"": false, ""rationale"": ""FoI2P: simple size claim without any benchmark."", ""misconception_tag"": ""a_simple_magnitude_claim_without_ben""}, {""text"": ""It’s about 5% more, so it matters."", ""key"": false, ""rationale"": ""FoI2P: miscalculated percentage and no benchmark."", ""misconception_tag"": ""a_simple_magnitude_claim_without_ben""}, {""text"": ""The p-value is small, so it’s important in practice."", ""key"": false, ""rationale"": ""FoI2P: confuses statistical evidence with practical importance."", ""misconception_tag"": ""confuses_statistical_with_practical""}, {""text"": ""With a very large sample, even small differences matter."", ""key"": false, ""rationale"": ""FoI2P: assumes large n implies practical meaning."", ""misconception_tag"": ""confuses_statistical_with_practical""}, {""text"": ""$500 per year meets a stated action threshold."", ""key"": true, ""rationale"": ""FoI3P: practical benchmark/threshold used to justify importance."", ""misconception_tag"": ""provides_sound_reasoning_focused_onl""}, {""text"": ""About 0.8% higher pay clears a predefined practical cutoff."", ""key"": true, ""rationale"": ""FoI3P: quantifies percent and references a cutoff."", ""misconception_tag"": ""provides_sound_reasoning_focused_onl""}]}",,"{""waypoints"": [{""id"": ""FoI3P"", ""credit"": 2, ""rule"": ""Q1='a. Yes', Q2 key ∈ {options 7, 8}""}, {""id"": ""FoI2P"", ""credit"": 1, ""rule"": ""Q1='a. Yes', Q2 ∈ {options 3, 4, 5, 6}""}, {""id"": ""FoI1"", ""credit"": 0, ""rule"": ""Q1='a. Yes', Q2 = option 2""}, {""id"": ""FoI0"", ""credit"": 0, ""rule"": ""Q1='a. Yes', Q2 = option 1""}], ""notes"": ""Assign higher credit to practical-only with explicit benchmark (FoI3P). Partial credit for magnitude-only or statistical confusion (FoI2P).""}","Keys target higher reasoning for a 'Yes' stance using explicit practical thresholds. Distractors span no-inference, subjective, raw-size claims, and p-value/sample-size confusions to diagnose misconceptions.","{
+  ""q1_choice"": ""a. Yes, it is practically meaningful"",
+  ""q2_item"": {
+    ""stem"": ""Which reason best supports saying the difference is practically meaningful?"",
+    ""options"": [
+      {
+        ""text"": ""I don’t know."",
+        ""key"": false,
+        ""rationale"": ""FoI0: no inference or reason provided."",
+        ""misconception_tag"": ""no_inference""
+      },
+      {
+        ""text"": ""It just feels important."",
+        ""key"": false,
+        ""rationale"": ""FoI1: subjective impression without quantitative support."",
+        ""misconception_tag"": ""purely_subjective_or_impression-base""
+      },
+      {
+        ""text"": ""$500 is a lot of money."",
+        ""key"": false,
+        ""rationale"": ""FoI2P: simple size claim without any benchmark."",
+        ""misconception_tag"": ""a_simple_magnitude_claim_without_ben""
+      },
+      {
+        ""text"": ""It’s about 5% more, so it matters."",
+        ""key"": false,
+        ""rationale"": ""FoI2P: miscalculated percentage and no benchmark."",
+        ""misconception_tag"": ""a_simple_magnitude_claim_without_ben""
+      },
+      {
+        ""text"": ""The p-value is small, so it’s important in practice."",
+        ""key"": false,
+        ""rationale"": ""FoI2P: confuses statistical evidence with practical importance."",
+        ""misconception_tag"": ""confuses_statistical_with_practical""
+      },
+      {
+        ""text"": ""With a very large sample, even small differences matter."",
+        ""key"": false,
+        ""rationale"": ""FoI2P: assumes large n implies practical meaning."",
+        ""misconception_tag"": ""confuses_statistical_with_practical""
+      },
+      {
+        ""text"": ""$500 per year meets a stated action threshold."",
+        ""key"": true,
+        ""rationale"": ""FoI3P: practical benchmark/threshold used to justify importance."",
+        ""misconception_tag"": ""provides_sound_reasoning_focused_onl""
+      },
+      {
+        ""text"": ""About 0.8% higher pay clears a predefined practical cutoff."",
+        ""key"": true,
+        ""rationale"": ""FoI3P: quantifies percent and references a cutoff."",
+        ""misconception_tag"": ""provides_sound_reasoning_focused_onl""
+      }
+    ]
+  },
+  ""q3_item"": null,
+  ""scoring_guide"": {
+    ""waypoints"": [
+      {
+        ""id"": ""FoI3P"",
+        ""credit"": 2,
+        ""rule"": ""Q1='a. Yes', Q2 key ∈ {options 7, 8}""
+      },
+      {
+        ""id"": ""FoI2P"",
+        ""credit"": 1,
+        ""rule"": ""Q1='a. Yes', Q2 ∈ {options 3, 4, 5, 6}""
+      },
+      {
+        ""id"": ""FoI1"",
+        ""credit"": 0,
+        ""rule"": ""Q1='a. Yes', Q2 = option 2""
+      },
+      {
+        ""id"": ""FoI0"",
+        ""credit"": 0,
+        ""rule"": ""Q1='a. Yes', Q2 = option 1""
+      }
+    ],
+    ""notes"": ""Assign higher credit to practical-only with explicit benchmark (FoI3P). Partial credit for magnitude-only or statistical confusion (FoI2P).""
+  },
+  ""note"": ""Keys target higher reasoning for a 'Yes' stance using explicit practical thresholds. Distractors span no-inference, subjective, raw-size claims, and p-value/sample-size confusions to diagnose misconceptions.""
+}"
+PlayingSports_P,"b. No, it is not practically meaningful","{""stem"": ""Which reason best supports your Q1 answer?"", ""options"": [{""text"": ""I can’t explain my choice."", ""key"": false, ""rationale"": ""No inference offered."", ""misconception_tag"": ""purely_subjective_or_impression-base""}, {""text"": ""It doesn’t feel important."", ""key"": false, ""rationale"": ""Subjective impression only."", ""misconception_tag"": ""purely_subjective_or_impression-base""}, {""text"": ""I wouldn’t care about $500 personally."", ""key"": false, ""rationale"": ""Personal preference; no quantitative warrant."", ""misconception_tag"": ""purely_subjective_or_impression-base""}, {""text"": ""The difference is small, so it’s not meaningful."", ""key"": false, ""rationale"": ""Magnitude-only claim without a benchmark."", ""misconception_tag"": ""a_simple_magnitude_claim_without_ben""}, {""text"": ""p = 0.025 isn’t low enough to matter practically."", ""key"": false, ""rationale"": ""Treats p-value as practical meaning."", ""misconception_tag"": ""a_simple_magnitude_claim_without_ben""}, {""text"": ""The sample is too small to trust this difference."", ""key"": false, ""rationale"": ""Misapplies statistical concern to practicality."", ""misconception_tag"": ""a_simple_magnitude_claim_without_ben""}, {""text"": ""$500 is under 1% of salary, too small to matter."", ""key"": true, ""rationale"": ""Quantifies magnitude in context; practical-only reasoning."", ""misconception_tag"": ""provides_sound_reasoning_focused_onl""}, {""text"": ""$500 is trivial versus $63k; with 1,500 per group, tiny gaps can be significant. Practical thresholds or effect size should guide action."", ""key"": true, ""rationale"": ""Coordinates practical size with statistical context and decision thresholds."", ""misconception_tag"": ""correctly_argues_that_the_result_is_""}]}",,"{""waypoints"": [{""id"": ""FoI4"", ""credit"": 3, ""rule"": ""Q1=b. No; Q2 selects FoI4-integrated option.""}, {""id"": ""FoI3P"", ""credit"": 2, ""rule"": ""Q1=b. No; Q2 selects FoI3P practical-only quantified option.""}, {""id"": ""FoI2P"", ""credit"": 1, ""rule"": ""Q1=b. No; Q2 selects any FoI2P option (magnitude-only or statistical confusion).""}, {""id"": ""FoI1"", ""credit"": 0, ""rule"": ""Q1=b. No; Q2 selects subjective/impression-based option.""}, {""id"": ""FoI0"", ""credit"": 0, ""rule"": ""Q1=b. No; Q2 provides no reasoning.""}], ""notes"": ""Polytomous scoring aligned to ordered reasoning. Highest credit for integrated coordination; partial credit for quantified practical-only; lower for procedural or subjective. No Q3 used.""}","Difficulty targets upper-secondary/intro-stats. Distractors diagnose magnitude-only claims, p-value confusion, and vague subjectivity; keys differentiate quantified practical reasoning and integrated trade-off reasoning.","{
+  ""q1_choice"": ""b. No, it is not practically meaningful"",
+  ""q2_item"": {
+    ""stem"": ""Which reason best supports your Q1 answer?"",
+    ""options"": [
+      {
+        ""text"": ""I can’t explain my choice."",
+        ""key"": false,
+        ""rationale"": ""No inference offered."",
+        ""misconception_tag"": ""purely_subjective_or_impression-base""
+      },
+      {
+        ""text"": ""It doesn’t feel important."",
+        ""key"": false,
+        ""rationale"": ""Subjective impression only."",
+        ""misconception_tag"": ""purely_subjective_or_impression-base""
+      },
+      {
+        ""text"": ""I wouldn’t care about $500 personally."",
+        ""key"": false,
+        ""rationale"": ""Personal preference; no quantitative warrant."",
+        ""misconception_tag"": ""purely_subjective_or_impression-base""
+      },
+      {
+        ""text"": ""The difference is small, so it’s not meaningful."",
+        ""key"": false,
+        ""rationale"": ""Magnitude-only claim without a benchmark."",
+        ""misconception_tag"": ""a_simple_magnitude_claim_without_ben""
+      },
+      {
+        ""text"": ""p = 0.025 isn’t low enough to matter practically."",
+        ""key"": false,
+        ""rationale"": ""Treats p-value as practical meaning."",
+        ""misconception_tag"": ""a_simple_magnitude_claim_without_ben""
+      },
+      {
+        ""text"": ""The sample is too small to trust this difference."",
+        ""key"": false,
+        ""rationale"": ""Misapplies statistical concern to practicality."",
+        ""misconception_tag"": ""a_simple_magnitude_claim_without_ben""
+      },
+      {
+        ""text"": ""$500 is under 1% of salary, too small to matter."",
+        ""key"": true,
+        ""rationale"": ""Quantifies magnitude in context; practical-only reasoning."",
+        ""misconception_tag"": ""provides_sound_reasoning_focused_onl""
+      },
+      {
+        ""text"": ""$500 is trivial versus $63k; with 1,500 per group, tiny gaps can be significant. Practical thresholds or effect size should guide action."",
+        ""key"": true,
+        ""rationale"": ""Coordinates practical size with statistical context and decision thresholds."",
+        ""misconception_tag"": ""correctly_argues_that_the_result_is_""
+      }
+    ]
+  },
+  ""q3_item"": null,
+  ""scoring_guide"": {
+    ""waypoints"": [
+      {
+        ""id"": ""FoI4"",
+        ""credit"": 3,
+        ""rule"": ""Q1=b. No; Q2 selects FoI4-integrated option.""
+      },
+      {
+        ""id"": ""FoI3P"",
+        ""credit"": 2,
+        ""rule"": ""Q1=b. No; Q2 selects FoI3P practical-only quantified option.""
+      },
+      {
+        ""id"": ""FoI2P"",
+        ""credit"": 1,
+        ""rule"": ""Q1=b. No; Q2 selects any FoI2P option (magnitude-only or statistical confusion).""
+      },
+      {
+        ""id"": ""FoI1"",
+        ""credit"": 0,
+        ""rule"": ""Q1=b. No; Q2 selects subjective/impression-based option.""
+      },
+      {
+        ""id"": ""FoI0"",
+        ""credit"": 0,
+        ""rule"": ""Q1=b. No; Q2 provides no reasoning.""
+      }
+    ],
+    ""notes"": ""Polytomous scoring aligned to ordered reasoning. Highest credit for integrated coordination; partial credit for quantified practical-only; lower for procedural or subjective. No Q3 used.""
+  },
+  ""note"": ""Difficulty targets upper-secondary/intro-stats. Distractors diagnose magnitude-only claims, p-value confusion, and vague subjectivity; keys differentiate quantified practical reasoning and integrated trade-off reasoning.""
+}"

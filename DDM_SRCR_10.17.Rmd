@@ -1,0 +1,606 @@
+---
+title: "DDM_SRCR"
+author: "Hyem"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+rm(list = ls())
+
+library(dplyr); library(tidyr);library(readxl); library(tidyverse); library(TAM)
+library(WrightMap); library(scaleAlign); library(patchwork); library(purrr)
+library(ggplot2); library(ggforce)
+
+
+################################# DDM Scored
+
+file_path <- "C:/Users/Hyemi/Desktop/HYEM'S/PH.D/Codes/GPTOEtoMC/data"
+
+score_abtest <- read_excel(file.path(file_path, "score_abtest.xlsx"), sheet = 1) %>%
+  select(`Respondent Id`, `Assignment Id`, Score) %>%
+  rename(`ABTest.01_MCOE` = Score)
+
+
+score_sports <- read_excel(file.path(file_path, "score_sports.xlsx"), sheet = 1) %>%
+  select(`Respondent Id`, `Assignment Id`, Score) %>%
+  rename(`Sports.00_MCOE` = Score)
+
+spring2024 <- read_excel(file.path(file_path, "Spring2024_DDM_FULL.xlsx"))
+
+merged <- spring2024 %>%
+  
+  select(-Class, -ABTest.01_MCOE, -Sports.00_MCOE) %>%
+  
+  left_join(score_abtest, by = c("Respondent Id", "Assignment Id")) %>%
+  left_join(score_sports, by = c("Respondent Id", "Assignment Id")) %>%
+  mutate(across(everything(), ~ str_replace_all(., c("DDM0" = "0", "DDM1" = "1", 
+                                                     "DDM2" = "2", "DDM3" = "3", 
+                                                     "DDM4" = "4", "DDM5" = "5")))) %>%
+  mutate(across(everything(), ~ na_if(., "Not Included"))) %>%
+  mutate(across(everything(), ~ na_if(., "-"))) %>%
+  mutate(across(everything(), ~ na_if(., "No Scores"))) %>%
+  mutate(across(everything(), ~ na_if(., "Not Reached"))) %>%
+  mutate(across(everything(), ~ na_if(., "Blank"))) %>%
+
+  mutate(across(-c(Activities), as.numeric))
+  
+
+merged
+
+```
+
+
+```{r}
+
+item_cols <- setdiff(names(merged), c("Respondent Id", "Assignment Id", "Activities"))
+
+# 각 Activities 그룹별로, 응답이 하나라도 존재하는 문항(column)을 추출
+df_form <- merged %>%
+  mutate(FormGroup = case_when(
+    grepl("A1", Activities) ~ "A1",
+    grepl("A2", Activities) ~ "A2",
+    grepl("\\bB\\b|Br", Activities) ~ "B",
+    grepl("\\bC\\b|Cr", Activities) ~ "C",
+    grepl("\\bD\\b|Dr", Activities) ~ "D",
+    TRUE ~ NA_character_
+  )) %>%
+  filter(!is.na(FormGroup))
+
+# long 변환 → 폼×아이템 포함여부 집계 → 5개 폼 모두 포함된 아이템만 추출
+common_items <- df_form %>%
+  select(FormGroup, all_of(item_cols)) %>%
+  pivot_longer(-FormGroup, names_to = "Item", values_to = "val") %>%
+  mutate(included = !is.na(val) & val != "") %>%
+  group_by(FormGroup, Item) %>%
+  summarise(included = any(included), .groups = "drop") %>%
+  filter(included) %>%
+  count(Item, name = "n_forms") %>%
+  filter(n_forms >= 4) %>%        # A1, A2, B, C, D 모두에 포함
+  arrange(Item) %>%
+  pull(Item)
+
+print(common_items)
+
+
+subset_data <- merged %>%
+  select(
+    matches("^(ABTest\\.00|ABTest\\.01|Sports\\.00|Sports\\.01)"),
+    any_of(common_items)
+  ) %>%
+  filter(if_any(everything(), ~ !is.na(.x))) %>%
+  select(order(colnames(.))) %>%
+  relocate(ends_with("OE"), .after = last_col()) %>%
+  filter(if_any(c(`ABTest.01_MCOE`, `Sports.00_MCOE`), ~ !is.na(.x))) %>%
+  select(where(~ {
+    if (all(is.na(.x))) {
+      FALSE   # drop columns that are all NA
+    } else {
+      max(.x, na.rm = TRUE) > 0
+    }
+  }))
+
+print(subset_data)
+
+
+
+```
+
+## TAM
+
+```{r, results='hide'}
+
+IRTDF <- as.data.frame(subset_data)
+
+for (i in 1:12){
+IRTDF[,i] <- as.factor(IRTDF[,i])
+}
+for (i in 1:12) {
+levels(IRTDF[,i]) <- 0:(length(table(IRTDF[,i]))-1)
+}
+for (i in 1:12){
+IRTDF[,i] <- as.numeric(as.character(IRTDF[,i]))
+}
+
+#writexl::write_xlsx(IRTDF, "C:/Users/Hyemi/Desktop/New folder (2)/Spring2024_DDM_SUBSET.xlsx")
+
+
+# Define Q-matrix for item-dimension mapping
+Q <- cbind(c(rep(1, 10), rep(0, 2)), c(rep(0, 10), rep(1, 2)))
+mod <- TAM::tam.mml(resp = IRTDF, irtmodel = "PCM", Q = Q)
+summary(mod)
+mod$xsi
+
+threshO <- tam.threshold(mod, prob.lvl=0.5)
+threshO_params <- threshO[, c("Cat1", "Cat2", "Cat3", "Cat4", "Cat5")]
+threshO_params
+
+mod$item_irt
+
+    
+```
+
+
+```{r}
+
+wle <- read_excel("C:/Users/Hyemi/Desktop/HYEM'S/PH.D/Codes/GPTOEtoMC/data/WLE.xlsx") %>%
+  mutate(DIM1 = as.numeric(DIM1),
+         DIM2 = as.numeric(DIM2))
+correlation <- cor(wle$DIM1, wle$DIM2)
+
+ggplot(wle, aes(x = DIM1, y = DIM2)) +
+  geom_point(alpha = 0.6, color = "steelblue") +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linewidth = 0.8) +
+  labs(
+    title = paste0("Scatter Plot of WLE Scores (r = ", round(correlation, 3), ")"),
+    x = "WLE Dimension 1",
+    y = "WLE Dimension 2"
+  ) +
+  theme_minimal(base_size = 14)
+
+```
+
+
+## Align Person
+
+```{r}
+
+personO <- tam.wle(mod)
+thetaO <- data.frame(personO$theta.Dim01, personO$theta.Dim02)
+errorO <- data.frame(personO$error.Dim01, personO$error.Dim02)
+
+
+original_means <- colMeans(thetaO, na.rm = TRUE)
+original_sds <- apply(thetaO, 2, sd, na.rm = TRUE)
+
+
+
+# Boxplot for original theta
+personOL <- thetaO %>%
+  pivot_longer(cols = everything(), names_to = "Dimension", values_to = "Value") %>%
+  mutate(Dimension = recode(Dimension,
+                            "personO.theta.Dim01" = "SR",
+                            "personO.theta.Dim02" = "CR"))
+
+
+
+personOL <- personOL %>%
+  mutate(Dimension = factor(Dimension, levels = c("SR", "CR")))
+
+
+
+
+# Create boxplots for thetaO and thetaA
+ggplot(personOL, aes(x = Dimension, y = Value)) +
+  geom_boxplot(fill = "lightblue", color = "black") +
+  labs(title = "Original",
+       x = "Dimension", 
+       y = "WLE theta") +
+  ylim(-3, 5.5) +  # Set y-axis limits
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")  # Center + bold
+  )
+
+
+
+
+
+
+#ggplot(thetaO, aes(x = personO.theta.Dim01, y = personO.theta.Dim02)) +
+#  geom_point(color = "blue") +  # Scatter plot points in blue
+#  labs(title = "SR vs. CR student locations (DCS)",
+#       x = "WLE (SR)", 
+#       y = "WLE (CR)") +
+#  xlim(-4, 5) +  # Set x-axis range from -4 to 4
+#  ylim(-4, 5) +  # Set y-axis range from -4 to 4
+#  theme_minimal()
+
+
+ggplot(thetaO, aes(x = personO.theta.Dim01, y = personO.theta.Dim02)) +
+  geom_point(color = "blue") +  # Scatter plot points in blue
+  labs(title = "SR vs. CR student locations (DCS) after DDA",
+       x = "WLE (SR)", 
+       y = "WLE (CR)") +
+  xlim(-4, 4.5) +  # Set x-axis range from -4 to 4
+  ylim(-4, 4) +  # Set y-axis range from -4 to 4
+  theme_minimal() + 
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold")  # Center + bold
+  )
+
+
+cor(thetaO$personO.theta.Dim01, thetaO$personO.theta.Dim02, use = "pairwise.complete.obs")
+
+obs_corr <- cor(thetaA$personA.theta.Dim01, thetaA$personA.theta.Dim02, use = "pairwise.complete.obs")
+obs_corr
+reli_dim1 <- 0.517 
+reli_dim2 <- 0.541 
+latent_corr <- obs_corr / sqrt(reli_dim1 * reli_dim2)
+print(paste("Latent Correlation =", round(latent_corr, 3)))
+
+
+```
+
+
+
+## Alignment Item
+
+```{r}
+
+# Compare a few original and aligned parameters
+item_names <- rownames(mod_aligned$xsi)
+item_comparison <- data.frame(
+  Items = item_names,
+  Original = mod$xsi$xsi,
+  Aligned = mod_aligned$xsi$xsi,
+  Dimension = ifelse(grepl("OE", item_names), 2, 1)
+)
+print(item_comparison)
+
+
+
+# Visualize the item difficulties before and after alignment
+library(ggplot2)
+ggplot(item_comparison, aes(x = Original, y = Aligned, color = factor(Dimension))) +
+  geom_point() +
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed") +
+  labs(title = "Item Difficulties: Original vs Aligned",
+       x = "Original Difficulty",
+       y = "Aligned Difficulty",
+       color = "Dimension") +
+  theme_minimal()
+
+
+```
+
+
+
+### WrightMap Reorder
+
+
+```{r}
+
+# Define desired item order
+desired_order <- c(
+  "Delivery.00ab_MC", "Delivery.00abc_OE",
+  "Travel.00ab_MC", "Travel.00abc_OE",
+  "Elevator.00ab_MC", "Elevator.00abc_OE",
+  "Market.00ab_MC", "Market.00abc_OE",
+  "Market.01abc_MC", "Market.01abc_OE",
+  "Elevator.02abc_MC", "Elevator.02abc_OE",
+  "Delivery.04abc_MCMCMC", "Market.02b_FB", "Shipping.01_NU", "Shipping.03abc_MCMCME"
+)
+
+score_categories <- setNames(
+  lapply(data1[desired_order], function(col) sort(unique(col), na.last = TRUE)),
+  desired_order
+)
+
+# Function to relocate step difficulties to original score locations
+relocate_steps <- function(step_params, original_scores) {
+    # Ensure original scores are numeric and sorted
+    sorted_scores <- sort(original_scores, na.last = TRUE)
+    
+    # Check if sorted_scores is empty or contains only NAs
+    if (length(sorted_scores) == 0 || all(is.na(sorted_scores))) {
+        warning("original_scores is empty or contains only NA values.")
+        return(rep(NA, length(step_params)))  # Return an NA vector of the same length as step_params
+    }
+
+    # Compute max safely
+    max_score <- max(sorted_scores, na.rm = TRUE)
+    
+    # Ensure max_score is a valid numeric value
+    if (is.na(max_score) || max_score <= 0) {
+        warning("Invalid max value in sorted_scores. Returning NA vector.")
+        return(rep(NA, length(step_params)))
+    }
+
+    # Initialize a vector of NAs for the full score range
+    relocated_params <- rep(NA, max_score)
+
+    # Assign the step difficulties to the correct indices
+    for (i in seq_along(step_params)) {
+        if (!is.na(sorted_scores[i + 1])) {
+            relocated_params[sorted_scores[i + 1]] <- step_params[i]
+        }
+    }
+    return(relocated_params)
+}
+
+
+threshA_params <- threshA_params[desired_order, , drop = FALSE]
+mod_aligned$item <- mod_aligned$item[match(desired_order, mod_aligned$item$item), ]
+
+
+# Step 4: Relocate step difficulties with names
+
+relocated_params <- list()
+for (i in seq_along(score_categories)) {
+    item_scores <- score_categories[[i]]  # Get original score locations
+    item_steps <- threshA_params[i, !is.na(threshA_params[i, ])]  # Get step parameters
+    
+    # Ensure step_params exist before relocating
+    if (length(item_steps) > 0) {
+        relocated_params[[i]] <- relocate_steps(item_steps, item_scores)
+    } else {
+        relocated_params[[i]] <- NA
+    }
+}
+
+max_steps <- max(sapply(relocated_params, length))
+item_difficulty_table <- data.frame(
+  Item = names(score_categories),  # Use item names
+  Overall_Difficulty =  mod_aligned$item$xsi.item
+)
+# Add step difficulties as separate columns
+for (i in 1:max_steps) {
+  item_difficulty_table[[paste0("threshold", i)]] <- sapply(relocated_params, function(x) if (length(x) >= i) x[i] else NA)
+}
+
+print(item_difficulty_table)
+
+
+
+# Convert the list of relocated step difficulties into a matrix
+step_matrix <- matrix(NA, nrow = length(relocated_params), ncol = max_steps)
+for (i in seq_along(relocated_params)) {
+  step_matrix[i, 1:length(relocated_params[[i]])] <- relocated_params[[i]]
+}
+
+rownames(step_matrix) <- names(score_categories) %>%
+  sort() %>%
+  str_remove("^item\\d+")  # Remove "item" prefix 
+
+
+# Create numerical labels for items
+item_labels <- names(score_categories)  # Original item names
+num_labels <- seq_along(item_labels)    # Generate numeric labels
+
+# Adjust margins to create space for the legend
+windows(width = 20, height = 8)  # Use quartz() for Mac or X11() for Linux
+
+
+png("C:/HYEM'S/PH.D/PH.D PROJECTS/NCME25_SRCR Comparison Study/SRCR_Report_4.19/data1.png",
+    width = 1500, height = 1000, res = 150)
+
+wrightMap(
+  thetas = thetaA,
+  thresholds = step_matrix,
+  label.items = num_labels,
+  label.persons = TRUE,
+  ylim = c(-6, 6)
+)
+
+dev.flush()
+dev.off()
+
+# Optional: Print legend for clarity
+cat("Item Legend:\n", paste(num_labels, ":", desired_order, collapse = "\n"))
+
+
+```
+
+```{r}
+png("C:/HYEM'S/PH.D/PH.D PROJECTS/NCME25_SRCR Comparison Study/SRCR_Report_4.19/threshold_plot_enhanced.png", 
+    width = 2200, height = 1500, res = 200)
+
+par(mar = c(5, 5, 4, 5))  # 오른쪽 여백 확보
+
+plot(NULL, xlim = c(0.5, 12.5), ylim = c(-3, 4),
+     xlab = "Item Number", ylab = "Logit Scale",
+     xaxt = "n", main = "Wright Map with Threshold Averages and Labels")
+
+axis(1, at = 1:12)
+
+# 문항 및 차원 정보
+item_number <- 1:12
+dimension <- ifelse(item_number %% 2 == 1, "SR", "CR")
+
+# 문항별 threshold 점 찍기 + 숫자 표시
+for (i in 1:12) {
+  for (k in 1:4) {
+    val <- step_matrix[i, k]
+    if (!is.na(val)) {
+      col_point <- ifelse(dimension[i] == "SR", "blue", "red")
+      points(i, val, pch = 18, col = col_point)
+      text(i, val + 0.15, labels = k, cex = 0.75, col = col_point)
+    }
+  }
+}
+
+# threshold 평균선 스타일
+colors <- c("T1" = "orange", "T2" = "blue", "T3" = "darkgreen", "T4" = "purple")
+linetypes <- c("SR" = 1, "CR" = 2)
+
+# 선 그리기 및 텍스트 라벨
+for (k in 1:4) {
+  t_label <- paste0("T", k)
+  color <- colors[[t_label]]
+  
+  for (dim in c("SR", "CR")) {
+    idx <- if (dim == "SR") seq(1, 11, by = 2) else seq(2, 12, by = 2)
+    mean_val <- mean(step_matrix[idx, k], na.rm = TRUE)
+    
+    abline(h = mean_val, col = color, lty = linetypes[[dim]], lwd = 2)
+    
+    # 위치 조정
+    text_x <- if (dim == "SR") 12.6 else 0.4
+    offset_y <- if (dim == "SR") 0.15 else -0.2  # SR: 아래로, CR: 위로
+
+    text(text_x, mean_val + offset_y, labels = paste0(dim, "-T", k),
+         col = color, cex = 0.85, font = 2)
+  }
+}
+
+dev.off()
+
+
+```
+
+
+```{r}
+
+# 문항 인덱스 정의
+sr_idx <- seq(1, 11, by = 2)  # SR 문항은 홀수 번호
+cr_idx <- seq(2, 12, by = 2)  # CR 문항은 바로 다음 짝수 번호
+
+# threshold level 별 평균 계산
+sr_means <- colMeans(step_matrix[sr_idx, , drop = FALSE], na.rm = TRUE)
+cr_means <- colMeans(step_matrix[cr_idx, , drop = FALSE], na.rm = TRUE)
+
+# 차이 계산
+threshold_diff <- cr_means - sr_means
+
+# 결과 정리
+threshold_level <- paste0("T", seq_along(threshold_diff))
+threshold_gap_summary <- data.frame(
+  Threshold_Level = threshold_level,
+  SR_Mean = round(sr_means, 3),
+  CR_Mean = round(cr_means, 3),
+  CR_minus_SR = round(threshold_diff, 3)
+)
+
+# 출력
+print(threshold_gap_summary)
+
+```
+
+
+### Scatter Plot with SE OVERALL DIFFICULTY
+
+```{r}
+
+xsi_df <- mod_aligned$xsi 
+xsi_df$se.xsi <- mod$xsi$se.xsi
+xsi_df$item <- rownames(xsi_df)
+
+base_items <- c("Delivery.00", "Travel.00", "Elevator.00", "Market.00", "Market.01", "Elevator.02")
+
+
+# long-format으로 SR/CR step parameter 필터링
+overall_df <- xsi_df %>%
+  filter(!grepl("_step", item)) %>%
+  mutate(
+    root = gsub("(\\d+)[a-zA-Z]+", "\\1", gsub("_.*$", "", item)),
+    type = case_when(
+      grepl("_MC", item) ~ "SR",
+      grepl("_OE", item) ~ "CR")
+  ) %>%
+  filter(root %in% base_items) %>%
+  select(root, xsi, se.xsi, type)
+
+
+# wide format으로 변환: SR과 CR step을 같은 row에 매칭
+plotoverall_df <- overall_df %>%
+  pivot_wider(
+    id_cols = root,
+    names_from = type,
+    values_from = c(xsi, se.xsi)
+  ) %>%
+  drop_na(xsi_SR, xsi_CR) %>%
+  mutate(
+    radius_x = 2 * se.xsi_SR,  # 95% CI 반지름 (SR 기준)
+    radius_y = 2 * se.xsi_CR   # 95% CI 반지름 (CR 기준)
+  )
+
+# 시각화
+ggplot(plotoverall_df, aes(x = xsi_SR, y = xsi_CR)) +
+  geom_abline(slope = 1, intercept = 0, color = "black", size = 0.5) +  # y = x 기준선
+  #geom_smooth(method = "lm", se = FALSE, linetype = "dashed", color = "red") +
+  geom_point(size = 2) +
+  geom_text(aes(label = root), vjust = -1.2, size = 3.5) +
+  geom_ellipse(aes(x0 = xsi_SR, y0 = xsi_CR, a = radius_x, b = radius_y, angle = 0),
+               alpha = 0.2, fill = "pink", color = NA) +
+  coord_fixed(xlim = c(-0.2, 2), ylim = c(-0.1, 2)) +
+  labs(
+    title = "Overall Difficulty: SR vs CR with 95% CI",
+    x = "SR Overall Difficulty",
+    y = "CR Overall Difficulty"
+  ) +
+  theme_minimal()
+
+```
+
+
+
+
+
+### Scatter Plot with SE STEP DIFFICULTY
+
+```{r}
+
+xsi_df <- mod_aligned$xsi 
+xsi_df$se.xsi <- mod$xsi$se.xsi
+xsi_df$item <- rownames(xsi_df)
+
+base_items <- c("Market.00","Elevator.00","Elevator.02")
+
+
+# long-format으로 SR/CR step parameter 필터링
+step_df <- xsi_df %>%
+  filter(grepl("_step", item)) %>%
+  mutate(
+    root = gsub("(\\d+)[a-zA-Z]+", "\\1", gsub("_.*$", "", item)),
+    type = case_when(
+      grepl("_MC_step", item) ~ "SR",
+      grepl("_OE_step", item) ~ "CR"),
+    step = as.integer(gsub(".*step", "", item))
+  ) %>%
+  filter(root %in% base_items) %>%
+  select(root, xsi, se.xsi, type, step)
+
+
+# wide format으로 변환: SR과 CR step을 같은 row에 매칭
+plot_df <- step_df %>%
+  pivot_wider(
+    id_cols = c(root, step),
+    names_from = type,
+    values_from = c(xsi, se.xsi)
+  ) %>%
+  drop_na(xsi_SR, xsi_CR) %>%
+  mutate(
+    radius_x = 2 * se.xsi_SR,  # 95% CI 반지름 (가로)
+    radius_y = 2 * se.xsi_CR   # 95% CI 반지름 (세로)
+  )
+
+
+ggplot(plot_df, aes(x = xsi_SR, y = xsi_CR)) +
+  geom_abline(slope = 1, intercept = 0, color = "black", size = 0.5) +  # y = x 기준선
+  #geom_smooth(method = "lm", se = FALSE, linetype = "dashed", color = "red") +
+  geom_point(size = 2) +
+  geom_text(aes(label = paste0(root, "_s", step)), vjust = -1.2, size = 3.5) +
+  geom_ellipse(aes(x0 = xsi_SR, y0 = xsi_CR, a = radius_x, b = radius_y, angle = 0),
+               alpha = 0.2, fill = "pink", color = NA) +
+  coord_fixed(xlim = c(-4.5, 4), ylim = c(-4.5, 4)) +
+  labs(
+    title = "Step Parameters: SR vs CR with 95% CI",
+    x = "SR Step Difficulty",
+    y = "CR Step Difficulty"
+  ) +
+  theme_minimal()
+```
